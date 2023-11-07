@@ -1,0 +1,75 @@
+### 力扣-0024-两两交换链表中的结点 ###
+# 链表
+
+
+# 虚拟头结点
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+class Solution:
+    @staticmethod
+    def swapPairs(head: ListNode) -> ListNode:
+        dummy_head = ListNode(next=head)
+        current = dummy_head
+
+        # 必须有cur的下一个和下下个才能交换，否则说明已经交换结束了
+        while current.next and current.next.next:
+            temp = current.next  # 防止节点修改
+            temp1 = current.next.next.next
+
+            current.next = current.next.next
+            current.next.next = temp
+            temp.next = temp1
+            current = current.next.next
+        return dummy_head.next
+
+    @staticmethod
+    def create_linked_list_from_user_input():
+        values = input("请输入一系列整数，以空格分隔：").split()
+        head = ListNode(int(values[0]))
+        current = head
+
+        for val in values[1:]:
+            current.next = ListNode(int(val))
+            current = current.next
+
+        return head
+
+    @staticmethod
+    def print_linked_list(head):
+        current = head
+        while current:
+            print(current.val, end=" -> ")
+            current = current.next
+        print("None")
+
+
+if __name__ == '__main__':
+    user_input_linked_list = Solution.create_linked_list_from_user_input()
+    # 打印原始链表
+    print("原始链表:")
+    Solution.print_linked_list(user_input_linked_list)
+    user_input_linked_list = Solution.swapPairs(user_input_linked_list)
+    # 打印翻转后的链表
+    print("翻转后的链表:")
+    Solution.print_linked_list(user_input_linked_list)
+
+
+# 递归
+# class Solution:
+#     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+#         if head is None or head.next is None:
+#             return head
+#
+#         # 待翻转的两个node分别是pre和cur
+#         pre = head
+#         cur = head.next
+#         next = head.next.next
+#
+#         cur.next = pre  # 交换
+#         pre.next = self.swapPairs(next)  # 将以next为head的后续链表两两交换
+#
+#         return cur

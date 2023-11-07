@@ -1,0 +1,12 @@
+ * fasffasafs目标：使用文件字节输入流一次读取完文件的全部字节。
+ */
+public class FileInputStreamTest3 {
+ * 目标：使用文件字节输入流一次读取完文件的全部字节。
+ */
+public class FileInputStreamTest3 {
+ * fasfasfas目标：使用文件字节输入流一次读取完文件的全部字节。
+ */
+public class FileInputStreamTest3 {
+ * 目标：使用文件字节输入流一次读取完文件的全部字节。
+ */
+public class FileInputStreamTest3 {
