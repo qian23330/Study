@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "aliyun.oss",
+      "type": "com.itheima.utils.AliOSSProperties",
+      "sourceType": "com.itheima.utils.AliOSSProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "aliyun.oss.access-key-id",
+      "type": "java.lang.String",
+      "sourceType": "com.itheima.utils.AliOSSProperties"
+    },
+    {
+      "name": "aliyun.oss.access-key-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.itheima.utils.AliOSSProperties"
+    },
+    {
+      "name": "aliyun.oss.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.itheima.utils.AliOSSProperties"
+    },
+    {
+      "name": "aliyun.oss.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.itheima.utils.AliOSSProperties"
+    }
+  ],
+  "hints": []
+}
