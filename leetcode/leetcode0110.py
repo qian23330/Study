@@ -10,10 +10,12 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-        
+
+
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         return self.get_hight(root) != -1
+
     def get_hight(self, node):
         if not node:
             return 0
@@ -22,15 +24,21 @@ class Solution:
         if left == -1 or right == -1 or abs(left - right) > 1:
             return -1
         return max(left, right) + 1
-    
+
+
+def build_tree(nodes, i, n):
+    root = None
+    if i < n and nodes[i] is not None:
+        root = TreeNode(nodes[i])
+        root.left = build_tree(nodes, 2 * i + 1, n)
+        root.right = build_tree(nodes, 2 * i + 2, n)
+    return root
+
 
 if __name__ == '__main__':
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.left.left = TreeNode(4)
-    root.left.right = TreeNode(5)
-    root.right = TreeNode(3)
-    root.right.left = TreeNode(6)
-    root.right.right = TreeNode(7)
+    list = input().split()
+    list = [int(val) if val != "null" else None for val in list]
 
+    # 从输入的列表构建树
+    root = build_tree(list, 0, len(list))
     print(Solution().isBalanced(root))

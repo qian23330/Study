@@ -37,11 +37,20 @@ class Solution:
         # 第六步: 递归
         root.left = self.buildTree(inorder_left, postorder_left)
         root.right = self.buildTree(inorder_right, postorder_right)
-         # 第七步: 返回答案
+        # 第七步: 返回答案
         return root
-    
-    
+
+
+def print_tree(root):
+    if root:
+        print(root.val, end=" ")
+        print_tree(root.left)
+        print_tree(root.right)
+
+
 if __name__ == '__main__':
     list1 = list(map(int, input().split()))
     list2 = list(map(int, input().split()))
-    print(Solution().buildTree(list1, list2))
+
+    result_tree = Solution().buildTree(list1, list2)
+    print_tree(result_tree)

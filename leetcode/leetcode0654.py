@@ -20,10 +20,19 @@ class Solution:
         max_index = nums.index(max_val)
         node = TreeNode(max_val)
         node.left = self.constructMaximumBinaryTree(nums[:max_index])
-        node.right = self.constructMaximumBinaryTree(nums[max_index+1:])
+        node.right = self.constructMaximumBinaryTree(nums[max_index + 1:])
         return node
-    
-    
+
+
+def print_tree(root):
+    if root:
+        print(root.val, end=" ")
+        print_tree(root.left)
+        print_tree(root.right)
+
+
 if __name__ == '__main__':
     list = list(map(int, input().split()))
-    print(Solution().constructMaximumBinaryTree(list))
+    result_tree = Solution().constructMaximumBinaryTree(list)
+    print_tree(result_tree)
+

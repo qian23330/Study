@@ -40,8 +40,17 @@ class Solution:
         # 第七步: 返回答案
         return root
     
-    
+
+def print_tree(root):
+    if root:
+        print(root.val, end=" ")
+        print_tree(root.left)
+        print_tree(root.right)
+
+
 if __name__ == '__main__':
     list1 = list(map(int, input().split()))
     list2 = list(map(int, input().split()))
-    print(Solution().buildTree(list1, list2))
+
+    result_tree = Solution().buildTree(list1, list2)
+    print_tree(result_tree)
