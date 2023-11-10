@@ -40,16 +40,17 @@
 </body>
 <script>
     new Vue({
-       el: "#app",
-       data: {
-         emps:[]
-       },
-       mounted () {
+
+        el: "#app",
+        data: {
+            emps:[]
+        },
+        mounted () {
           //发送异步请求,加载数据
           axios.get("http://yapi.smart-xwork.cn/mock/169327/emp/list").then(result => {
             this.emps = result.data.data;
-          })
-       }
+        })
+        }
     });
 </script>
 </html>
