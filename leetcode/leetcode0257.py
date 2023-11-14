@@ -1,5 +1,6 @@
 # 力扣-0257-二叉树的所有路径
 # 二叉树遍历-前序遍历
+from tree import tree
 
 
 class TreeNode:
@@ -34,12 +35,8 @@ class Solution:
 
 
 if __name__ == '__main__':
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.left.left = TreeNode(4)
-    root.left.right = TreeNode(5)
-    root.right = TreeNode(3)
-    root.right.left = TreeNode(6)
-    root.right.right = TreeNode(7)
+    list = input().split()
+    root = tree.construct_binary_tree(list)
 
-    print(Solution().binaryTreePaths(root))
+    result_tree = Solution().binaryTreePaths(root)
+    print(result_tree)
