@@ -34,7 +34,7 @@ def construct_binary_tree(nums: []) -> TreeNode:
     return root
 
 
-def print_tree(root: Optional[TreeNode]) -> List[List[int]]:
+def print_tree(root: Optional[TreeNode]) -> List[int]:
     if not root:
         return []
     queue = collections.deque([root])
