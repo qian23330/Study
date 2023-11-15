@@ -5,7 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../../../Java study/JavaWeb/day04-Maven-SpringBootWeb入门/day04-Maven-SpringBootWeb入门/代码/maven-project02/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot-web-quickstart/pom.xml" />
       </list>
     </option>
   </component>
