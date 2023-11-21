@@ -10,6 +10,7 @@ class Solution:
         result = []  # 存储最终结果的二维字符串数组
 
         chessboard = ['.' * n for _ in range(n)]  # 初始化棋盘
+        # print(chessboard)
         self.backtracking(n, 0, chessboard, result)  # 回溯求解
         return [[''.join(row) for row in solution] for solution in result]  # 返回结果集
 
@@ -52,4 +53,3 @@ class Solution:
 if __name__ == '__main__':
     n = int(input())
     print(Solution().solveNQueens(n))
-    

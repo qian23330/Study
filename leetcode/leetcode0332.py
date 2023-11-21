@@ -1,5 +1,5 @@
 ### 力扣-332-重新安排行程 ###
-# 回溯-二分查找
+# 回溯
 
 
 from collections import defaultdict
