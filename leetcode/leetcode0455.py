@@ -2,7 +2,7 @@
 # 贪心
 
 
-class Solution: # 小饼干优先
+class Solution:  # 小饼干优先
     def findContentChildren(self, g, s):
         g.sort()  # 将孩子的贪心因子排序
         s.sort()  # 将饼干的尺寸排序
