@@ -1,6 +1,3 @@
-## 检查EAF与MAF对应情况 ##
-
-
 import os
 import sys
 import pandas as pd
