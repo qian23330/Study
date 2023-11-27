@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/mysql-test01.iml" filepath="$PROJECT_DIR$/mysql-test01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springboot-mybatis-quickstart/springboot-mybatis-quickstart.iml" filepath="$PROJECT_DIR$/../springboot-mybatis-quickstart/springboot-mybatis-quickstart.iml" />
     </modules>
   </component>
 </project>
