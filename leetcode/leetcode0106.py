@@ -3,15 +3,9 @@
 
 
 from typing import List
+from tree.tree import TreeNode, print_tree
 
 
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-        
-        
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
         # 第一步: 特殊情况讨论: 树为空. (递归终止条件)
@@ -41,16 +35,8 @@ class Solution:
         return root
 
 
-def print_tree(root):
-    if root:
-        print(root.val, end=" ")
-        print_tree(root.left)
-        print_tree(root.right)
-
-
 if __name__ == '__main__':
     list1 = list(map(int, input().split()))
     list2 = list(map(int, input().split()))
-
     result_tree = Solution().buildTree(list1, list2)
     print_tree(result_tree)

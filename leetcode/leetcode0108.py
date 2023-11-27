@@ -3,14 +3,7 @@
 
 
 from typing import List
-from tree import tree
-
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from tree.tree import TreeNode, print_tree
 
 
 class Solution:
@@ -32,6 +25,5 @@ class Solution:
 if __name__ == '__main__':
     list = list(map(int, input().split()))
     # root = tree.construct_binary_tree(list)
-
     result_tree = Solution().sortedArrayToBST(list)
-    tree.print_tree(result_tree)
+    print_tree(result_tree)

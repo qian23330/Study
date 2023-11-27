@@ -1,15 +1,10 @@
 # 力扣-0257-二叉树的所有路径
 # 二叉树遍历-前序遍历
-from tree import tree
 
 
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-        
-        
+from tree.tree import TreeNode, construct_binary_tree
+
+
 # 递归法+回溯
 class Solution:
     def traversal(self, cur, path, result):
@@ -35,8 +30,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = input().split()
-    root = tree.construct_binary_tree(list)
-
+    list = list(map(int, input().split()))
+    root = construct_binary_tree(list)
     result_tree = Solution().binaryTreePaths(root)
     print(result_tree)

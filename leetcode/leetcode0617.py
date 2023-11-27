@@ -3,13 +3,7 @@
 
 
 from tree import tree
-
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from tree.tree import TreeNode, construct_binary_tree
 
 
 class Solution:
@@ -30,12 +24,12 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list1 = input().split()
-    list2 = input().split()
+    list1 = list(map(int, input().split()))
+    list2 = list(map(int, input().split()))
 
     # 从输入的列表构建树
-    root1 = tree.construct_binary_tree(list1)
-    root2 = tree.construct_binary_tree(list2)
+    root1 = construct_binary_tree(list1)
+    root2 = construct_binary_tree(list2)
 
     # 调用合并方法
     result_tree = Solution().mergeTrees(root1, root2)

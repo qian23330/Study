@@ -2,14 +2,7 @@
 # 二叉搜索树
 
 
-from tree import tree
-
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from tree.tree import TreeNode, construct_binary_tree, print_tree
 
 
 class Solution:
@@ -39,9 +32,9 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = input().split()
-    root = tree.construct_binary_tree(list)
+    list = list(map(int, input().split()))
+    root = construct_binary_tree(list)
     node = int(input())
 
     result_tree = Solution().searchBST(root, node)
-    tree.print_tree(result_tree)
+    print_tree(result_tree)

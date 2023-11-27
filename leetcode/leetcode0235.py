@@ -1,14 +1,8 @@
 # 力扣-0235-二叉搜索树的最近公共祖先
 # 二叉搜索树
 
-from tree import tree
 
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from tree.tree import TreeNode, construct_binary_tree
 
 
 class Solution:
@@ -23,7 +17,7 @@ class Solution:
 
 if __name__ == '__main__':
     list = input().split()
-    root = tree.construct_binary_tree(list)
+    root = construct_binary_tree(list)
     p = TreeNode(int(input()))
     q = TreeNode(int(input()))
 

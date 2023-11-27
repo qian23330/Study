@@ -3,13 +3,7 @@
 
 import collections
 from typing import List
-
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from tree.tree import TreeNode, construct_binary_tree
 
 
 class Solution:
@@ -38,12 +32,6 @@ class Solution:
     
 
 if __name__ == '__main__':
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.left.left = TreeNode(4)
-    root.left.right = TreeNode(5)
-    root.right = TreeNode(3)
-    root.right.left = TreeNode(6)
-    root.right.right = TreeNode(7)
-
+    list = list(map(int, input().split()))
+    root = construct_binary_tree(list)
     print(Solution().averageOfLevels(root))

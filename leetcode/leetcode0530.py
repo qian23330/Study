@@ -2,14 +2,7 @@
 # 二叉搜索树-中序遍历
 
 
-from tree import tree
-
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from tree.tree import construct_binary_tree
 
 
 class Solution:
@@ -37,7 +30,7 @@ class Solution:
 
 if __name__ == '__main__':
     list = input().split()
-    root = tree.construct_binary_tree(list)
+    root = construct_binary_tree(list)
 
     result_tree = Solution().getMinimumDifference(root)
     print(result_tree)
