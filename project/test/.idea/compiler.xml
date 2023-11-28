@@ -10,11 +10,12 @@
         <module name="maven-project01" />
         <module name="springboot-mybatis-crud" />
         <module name="springboot-mybatis-quickstart" />
-        <module name="springboot-web-req-resp" />
         <module name="springboot-web-quickstart" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel target="17">
+      <module name="springboot-web-req-resp" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
