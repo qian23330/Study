@@ -7,13 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="maven-project01" />
-        <module name="springboot-mybatis-crud" />
-        <module name="springboot-mybatis-quickstart" />
-        <module name="springboot-web-quickstart" />
+        <module name="tlias-web-management" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17">
+      <module name="maven-project01" target="1.8" />
+      <module name="springboot-mybatis-crud" target="17" />
+      <module name="springboot-mybatis-quickstart" target="17" />
+      <module name="springboot-web-quickstart" target="17" />
       <module name="springboot-web-req-resp" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -23,6 +24,7 @@
       <module name="springboot-mybatis-quickstart" options="-parameters" />
       <module name="springboot-web-quickstart" options="-parameters" />
       <module name="springboot-web-req-resp" options="-parameters" />
+      <module name="tlias-web-management" options="-parameters" />
     </option>
   </component>
 </project>

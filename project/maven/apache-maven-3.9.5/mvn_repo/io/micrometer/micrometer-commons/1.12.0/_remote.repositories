@@ -1,4 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Mon Nov 27 11:26:41 CST 2023
+#Wed Nov 29 11:06:12 CST 2023
 micrometer-commons-1.12.0.pom>alimaven=
+micrometer-commons-1.12.0-sources.jar>alimaven=
 micrometer-commons-1.12.0.jar>alimaven=

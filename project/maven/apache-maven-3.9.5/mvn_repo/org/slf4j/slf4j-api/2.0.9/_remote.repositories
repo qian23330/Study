@@ -1,4 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Wed Nov 15 21:27:41 CST 2023
+#Wed Nov 29 11:06:25 CST 2023
 slf4j-api-2.0.9.jar>alimaven=
+slf4j-api-2.0.9-sources.jar>alimaven=
 slf4j-api-2.0.9.pom>alimaven=

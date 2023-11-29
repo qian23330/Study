@@ -1,4 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Mon Nov 27 11:26:46 CST 2023
+#Wed Nov 29 11:06:21 CST 2023
 mysql-connector-j-8.1.0.pom>alimaven=
 mysql-connector-j-8.1.0.jar>alimaven=
+mysql-connector-j-8.1.0-sources.jar>alimaven=

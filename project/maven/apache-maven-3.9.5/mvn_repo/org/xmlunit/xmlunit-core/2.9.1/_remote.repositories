@@ -1,4 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Wed Nov 15 21:27:46 CST 2023
+#Wed Nov 29 11:06:50 CST 2023
 xmlunit-core-2.9.1.pom>alimaven=
 xmlunit-core-2.9.1.jar>alimaven=
+xmlunit-core-2.9.1-sources.jar>alimaven=

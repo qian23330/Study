@@ -38,5 +38,5 @@ class Solution:
 
 if __name__ == '__main__':
     obstacleGrid = [[int(path) for path in paths.split()] for paths in input().split(",")]
-    print(obstacleGrid)
+    # print(obstacleGrid)
     print(Solution().uniquePathsWithObstacles(obstacleGrid))

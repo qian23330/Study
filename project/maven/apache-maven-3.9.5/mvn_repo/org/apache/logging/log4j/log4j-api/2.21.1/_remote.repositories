@@ -1,4 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Mon Nov 27 11:26:44 CST 2023
+#Wed Nov 29 11:05:54 CST 2023
 log4j-api-2.21.1.pom>alimaven=
 log4j-api-2.21.1.jar>alimaven=
+log4j-api-2.21.1-sources.jar>alimaven=
