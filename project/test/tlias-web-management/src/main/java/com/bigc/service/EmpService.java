@@ -32,4 +32,22 @@ public interface EmpService {
      * @param emp
      */
     void save(Emp emp);
+
+    /**
+     * 根据 id 查询员工
+     * @param id
+     */
+    Emp getById(Integer id);
+
+    /**
+     * 更新员工
+     * @param emp
+     */
+    void update(Emp emp);
+
+    /**
+     * 员工登录
+     * @param emp
+     */
+    Emp login(Emp emp);
 }
