@@ -1,6 +1,7 @@
 package com.bigc.mapper;
 
 import com.bigc.pojo.Emp;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -68,4 +69,11 @@ public interface EmpMapper {
      */
     @Select("select * from emp where username = #{username} and password = #{password}")
     Emp getByUsernameAndPassword(Emp emp);
+
+    /**
+     * 根据部门 id 删除员工
+     * @param deptid
+     */
+    @Delete("delete from emp where dept_id = #{deptid} ")
+    void deleteByDeptId(Integer deptid);
 }
