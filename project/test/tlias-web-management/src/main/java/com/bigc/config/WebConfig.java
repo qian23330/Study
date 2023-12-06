@@ -1,4 +1,4 @@
-package com.bigc.controller.config;
+package com.bigc.config;
 
 import com.bigc.interceptor.LoginCheckInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;

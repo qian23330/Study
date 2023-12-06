@@ -23,7 +23,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = list(map(int, input().split()))
+    list = [x for x in input().split()]
     # root = tree.construct_binary_tree(list)
     result_tree = Solution().sortedArrayToBST(list)
     print_tree(result_tree)

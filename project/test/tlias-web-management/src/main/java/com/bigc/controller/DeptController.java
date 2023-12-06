@@ -1,5 +1,6 @@
 package com.bigc.controller;
 
+import com.bigc.anno.Log;
 import com.bigc.pojo.Dept;
 import com.bigc.pojo.Result;
 import com.bigc.service.DeptService;
@@ -25,6 +26,7 @@ public class DeptController {
     private DeptService deptService;
 
     // @RequestMapping(value = "/depts", method = RequestMethod.GET)
+
     @GetMapping
     public Result list() {
         log.info("查询全部部门数据");
@@ -35,6 +37,7 @@ public class DeptController {
         return Result.success(deptList);
     }
 
+    @Log
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) {
         log.info("根据id删除部门：{}", id);
@@ -44,6 +47,7 @@ public class DeptController {
         return Result.success();
     }
 
+    @Log
     @PostMapping
     public Result add(@RequestBody Dept dept) {
         log.info("新增部门：{}", dept);
@@ -62,6 +66,7 @@ public class DeptController {
         return Result.success(dept);
     }
 
+    @Log
     @PutMapping
     public Result update(@RequestBody Dept dept) {
         log.info("修改部门：{}", dept);

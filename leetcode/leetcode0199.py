@@ -30,6 +30,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = list(map(int, input().split()))
+    list = [x for x in input().split()]
     root = construct_binary_tree(list)
     print(Solution().rightSideView(root))

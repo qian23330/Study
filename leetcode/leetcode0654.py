@@ -19,7 +19,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = list(map(int, input().split()))
+    list = [x for x in input().split()]
     result_tree = Solution().constructMaximumBinaryTree(list)
     print_tree(result_tree)
 

@@ -35,6 +35,7 @@ public class AliOSSUtils {
     public AliOSSUtils() throws ClientException {
     }
 
+
     /**
      * 实现上传图片到OSS
      */
