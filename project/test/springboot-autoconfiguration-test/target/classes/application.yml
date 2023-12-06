@@ -1,0 +1,5 @@
+# 阿里云
+aliyun:
+  oss:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+    bucketName: ql-web-tlias
