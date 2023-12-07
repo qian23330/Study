@@ -1,11 +1,11 @@
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/controller/DeptController.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/service/impl/DeptServiceImpl.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/utils/AliOSSProperties.java
-/Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/controller/config/WebConfig.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/TliasWebManagementApplication.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/interceptor/LoginCheckInterceptor.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/controller/EmpController.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/anno/Log.java
+/Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/config/CommonConfig.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/service/DeptService.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/controller/LoginController.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/pojo/Result.java
@@ -21,6 +21,7 @@
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/pojo/PageBean.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/service/impl/DeptLogServiceImpl.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/pojo/DeptLog.java
+/Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/config/WebConfig.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/controller/UploadController.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/pojo/Dept.java
 /Users/qianlong/Git/Study/project/test/tlias-web-management/src/main/java/com/bigc/aop/LogAspect.java
