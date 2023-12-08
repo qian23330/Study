@@ -50,7 +50,7 @@ export const constantRoutes = [
         meta: { title: '学员管理', icon: 'el-icon-user-solid' }
       }
     ]
-  }, 
+  },
   {
     path: '/system',
     component: Layout,
@@ -72,8 +72,6 @@ export const constantRoutes = [
       }
     ]
   },
-
- 
   {
     path: '/report',
     component: Layout,
@@ -95,8 +93,6 @@ export const constantRoutes = [
       }
     ]
   },
-
- 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

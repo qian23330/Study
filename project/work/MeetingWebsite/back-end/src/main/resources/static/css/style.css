@@ -879,13 +879,7 @@ object {
  * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
  */
 
-@-ms-viewport {
-    width: device-width;
-}
 
-@viewport {
-    width: device-width;
-}
 
 
 /*=============================
@@ -2811,7 +2805,6 @@ testimonial
 .testimonial-item .testi-content {
     width: calc(100% - 165px);
     width: -webkit-calc(100% - 165px);
-    width: -ms-calc(100% - 165px);
     margin-left: 40px;
     border: 1px solid #ccc;
     padding: 15px 20px 18px;
@@ -4265,7 +4258,7 @@ edu-errorpage media screen
         padding: 15px;
     }
     .edu-errorpage em {
-        line-height: none;
+
         margin-bottom: 10px
     }
 }
