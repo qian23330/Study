@@ -209,7 +209,7 @@ export default {
         gender: "",
       },
       emp: {
-        image: "",
+        image: ''
       },
       deptList: [],
       genderList: [{id: 1,name: "男"},{id: 2,name: "女"}],
@@ -242,8 +242,8 @@ export default {
       multipleSelection: [],
       // 表格数据
       tableData: [],
-      token: {token: getToken()}
-    };
+      token: { token: getToken() }
+    }
   },
 
   mounted() {
@@ -310,16 +310,17 @@ export default {
       });
     },
     update(id) {
-      //1. 打开窗口
+      // 1. 打开窗口
       this.dialogVisible = true;
-      //2. 发送请求
+      // 2. 发送请求
 
       selectById(id).then((result) => {
+        // eslint-disable-next-line eqeqeq
         if (result.data.code == 1) {
-          this.emp = result.data.data;
-          this.emp;
+          this.emp = result.data.data
+          this.emp
         }
-      });
+      })
     },
 
     
@@ -391,22 +392,21 @@ export default {
         });
     },
 
-
-    //文件上传相关
+    // 文件上传相关
     handleAvatarSuccess(res, file) {
       this.emp.image = res.data;
     },
     beforeAvatarUpload(file) {
-      const isJPG = file.type === "image/jpeg";
+      const isJPG = file.type === 'image/jpeg';
       const isLt2M = file.size / 1024 / 1024 < 2;
       if (!isJPG) {
-        this.$message.error("上传头像图片只能是 JPG 格式!");
+        this.$message.error('上传头像图片只能是 JPG 格式!');
       }
       if (!isLt2M) {
-        this.$message.error("上传头像图片大小不能超过 2MB!");
+        this.$message.error('上传头像图片大小不能超过 2MB!');
       }
-      return isJPG && isLt2M;
-    },
+      return isJPG && isLt2M
+    }
   },
 
 

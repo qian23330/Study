@@ -8,7 +8,14 @@ const routes = [
   {
     path: '/',
     name: 'home',
+<<<<<<< HEAD
+    component: Home,
+    meta: {
+      keepAlive: false
+    }
+=======
     component: HomeView
+>>>>>>> parent of 9cf68e39 (12-10)
   },
   {
     path: '/about',

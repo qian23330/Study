@@ -1,10 +1,16 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+=======
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>
+>>>>>>> parent of 9cf68e39 (12-10)
   </div>
 </template>
 
@@ -30,3 +36,9 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<<<<<<< HEAD
+<script>
+
+</script>
+=======
+>>>>>>> parent of 9cf68e39 (12-10)
