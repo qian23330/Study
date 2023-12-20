@@ -2,8 +2,7 @@
 # 数组-双指针
 
 class Solution:
-    @staticmethod
-    def moveZeroes(nums: list[int]): #-> None:
+    def moveZeroes(self, nums: list[int]):  # -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -25,9 +24,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    numbers = []
-    for i in input().split():
-        numbers.append(int(i))
+    nums = [int(i) for i in input().split()]
 
-    num = Solution.moveZeroes(numbers)
+    num = Solution().moveZeroes(nums)
     print(num)

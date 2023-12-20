@@ -1,1 +1,27 @@
+spring:
+  # 数据库连接信息
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://58.206.100.88:3306/community
+    username: root
+    password: stu2023
 
+  # 关闭Thymeleaf的缓存
+  thymeleaf:
+    cache:
+      false
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+# spring事务管理日志
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: DEBUG
+
+# 路径
+server:
+  servlet:
+    context-path:  /community

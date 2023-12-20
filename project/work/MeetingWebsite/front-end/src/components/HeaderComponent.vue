@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div id="layout-header" :class="{'fixed':fixed,'hidden':hidden,'e':e && index===1}"
        @click.stop="mobileShow=false">
     <div class="site-branding">
@@ -15,27 +14,12 @@
           <a class="aa">{{ menu.name }}</a>
         </router-link>
       </nav>
-=======
-  <div class="top-header">
-<!--    <h2>HELLO</h2>-->
-    <div class="container">
-      <div class="row">
-
-
-          <li>Welcome!</li>
-          <h1>HELLO</h1>
-
-
-      </div>
->>>>>>> parent of 9cf68e39 (12-10)
     </div>
   </div>
-
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
   name: "HeaderComponent",
   data() {
     return {
@@ -107,6 +91,7 @@ export default {
   },
 }
 </script>
+
 <style lang="less" scoped>
 #layout-header .el-image {
   width: 50px;
@@ -373,33 +358,3 @@ a {
 }
 
 </style>
-=======
-
-}
-</script>
-<style>
-.top-header {
-  background: #03a9f4;
-  padding: 10px 0;
-  clear: both;
-}
-.container {
-  max-width:720px
-}
-.row {
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -ms-flex-wrap:wrap;
-  flex-wrap:wrap;
-  margin-right:-15px;
-  margin-left:-15px
-}
-.col-md-5{-webkit-box-flex:0;-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;display: none;}
-.col-sm-5{-webkit-box-flex:0;-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}
-.tophead-link {
-  display: inline-block;
-}
-
-</style>
->>>>>>> parent of 9cf68e39 (12-10)

@@ -1,8 +1,9 @@
 <template>
   <div>
     <HeaderComponent></HeaderComponent>
-    <!-- banner slider -->
-    <Slider></Slider>
+    <div class="slider-container">
+      <img class="slider-items" src="@/assets/images/background/第二届基因组与转化医学国际研讨会.jpg" alt="image"/>
+    </div>
     <section class="slide-bottom-sec">
       <div class="container">
         <div class="slide-bottom">
@@ -53,7 +54,7 @@
           <div class="row mx-auto d-flex justify-content-center">
             <div class="col-md-8">
               <div class="title">
-                <h2>会议议题/Agenda</h2>
+                <h2 class="d-flex justify-content-center">会议议题/Agenda</h2>
               </div>
               <div class="welcome-inner">
                 <div class="row">
@@ -132,10 +133,9 @@
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
-import Slider from "@/components/SlideComponent1.vue";
 import Item from "@/components/Item.vue";
 export default {
   name: 'HomeView',
-  components: {Item, Slider, FooterComponent, HeaderComponent}
+  components: {Item, FooterComponent, HeaderComponent}
 }
 </script>

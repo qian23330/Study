@@ -1,4 +1,6 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Tue Dec 05 21:01:58 CST 2023
-junit-platform-launcher-1.10.1.pom>alimaven=
+#Wed Dec 20 12:48:39 CST 2023
 junit-platform-launcher-1.10.1.jar>alimaven=
+junit-platform-launcher-1.10.1.jar>central=
+junit-platform-launcher-1.10.1.pom>alimaven=
+junit-platform-launcher-1.10.1.pom>central=

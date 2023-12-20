@@ -2,7 +2,7 @@ spring:
   # 数据库连接信息
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://58.206.100.88:3306/
+    url: jdbc:mysql://58.206.100.88:3306/meeting_info
     username: root
     password: stu2023
   # 文件上传配置

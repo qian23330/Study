@@ -2,7 +2,7 @@
   <el-table
       :data="tableData"
       style="width: 100%"
-      height="350" class="fontchange">
+      height="450" class="fontchange">
     <el-table-column
         prop="date"
         label="日期/Date"

@@ -1,7 +1,13 @@
 const { defineConfig } = require('@vue/cli-service')
+const path = require('path')
+const defaultSettings = require('./src/settings.js')
+const name = defaultSettings.title
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
+
 module.exports = defineConfig({
   transpileDependencies: true,
-<<<<<<< HEAD
   publicPath: './',
   outputDir: 'dist',
   assetsDir: 'static',
@@ -34,9 +40,5 @@ module.exports = defineConfig({
         }
       }
     }
-=======
-  devServer: {
-    port: 80
->>>>>>> parent of 9cf68e39 (12-10)
   }
 })
