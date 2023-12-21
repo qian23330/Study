@@ -12,7 +12,7 @@
     <section class="homepage-event section">
       <div class="container">
         <div class="title sec-title">
-          <h2>会议议程/Schedule</h2>
+          <h2 class="mytext">Schedule</h2>
           <p>会议具体时间安排如下：(Underdetermined)</p>
         </div>
         <div class="row mx-auto d-flex justify-content-center">
@@ -31,6 +31,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.mytext {
+  text-transform: capitalize;
 }
 </style>
 <script setup>

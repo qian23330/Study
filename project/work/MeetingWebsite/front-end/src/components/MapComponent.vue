@@ -30,9 +30,9 @@ export default {
           })
           // 使用本地图片作为标记点的图标
           let markerIcon = new AMap.Icon({
-            imageSize: new AMap.Size(32, 32),
+            imageSize: new AMap.Size(48, 48),
             image: '/static/photos/background/locate.png', // 替换为你的本地图片路径
-            size: new AMap.Size(32, 32)
+            size: new AMap.Size(48, 48)
           })
 
           // 添加标记点
@@ -46,7 +46,7 @@ export default {
           // 创建初始信息窗体
           let initialInfoWindow = new AMap.InfoWindow({
             content: "I'm here!", // 初始弹框文本内容
-            offset: new AMap.Pixel(0, -10)
+            offset: new AMap.Pixel(20, 0)
           })
 
           // 在地图加载完成后显示初始信息窗体
@@ -57,7 +57,7 @@ export default {
           // 创建信息窗体
           let infoWindow = new AMap.InfoWindow({
             content: 'xjtu',
-            offset: new AMap.Pixel(0, -10)
+            offset: new AMap.Pixel(20, 0)
           })
 
           // 点击标记点显示信息窗体

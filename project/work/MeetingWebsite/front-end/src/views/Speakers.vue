@@ -12,7 +12,7 @@
     <section class="meet-team section">
       <div class="container">
         <div class="title sec-title">
-          <h2>Speakers</h2>
+          <h2 class="mytext">Speakers</h2>
           <p>Here are the introduction of our speakers.(Underdetermined)</p>
         </div>
       </div>
@@ -33,11 +33,11 @@
         <a href="https://gr.xjtu.edu.cn/en/web/yangtielin/1">了解更多</a>
       </div>
       <div class="card">
-        <div class="photo"><img src="" alt=""></div>
-        <h1>待定</h1>
-        <h2>待定</h2>
-        <p>待定</p>
-        <a href="#">了解更多</a>
+        <div class="photo"><img src="/static/photos/bigc/郭燕.jpg" alt=""></div>
+        <h1>郭燕</h1>
+        <h2>教授，博士生导师</h2>
+        <p>西安交通大学生物医学信息与基因组学中心</p>
+        <a href="https://gr.xjtu.edu.cn/en/web/guoyan253">了解更多</a>
       </div>
     </section>
     <section class="introduction">
@@ -148,11 +148,13 @@
   padding-bottom: 20px;
 }
 .card p{
-  width: 90%;
+  width: 80%;
   text-indent: 32px;
   font-size: 16px;
   margin-bottom: 15px;
   line-height: 30px;
+  text-align: center;
+  margin-right: 30px;
 }
 .card a{
   font-size: 14px;
@@ -165,6 +167,9 @@
 .card a:hover{
   color: #fff;
   background-color: rgba(255,255,255,0.2);
+}
+.mytext {
+  text-transform: capitalize;
 }
 </style>
 <script setup>

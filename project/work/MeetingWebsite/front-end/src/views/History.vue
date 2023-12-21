@@ -12,7 +12,7 @@
     <section class="clients section">
       <div class="container">
         <div class="title sec-title">
-          <h2>Our History</h2>
+          <h2 class="mytext">Our History</h2>
           <p>往届会议回顾/Review of the 1st ISGTM</p>
         </div>
         <div class="video-top">
@@ -40,7 +40,9 @@
 </template>
 
 <style scoped>
-
+.mytext {
+  text-transform: capitalize;
+}
 </style>
 <script setup>
 import HeaderComponent from "@/components/HeaderComponent.vue";

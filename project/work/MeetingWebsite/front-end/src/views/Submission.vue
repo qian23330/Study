@@ -12,23 +12,23 @@
     <section class="contact-page inner-page">
       <div class="col-md-6 mx-auto">
         <div class="title inner-page-title">
-          <h3>Submission(Not Started Yet)</h3>
+          <h3 class="mytext">Submission(Not Started Yet)</h3>
         </div>
         <el-form ref="form" :model="people" label-width="100px" :rules="formRules">
           <el-row :gutter="20">
             <el-col :span="12">
-              <el-form-item label="Name :">
-                <el-input v-model="people.name" placeholder="name"></el-input>
+              <el-form-item label="Name :" prop="name">
+                <el-input v-model="people.name" placeholder="Name" ></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="Email :">
-                <el-input v-model="people.email" placeholder="email"></el-input>
+              <el-form-item label="Email :" prop="email">
+                <el-input v-model="people.email" placeholder="Email"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="Tel :">
-                <el-input v-model="people.telephone" placeholder="Tel"></el-input>
+              <el-form-item label="Tel :" prop="telephone">
+                <el-input v-model="people.telephone" placeholder="Telephone"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="12">
@@ -50,11 +50,12 @@
                 <el-upload class="upload-demo" drag action="/api/upload" multiple :limit="1"
                            name="doc"
                            :before-upload="beforeAvatarUpload" :on-success="handleAvatarSuccess"
-                           :show-file-list="false">
+                           :file-list="fileList" :on-change="handleChange">
                   <i class="el-icon-upload"></i>
                   <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
                   <div class="el-upload__tip" slot="tip">请修改文件名为‘姓名-标题'！<br>
-                    注意：仅支持.pdf/.doc文件，且不超过10MB</div>
+                    注意：仅支持.pdf/.doc文件，且不超过10MB。<br>
+                    一次仅支持上传一个文件，请检查无误后上传。</div>
                 </el-upload>
               </el-form-item>
             </el-col>
@@ -66,9 +67,6 @@
   </div>
 </template>
 
-<style scoped>
-
-</style>
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
@@ -88,6 +86,7 @@ export default {
           files: '',
         }
       },
+      fileList: [],
       formRules: {
         name: [{required: true, message: 'Please input name', trigger: 'blur'}],
         email: [{required: true, message: 'Please input email', trigger: 'blur'}],
@@ -96,6 +95,10 @@ export default {
     };
   },
   methods: {
+    handleChange(file, fileList) {
+      // 获取上传文件的信息，设置文件名到 fileList
+      file.raw && this.fileList.push({ name: file.raw.name });
+    },
     handleAvatarSuccess(res, file) {
       this.people.attach.files = res.data.data;
       this.$message.success('文件上传成功！');
@@ -157,5 +160,8 @@ width: fit-content;
 }
 .el-upload__tip {
   font-size: medium;
+}
+.mytext {
+  text-transform: capitalize;
 }
 </style>

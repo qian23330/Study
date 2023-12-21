@@ -14,7 +14,7 @@
         <div class="row">
           <div class="col-md-6 text-left">
             <div class="title inner-page-title">
-              <h3>Contact info/Traffic</h3>
+              <h3 class="mytext">Contact info/Traffic</h3>
             </div>
             <div class="contact-info">
               <p><i class="fa fa-phone"></i>+86-18192703755</p>
@@ -34,7 +34,7 @@
     </section>
     <div class="container">
       <div class="title sec-title">
-        <h2>Hotel</h2>
+        <h2 class="mytext">Hotel</h2>
         <p>蔓兰酒店/Man Lan Hotel</p>
       </div>
     </div>
@@ -175,6 +175,9 @@
 .card a:hover{
   color: #fff;
   background-color: rgba(255,255,255,0.2);
+}
+.mytext {
+  text-transform: capitalize;
 }
 </style>
 <script>

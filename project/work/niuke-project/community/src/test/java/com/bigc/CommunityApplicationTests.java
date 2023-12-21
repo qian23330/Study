@@ -3,6 +3,8 @@ package com.bigc;
 import com.bigc.mapper.DiscussPostMapper;
 import com.bigc.pojo.DiscussPost;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,6 +15,8 @@ class CommunityApplicationTests {
 
     @Autowired
     private DiscussPostMapper discussPostMapper;
+
+    private static final Logger logger = LoggerFactory.getLogger(CommunityApplicationTests.class);
 
     @Test
     void contextLoads() {
@@ -27,6 +31,16 @@ class CommunityApplicationTests {
 
         int rows = discussPostMapper.selectDiscussPostRows(149);
         System.out.println(rows);
+    }
+
+    @Test
+    public void testLogger() {
+        System.out.println(logger.getName());
+
+        logger.debug("debug log");
+        logger.info("info log");
+        logger.warn("warn log");
+        logger.error("error log");
     }
 
 }

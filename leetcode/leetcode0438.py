@@ -1,5 +1,5 @@
 ### 力扣-0438-找到字符串中所有字母异位词 ###
-# 哈希表+滑动窗口+快慢指针
+# 哈希表+滑动窗口
 
 from collections import defaultdict
 
@@ -45,13 +45,3 @@ if __name__ == '__main__':
     s, p = input().split()
     print(Solution().findAnagrams(s, p))
 
-
-# class Solution:
-#     def findAnagrams(self, s: str, p: str) -> List[int]:
-#         pset = set(collections.Counter(p).items())
-#         left, right = 0, len(p)
-#         ans = []
-#         for i in range(len(s)-right + 1):
-#             if not (set(collections.Counter(s[left + i: right + i]).items()) ^ pset):
-#                 ans.append(i)
-#         return ans

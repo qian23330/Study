@@ -122,7 +122,7 @@
           <p>西安交通大学/Xi'an Jiaotong University</p>
         </div>
         <div class="pupular-course-inner">
-            <Item />
+            <Slider></Slider>
         </div>
       </div>
     </section>
@@ -133,9 +133,9 @@
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
-import Item from "@/components/Item.vue";
+import Slider from "@/components/SliderComponent.vue";
 export default {
   name: 'HomeView',
-  components: {Item, FooterComponent, HeaderComponent}
+  components: {Slider, FooterComponent, HeaderComponent}
 }
 </script>
