@@ -2,30 +2,33 @@
 # 单调队列
 
 
-from collections import deque
+import collections
 from typing import List
 
 
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
-        ans = []
-        q = deque()  # 双端队列
-        for i, x in enumerate(nums):
-            # 1. 入
-            while q and nums[q[-1]] <= x:
-                q.pop()  # 维护 q 的单调性
-            q.append(i)  # 入队
-            # 2. 出
-            if i - q[0] >= k:  # 队首已经离开窗口了
-                q.popleft()
-            # 3. 记录答案
-            if i >= k - 1:
-                # 由于队首到队尾单调递减，所以窗口最大值就是队首
-                ans.append(nums[q[0]])
-        return ans
+        if not nums or k == 0:
+            return []
+        deque = collections.deque()
+        # 未形成窗口
+        for i in range(k):
+            while deque and deque[-1] < nums[i]:
+                deque.pop()
+            deque.append(nums[i])
+        res = [deque[0]]
+        # 形成窗口后
+        for i in range(k, len(nums)):
+            if deque[0] == nums[i - k]:
+                deque.popleft()
+            while deque and deque[-1] < nums[i]:
+                deque.pop()
+            deque.append(nums[i])
+            res.append(deque[0])
+        return res
 
 
 if __name__ == '__main__':
-    nums = list(map(int, input().split()))
+    nums = [int(i) for i in input().split()]
     k = int(input())
     print(Solution().maxSlidingWindow(nums, k))

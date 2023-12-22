@@ -1,5 +1,59 @@
-2023-12-21 20:49:41,525 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:50] Starting CommunityApplicationTests using Java 17.0.8 with PID 27640 (started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project/community)
-2023-12-21 20:49:41,526 INFO [main] c.b.CommunityApplicationTests [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
-2023-12-21 20:49:43,014 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
-2023-12-21 20:49:43,347 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:56] Started CommunityApplicationTests in 2.185 seconds (process running for 3.574)
-2023-12-21 20:49:43,801 INFO [main] c.b.CommunityApplicationTests [CommunityApplicationTests.java:41] info log
+2023-12-22 15:12:22,855 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:50] Starting CommunityApplicationTests using Java 17.0.8 with PID 10332 (started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project/community)
+2023-12-22 15:12:22,857 INFO [main] c.b.CommunityApplicationTests [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:12:23,442 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
+2023-12-22 15:12:23,567 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:56] Started CommunityApplicationTests in 0.886 seconds (process running for 1.46)
+2023-12-22 15:14:14,664 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:50] Starting CommunityApplicationTests using Java 17.0.8 with PID 10444 (started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project/community)
+2023-12-22 15:14:14,666 INFO [main] c.b.CommunityApplicationTests [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:14:16,361 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
+2023-12-22 15:14:16,690 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:56] Started CommunityApplicationTests in 2.758 seconds (process running for 4.546)
+2023-12-22 15:15:13,555 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:50] Starting CommunityApplicationTests using Java 17.0.8 with PID 10521 (started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project/community)
+2023-12-22 15:15:13,555 INFO [main] c.b.CommunityApplicationTests [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:15:14,080 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
+2023-12-22 15:15:14,213 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:56] Started CommunityApplicationTests in 0.832 seconds (process running for 1.321)
+2023-12-22 15:25:39,195 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:50] Starting CommunityApplicationTests using Java 17.0.8 with PID 11003 (started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project/community)
+2023-12-22 15:25:39,197 INFO [main] c.b.CommunityApplicationTests [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:25:39,724 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
+2023-12-22 15:25:39,851 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:56] Started CommunityApplicationTests in 0.833 seconds (process running for 1.249)
+2023-12-22 15:37:29,772 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:50] Starting CommunityApplicationTests using Java 17.0.8 with PID 11465 (started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project/community)
+2023-12-22 15:37:29,772 INFO [main] c.b.CommunityApplicationTests [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:37:30,281 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
+2023-12-22 15:37:30,409 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:56] Started CommunityApplicationTests in 0.835 seconds (process running for 1.262)
+2023-12-22 15:54:01,034 INFO [restartedMain] c.b.CommunityApplication [StartupInfoLogger.java:50] Starting CommunityApplication using Java 17.0.8 with PID 12121 (/Users/qianlong/Git/Study/project/work/niuke-project/community/target/classes started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project)
+2023-12-22 15:54:01,035 INFO [restartedMain] c.b.CommunityApplication [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:54:01,058 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:54:01,058 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-22 15:54:01,467 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port 8080 (http)
+2023-12-22 15:54:01,471 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-22 15:54:01,473 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-12-22 15:54:01,473 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:54:01,488 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-12-22 15:54:01,488 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] Root WebApplicationContext: initialization completed in 430 ms
+2023-12-22 15:54:01,627 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
+2023-12-22 15:54:01,880 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-12-22 15:54:01,888 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-22 15:54:01,896 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:221] Tomcat started on port 8080 (http) with context path '/community'
+2023-12-22 15:54:01,901 INFO [restartedMain] c.b.CommunityApplication [StartupInfoLogger.java:56] Started CommunityApplication in 1.096 seconds (process running for 1.426)
+2023-12-22 15:54:20,854 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:54:20,855 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:54:20,858 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 2 ms
+2023-12-22 15:54:20,921 INFO [http-nio-8080-exec-2] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-12-22 15:54:21,301 INFO [http-nio-8080-exec-2] c.z.h.p.HikariPool [HikariPool.java:565] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@395b3b4c
+2023-12-22 15:54:21,305 INFO [http-nio-8080-exec-2] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-12-22 15:55:18,202 INFO [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:211] Restarting due to 3 class path changes (1 addition, 0 deletions, 2 modifications)
+2023-12-22 15:55:18,213 INFO [Thread-5] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-22 15:55:18,229 INFO [Thread-5] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-12-22 15:55:18,321 INFO [Thread-5] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2023-12-22 15:55:18,394 INFO [restartedMain] c.b.CommunityApplication [StartupInfoLogger.java:50] Starting CommunityApplication using Java 17.0.8 with PID 12121 (/Users/qianlong/Git/Study/project/work/niuke-project/community/target/classes started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project)
+2023-12-22 15:55:18,394 INFO [restartedMain] c.b.CommunityApplication [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:55:18,508 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port 8080 (http)
+2023-12-22 15:55:18,508 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-22 15:55:18,508 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-12-22 15:55:18,508 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:55:18,512 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-12-22 15:55:18,512 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] Root WebApplicationContext: initialization completed in 116 ms
+2023-12-22 15:55:18,547 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
+2023-12-22 15:55:18,580 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-12-22 15:55:18,584 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-22 15:55:18,585 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:221] Tomcat started on port 8080 (http) with context path '/community'
+2023-12-22 15:55:18,587 INFO [restartedMain] c.b.CommunityApplication [StartupInfoLogger.java:56] Started CommunityApplication in 0.223 seconds (process running for 78.112)
+2023-12-22 15:55:18,588 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged

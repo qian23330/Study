@@ -11,6 +11,20 @@ spring:
     cache:
       false
 
+  # Mail配置
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 1339852932@qq.com
+    password: wimratzxzflihejc
+    protocol: smtps
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+    default-encoding: UTF-8
+
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -25,3 +39,4 @@ logging:
 server:
   servlet:
     context-path:  /community
+

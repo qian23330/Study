@@ -2,60 +2,39 @@
 # 数组-滑动窗口
 
 
-from collections import defaultdict
+import collections
 
 
 class Solution:
-    @staticmethod
-    def minWindow(s: str, t: str) -> str:
-        minLen = len(t)
-        maxLen = len(s)
-
-        if maxLen < minLen:
-            return ""
-
-        char_count = defaultdict(int)
-
-        for char in t:
-            char_count[char] += 1
-
-        char_list = []
-
-        for i in range(maxLen):
-            if s[i] in char_count:
-                char_list.append(i)
-
-        res = s + "a"
-        left = 0
-        count = 0
-
-        for right in range(len(char_list)):
-            if char_count[s[char_list[right]]] == 1:
-                count += 1
-            char_count[s[char_list[right]]] -= 1
-
-            if count == len(char_count):
-                while char_count[s[char_list[left]]] < 0:
-                    char_count[s[char_list[left]]] += 1
-                    left += 1
-
-                substr = s[char_list[left]:char_list[right] + 1]
-
-                if len(substr) < len(res):
-                    res = substr
-
-                if char_count[s[char_list[left]]] == 0:
-                    count -= 1
-
-                char_count[s[char_list[left]]] += 1
-                left += 1
-
-        return res if len(res) <= len(s) else ""
+    def minWindow(self, s: str, t: str) -> str:
+        need = collections.defaultdict(int)
+        for c in t:
+            need[c] += 1
+        needCnt = len(t)
+        i = 0
+        res = (0, float('inf'))
+        for j, c in enumerate(s):
+            if need[c] > 0:
+                needCnt -= 1
+            need[c] -= 1
+            if needCnt == 0:  # 步骤一：滑动窗口包含了所有T元素
+                while True:  # 步骤二：增加i，排除多余元素
+                    c = s[i]
+                    if need[c] == 0:
+                        break
+                    need[c] += 1
+                    i += 1
+                if j - i < res[1] - res[0]:  # 记录结果
+                    res = (i, j)
+                need[s[i]] += 1  # 步骤三：i增加一个位置，寻找新的满足条件滑动窗口
+                needCnt += 1
+                i += 1
+        return '' if res[1] > len(s) else s[res[0]:res[1] + 1]  # 如果res始终没被更新过，代表无满足条件的结果
 
 
 if __name__ == "__main__":
     s = input()
     t = input()
-    print(Solution.minWindow(s, t))
+    print(Solution().minWindow(s, t))
 
 

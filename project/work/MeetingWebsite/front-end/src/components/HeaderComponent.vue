@@ -138,9 +138,9 @@ a {
   z-index: 9;
   width: 100%;
   height: 6em;
-  padding: 0 33% 0 5%;
+  padding: 0 10% 0 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   transition: .3s all ease;
   -webkit-transition: .3s all ease;

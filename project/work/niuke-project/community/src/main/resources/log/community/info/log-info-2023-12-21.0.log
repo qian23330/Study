@@ -1,0 +1,5 @@
+2023-12-21 20:49:41,525 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:50] Starting CommunityApplicationTests using Java 17.0.8 with PID 27640 (started by qianlong in /Users/qianlong/Git/Study/project/work/niuke-project/community)
+2023-12-21 20:49:41,526 INFO [main] c.b.CommunityApplicationTests [SpringApplication.java:653] No active profile set, falling back to 1 default profile: "default"
+2023-12-21 20:49:43,014 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:59] Adding welcome page template: index
+2023-12-21 20:49:43,347 INFO [main] c.b.CommunityApplicationTests [StartupInfoLogger.java:56] Started CommunityApplicationTests in 2.185 seconds (process running for 3.574)
+2023-12-21 20:49:43,801 INFO [main] c.b.CommunityApplicationTests [CommunityApplicationTests.java:41] info log
