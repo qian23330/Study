@@ -29,7 +29,11 @@
                 主题为探讨基因组学与转化医学领域的交叉研究，
                 为疾病治疗提供新的思路。
                 该次会议共有来自海内、外60多所高校、
-                科研院所的200余名代表参加了此次大会，其中外宾30余人。</p>
+                科研院所的200余名代表参加了此次大会，其中外宾30余人。
+              <br><br>The 1st ISGTM was held in Suzhou from June 14 to 17, 2018,
+                with the theme of exploring the cross-research between genomics and translational medicine to provide new ideas for disease treatment.
+                A total of more than 200 representatives from more than 60 universities and research institutes at home and abroad attended the conference,
+                including more than 30 foreign guests.</p>
             </div>
           </div>
         </div>

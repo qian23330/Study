@@ -9,10 +9,10 @@
 <!--        <span><a href="#/">Home</a></span><span><i class="fa fa-angle-right"></i>Submission</span>-->
 <!--      </div>-->
 <!--    </section>-->
-    <section class="contact-page inner-page">
+    <section class="clients section">
       <div class="col-md-6 mx-auto">
-        <div class="title inner-page-title">
-          <h3 class="mytext">Submission(Not Started Yet)</h3>
+        <div class="title sec-title">
+          <h2 class="mytext">Register/Submission</h2>
         </div>
         <el-form ref="form" :model="people" label-width="100px" :rules="formRules">
           <el-row :gutter="20">
@@ -42,23 +42,26 @@
               </el-form-item>
             </el-col>
             <el-col :span="24">
-              <el-button type="primary" @click="submitForm">Send Now</el-button>
+              <div class="submit-button">
+                <el-button type="primary" @click="submitForm" class="enlarged-button">Register Now</el-button>
+              </div>
             </el-col>
+
             <el-col :span="24">
               <br><br><br>
-              <el-form-item>
-                <el-upload class="upload-demo" drag action="/api/upload" multiple :limit="1"
-                           name="doc"
-                           :before-upload="beforeAvatarUpload" :on-success="handleAvatarSuccess"
-                           :file-list="fileList" :on-change="handleChange">
-                  <i class="el-icon-upload"></i>
-                  <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-                  <div class="el-upload__tip" slot="tip">请修改文件名为‘姓名-标题'！<br>
-                    注意：仅支持.pdf/.doc文件，且不超过10MB。<br>
-                    一次仅支持上传一个文件，请检查无误后上传。</div>
-                </el-upload>
-              </el-form-item>
-            </el-col>
+                <el-form-item>
+                  <el-upload class="upload-demo" drag action="/api/upload" multiple :limit="1"
+                             name="doc" :on-exceed="handleExceed"
+                             :before-upload="beforeAvatarUpload" :on-success="handleAvatarSuccess"
+                             :file-list="fileList">
+                    <i class="el-icon-upload"></i>
+                    <div class="el-upload__text">Drag the file here, or <em> click to upload</em></div>
+                    <div class="el-upload__tip" slot="tip">Please change the file name to 'Name - Title'!<br>
+                      Note: Only .pdf/.doc files are supported and do not exceed 10MB.<br>
+                      Only 1 file can be uploaded at a time. Please check it.</div>
+                  </el-upload>
+                </el-form-item>
+              </el-col>
           </el-row>
         </el-form>
       </div>
@@ -95,13 +98,16 @@ export default {
     };
   },
   methods: {
-    handleChange(file, fileList) {
-      // 获取上传文件的信息，设置文件名到 fileList
-      file.raw && this.fileList.push({ name: file.raw.name });
+    handleExceed(){
+      this.$message({
+        type:'warning',
+        message:'Only 1 file can be uploaded!'
+      });
+      return false;
     },
-    handleAvatarSuccess(res, file) {
+    handleAvatarSuccess(res) {
       this.people.attach.files = res.data.data;
-      this.$message.success('文件上传成功！');
+      this.$message.success('file uploaded successfully！');
     },
     beforeAvatarUpload(file) {
       const fileType = file.type.toLowerCase();
@@ -112,10 +118,12 @@ export default {
       const isLt2M = file.size / 1024 / 1024 < 10;
 
       if (!isAllowedType) {
-        this.$message.error("上传文件只能是 PDF 或 DOC 格式!");
+        this.$message.error("please check your file type which should be .pdf or .docx");
+        return false;
       }
       if (!isLt2M) {
-        this.$message.error("上传文件大小不能超过 10MB!");
+        this.$message.error("The file size cannot exceed 10MB!");
+        return false;
       }
 
       return isAllowedType && isLt2M;
@@ -155,13 +163,33 @@ export default {
 }
 </script>
 <style scoped>
-.upload-demo {
-width: fit-content;
-}
-.el-upload__tip {
-  font-size: medium;
-}
+
 .mytext {
   text-transform: capitalize;
+}
+.submit-button {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px; /* Adjust as needed */
+}
+.enlarged-button {
+  font-size: 16px; /* Adjust the font size as needed */
+  padding: 12px 20px; /* Adjust the padding to increase button size */
+}
+
+.el-upload__tip {
+  width: 100%; /* 文本框宽度占比 */
+  font-size: 14px;
+  text-align: center;
+}
+.el-upload__text {
+  text-align: center;
+}
+
+/deep/ .el-upload{
+  width: 100%;
+}
+/deep/ .el-upload .el-upload-dragger {
+  width: 100%;
 }
 </style>

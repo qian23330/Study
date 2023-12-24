@@ -47,7 +47,7 @@ export default {
         link: "/schedule",
         id: 3
       },{
-        name: "Submission",
+        name: "Register/Submission",
         link: "/submission",
         id: 4
       },{

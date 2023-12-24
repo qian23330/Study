@@ -27,11 +27,11 @@
               <div class="modern-inner">
                 <h4>重要日期/Important Date</h4>
                 <p>论文投稿/Submission：</p>
-                <p>2024年1月1日 至 5月1日/Jan 1-May 1, 2024</p>
+                <p>2024.01.01-2024.05.01</p>
                 <p>参会注册/Register：</p>
-                <p>2024年1月1日 至 6月12日/Jan 1-June 12, 2024</p>
+                <p>2024.01.01-2024.06.12</p>
                 <p>会议时间/Meeting：</p>
-                <p>2024年6月13日 至 6月16日/June 13-16, 2024</p>
+                <p>2024.06.13-2024.06.16</p>
                 <div class="modern-btn">
                   <a href="#/schedule">learn more<i class="fa fa-long-arrow-right"></i></a>
                 </div>
@@ -43,8 +43,8 @@
             <div class="col-md-4 modern-class modern-apply text-center">
               <div class="modern-apply-inner">
                 <!-- <p>Apply To</p> -->
-                <h3>Click to apply</h3>
-                <a href="#/submission" class="btn btn-primary btn">Apply</a>
+                <h3>Click To Register</h3>
+                <a href="#/submission" class="btn btn-primary btn">Register</a>
               </div>
             </div>
           </div>
@@ -118,8 +118,10 @@
     <section class="popular-course section grey-background">
       <div class="container">
         <div class="title sec-title">
-          <h2>主办与承办单位</h2>
-          <p>西安交通大学/Xi'an Jiaotong University</p>
+          <h2 class="mytext">主办与承办单位/Host and organizer</h2>
+          <h6>西安交通大学/Xi'an Jiaotong University</h6>
+          <br>
+          <h6>西安简介/Introduction of Xi'an :</h6>
         </div>
         <div class="pupular-course-inner">
             <Slider></Slider>
@@ -139,3 +141,9 @@ export default {
   components: {Slider, FooterComponent, HeaderComponent}
 }
 </script>
+
+<style scoped>
+.mytext {
+  text-transform: capitalize;
+}
+</style>

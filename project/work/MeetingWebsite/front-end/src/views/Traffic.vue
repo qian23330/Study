@@ -13,14 +13,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-left">
-            <div class="title inner-page-title">
-              <h3 class="mytext">Contact info/Traffic</h3>
+            <div class="title sec-title">
+              <h2 class="mytext">Traffic/Hotel</h2>
             </div>
             <div class="contact-info">
-              <p><i class="fa fa-phone"></i>+86-18192703755</p>
-              <p><i class="fa fa-envelope"></i>zhudongli2018@xjtu.edu.cn</p>
-              <p><i class="fa fa-clock-o"></i>Mon - Sat: 10am - 8pm | Sun: 10am-6 pm </p>
-              <p><i class="fa fa-map-marker"></i>Take Xi‘an metro line 5 to CHUANGXINGANG <br>
+              <p class="newtext"><i class="fa fa-map-marker"></i>Take Xi‘an metro line 5 to CHUANGXINGANG <br>
                 or CHUANGXINGANGDONG station and get off</p>
             </div>
           </div>
@@ -34,8 +31,7 @@
     </section>
     <div class="container">
       <div class="title sec-title">
-        <h2 class="mytext">Hotel</h2>
-        <p>蔓兰酒店/Man Lan Hotel</p>
+        <p class="newtext">蔓兰酒店/Man Lan Hotel</p>
       </div>
     </div>
     <section class="introduction">
@@ -178,6 +174,9 @@
 }
 .mytext {
   text-transform: capitalize;
+}
+.newtext {
+  font-size: 18px;
 }
 </style>
 <script>

@@ -16,5 +16,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = list(map(int, input().split()))
+    nums = [int(i) for i in input().split()]
     print(Solution().maxSubArray(nums))
