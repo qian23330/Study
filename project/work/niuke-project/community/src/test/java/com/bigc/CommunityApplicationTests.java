@@ -1,7 +1,9 @@
 package com.bigc;
 
 import com.bigc.mapper.DiscussPostMapper;
+import com.bigc.mapper.LoginTicketMapper;
 import com.bigc.pojo.DiscussPost;
+import com.bigc.pojo.LoginTicket;
 import com.bigc.utils.MailClient;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -12,6 +14,7 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
 import java.io.StringWriter;
+import java.util.Date;
 import java.util.List;
 
 @SpringBootTest
@@ -63,5 +66,19 @@ class CommunityApplicationTests {
         System.out.println(content);
 
         mailClient.sendMail("ql18092264121@sina.com", "HTML", content);
+    }
+
+    @Autowired
+    private LoginTicketMapper loginTicketMapper;
+
+    @Test
+    public void testInsertLoginTicket() {
+        LoginTicket loginTicket = new LoginTicket();
+        loginTicket.setUserId(101);
+        loginTicket.setTicket("abc");
+        loginTicket.setStatus(0);
+        loginTicket.setExpired(new Date(System.currentTimeMillis() + 1000 * 60 * 10));
+
+        loginTicketMapper.insertLoginTicket(loginTicket);
     }
 }

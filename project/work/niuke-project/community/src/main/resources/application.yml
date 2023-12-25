@@ -29,6 +29,7 @@ mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
+    use-generated-keys: true
 
 # spring事务管理日志
 logging:
@@ -38,5 +39,9 @@ logging:
 # 路径
 server:
   servlet:
-    context-path:  /community
+    context-path: /community
 
+# community
+community:
+  path:
+    domain: http://localhost:8080

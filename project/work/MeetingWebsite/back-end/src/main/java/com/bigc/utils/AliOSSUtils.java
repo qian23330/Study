@@ -28,10 +28,7 @@ public class AliOSSUtils {
     // 从环境变量中获取访问凭证。运行本代码示例之前，
     // 请确保已设置环境变量OSS_ACCESS_KEY_ID和OSS_ACCESS_KEY_SECRET。
     // 从环境变量中获取RAM用户的访问密钥（AccessKey ID和AccessKey Secret）。
-//    String accessKeyId = "LTAI5t9Er3GPsBUgvApT3ykk";
-//    String accessKeySecret = "wwbNpuDKgnHS8jYkxt03eX3exJyYz1";
 
-    // 使用代码嵌入的RAM用户的访问密钥配置访问凭证。
     private final EnvironmentVariableCredentialsProvider credentialsProvider =
             CredentialsProviderFactory.newEnvironmentVariableCredentialsProvider();
 

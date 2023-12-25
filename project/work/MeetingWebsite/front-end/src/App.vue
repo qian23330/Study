@@ -5,6 +5,10 @@
 </template>
 
 <style>
+body {
+  overflow-y: auto !important;
+  padding-right: 0 !important;
+}
 </style>
 
 <script>
