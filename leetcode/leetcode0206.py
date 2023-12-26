@@ -1,17 +1,13 @@
-### 力扣-0203-反转链表 ###
+### 力扣-0206-反转链表 ###
 # 链表
 
 
+from linkedlist.linkedlist import ListNode, create_linked_list_from_user_input, print_linked_list
+
+
 # 双指针
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-
 class Solution:
-    @staticmethod
-    def reverseList(head: ListNode) -> ListNode:
+    def reverseList(self, head: ListNode) -> ListNode:
         cur = head
         pre = None
         while cur:
@@ -21,37 +17,17 @@ class Solution:
             cur = temp
         return pre
 
-    @staticmethod
-    def create_linked_list_from_user_input():
-        values = input("请输入一系列整数，以空格分隔：").split()
-        head = ListNode(int(values[0]))
-        current = head
-
-        for val in values[1:]:
-            current.next = ListNode(int(val))
-            current = current.next
-
-        return head
-
-    @staticmethod
-    def print_linked_list(head):
-        current = head
-        while current:
-            print(current.val, end=" -> ")
-            current = current.next
-        print("None")
-
 
 if __name__ == '__main__':
     # 创建链表
-    user_input_linked_list = Solution.create_linked_list_from_user_input()
+    user_input_linked_list = create_linked_list_from_user_input()
     # 打印原始链表
     print("原始链表:")
-    Solution.print_linked_list(user_input_linked_list)
-    user_input_linked_list = Solution.reverseList(user_input_linked_list)
+    print_linked_list(user_input_linked_list)
+    user_input_linked_list = Solution().reverseList(user_input_linked_list)
     # 打印翻转后的链表
     print("翻转后的链表:")
-    Solution.print_linked_list(user_input_linked_list)
+    print_linked_list(user_input_linked_list)
 
 # 递归
 # class Solution:

@@ -61,10 +61,7 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="text text-left">Copyright &copy; 2024.Company name All rights reserved.
-
-            </div>
+            <div class="text-left">Copyright &copy; 2023 Biomedical Informatics & Genomics Center, Xi’an Jiaotong University, China. All rights reserved.
           </div>
         </div>
       </div>

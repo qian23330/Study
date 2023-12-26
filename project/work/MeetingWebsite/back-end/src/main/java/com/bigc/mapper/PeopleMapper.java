@@ -11,7 +11,7 @@ public interface PeopleMapper {
 
     int submittedCount();
 
-    @Insert("insert into people_info (id, name, email, telephone, title, content, create_time, update_time) values " +
-            "(#{id}, #{name}, #{email}, #{telephone}, #{title}, #{content}, #{createTime}, #{updateTime})")
+    @Insert("insert into register_info_test (id, name, email, telephone, title, content, create_time) values " +
+            "(#{id}, #{name}, #{email}, #{telephone}, #{title}, #{content}, #{createTime})")
     void add(People people);
 }

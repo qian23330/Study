@@ -2,8 +2,11 @@
 # 哈希表
 
 
+from typing import List
+
+
 class Solution:
-    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         sorted_strs = ["".join(sorted(s)) for s in strs]
         anagram_dict = {}
         for i, s in enumerate(sorted_strs):
@@ -17,7 +20,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    strs = []
-    for i in input().split():
-        strs.append(i)
+    strs = [i for i in input().split()]
     print(Solution().groupAnagrams(strs))

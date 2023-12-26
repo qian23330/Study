@@ -18,5 +18,4 @@ public class People {
     private String content;
     private String file;
     private LocalDateTime createTime;
-    private LocalDateTime updateTime;
 }

@@ -160,7 +160,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
+    font-family: 'Arial', sans-serif !important;
 }
 
 button,
@@ -435,7 +435,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 10px 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Arial', sans-serif !important;
     font-weight: 600;
     color: #191d3d;
     line-height: 1.3;
@@ -477,7 +477,7 @@ address {
 
 pre {
     background: #eee;
-    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-family: 'Arial', sans-serif !important;
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -490,7 +490,7 @@ code,
 kbd,
 tt,
 var {
-    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-family: 'Arial', sans-serif !important;
     font-size: 15px;
 }
 
@@ -1142,7 +1142,7 @@ main-navigation
 }
 
 #main-navigation {
-    font-family: 'Hind', sans-serif !important;
+    font-family: 'Arial', sans-serif !important;
     font-weight: bold; /* 加粗字体 */
 
 }
@@ -1331,7 +1331,7 @@ main-navigation
 
 #main-navigation ul li.menu-item-has-children > a::after{
     content: "\f107";
-    font-family: "FontAwesome";
+    font-family: 'Arial', sans-serif !important;
     margin-left: 10px;
     margin-right: 0;
     position: absolute;
@@ -1345,7 +1345,7 @@ main-navigation
 
 #main-navigation ul li li.menu-item-has-children > a::after {
     content: "\f105";
-    font-family: "FontAwesome";
+    font-family: 'Arial', sans-serif !important;
     top: 10px;
     right: 20px;
 }
@@ -1804,7 +1804,6 @@ slider-bottom
     height: 60px;
     background-color: rgb(0, 78, 151);
     color: #fff;
-    z-index: 99;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -2571,7 +2570,7 @@ event
     color: rgb(0, 78, 151);
     font-size: 12px;
     font-weight: normal;
-    font-family: 'FontAwesome';
+    font-family: 'Arial', sans-serif !important;
 }
 
 
@@ -2694,7 +2693,7 @@ testimonial
 .testimonial-item .testi-content:after {
     content: '\f10e';
     position: absolute;
-    font-family: FontAwesome;
+    font-family: 'Arial', sans-serif !important;
     font-size: 26px;
     right: 20px;
     bottom: 0px;
@@ -3254,7 +3253,7 @@ course-page
     left: 0;
     font-size: 12px;
     font-weight: normal;
-    font-family: 'FontAwesome';
+    font-family: 'Arial', sans-serif !important;
 }
 
 .curriculum-title {
@@ -4323,7 +4322,7 @@ footer .footer-widget address p i:hover{
 
 footer .links-widget ul li a:before {
     content: '\f105';
-    font-family: 'FontAwesome';
+    font-family: 'Arial', sans-serif !important;
     margin-right: 11px;
     color: rgb(0, 78, 151);
 }

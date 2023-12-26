@@ -1,5 +1,6 @@
 package com.bigc.service;
 
+import com.bigc.pojo.LoginTicket;
 import com.bigc.pojo.User;
 
 import java.util.Map;
@@ -16,4 +17,6 @@ public interface UserService {
     Map<String, Object> login(String username, String password, int expiredSeconds);
 
     void logout(String ticket);
+
+    LoginTicket findLoginTicket(String ticket);
 }

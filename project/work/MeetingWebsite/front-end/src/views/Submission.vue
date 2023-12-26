@@ -128,7 +128,21 @@ export default {
 
       return isAllowedType && isLt2M;
     },
+
     submitForm() {
+      const phoneNumberPattern = /^\d+$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!phoneNumberPattern.test(this.people.telephone)) {
+        this.$message.error('Please enter a valid phone number (digits only)');
+        return;
+      }
+
+      if (!emailPattern.test(this.people.email)) {
+        this.$message.error('Please enter a valid email address');
+        return;
+      }
+
       this.$refs.form.validate((valid) => {
         if (valid) {
           // 表单验证通过，执行提交逻辑
