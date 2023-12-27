@@ -1,5 +1,6 @@
 ### 力扣-0024-两两交换链表中的结点 ###
 # 链表
+from linkedlist.linkedlist import create_linked_list_from_user_input, print_linked_list
 
 
 # 虚拟头结点
@@ -10,8 +11,7 @@ class ListNode:
 
 
 class Solution:
-    @staticmethod
-    def swapPairs(head: ListNode) -> ListNode:
+    def swapPairs(self, head: ListNode) -> ListNode:
         dummy_head = ListNode(next=head)
         current = dummy_head
 
@@ -26,36 +26,16 @@ class Solution:
             current = current.next.next
         return dummy_head.next
 
-    @staticmethod
-    def create_linked_list_from_user_input():
-        values = input("请输入一系列整数，以空格分隔：").split()
-        head = ListNode(int(values[0]))
-        current = head
-
-        for val in values[1:]:
-            current.next = ListNode(int(val))
-            current = current.next
-
-        return head
-
-    @staticmethod
-    def print_linked_list(head):
-        current = head
-        while current:
-            print(current.val, end=" -> ")
-            current = current.next
-        print("None")
-
 
 if __name__ == '__main__':
-    user_input_linked_list = Solution.create_linked_list_from_user_input()
+    user_input_linked_list = create_linked_list_from_user_input()
     # 打印原始链表
     print("原始链表:")
-    Solution.print_linked_list(user_input_linked_list)
-    user_input_linked_list = Solution.swapPairs(user_input_linked_list)
+    print_linked_list(user_input_linked_list)
+    user_input_linked_list = Solution().swapPairs(user_input_linked_list)
     # 打印翻转后的链表
     print("翻转后的链表:")
-    Solution.print_linked_list(user_input_linked_list)
+    print_linked_list(user_input_linked_list)
 
 
 # 递归

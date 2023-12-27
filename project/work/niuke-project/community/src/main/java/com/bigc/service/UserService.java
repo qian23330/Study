@@ -4,7 +4,6 @@ import com.bigc.pojo.LoginTicket;
 import com.bigc.pojo.User;
 
 import java.util.Map;
-import java.util.Objects;
 
 public interface UserService {
 
@@ -19,4 +18,8 @@ public interface UserService {
     void logout(String ticket);
 
     LoginTicket findLoginTicket(String ticket);
+
+    void updateHeader(int userId, String headUrl);
+
+    void updatePassword(int userId, String newPassword);
 }

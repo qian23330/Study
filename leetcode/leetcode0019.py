@@ -1,5 +1,6 @@
 ### 力扣-0019-删除链表倒数第N个结点 ###
 # 链表
+from linkedlist.linkedlist import create_linked_list_from_user_input, print_linked_list
 
 
 class ListNode:
@@ -9,8 +10,7 @@ class ListNode:
 
 
 class Solution:
-    @staticmethod
-    def removeNthFromEnd(head: ListNode, n: int) -> ListNode:
+    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         # 创建一个虚拟节点，并将其下一个指针设置为链表的头部
         dummy_head = ListNode(0, head)
 
@@ -31,34 +31,14 @@ class Solution:
 
         return dummy_head.next
 
-    @staticmethod
-    def create_linked_list_from_user_input():
-        values = input("请输入一系列整数，以空格分隔：").split()
-        head = ListNode(int(values[0]))
-        current = head
-
-        for val in values[1:]:
-            current.next = ListNode(int(val))
-            current = current.next
-
-        return head
-
-    @staticmethod
-    def print_linked_list(head):
-        current = head
-        while current:
-            print(current.val, end=" -> ")
-            current = current.next
-        print("None")
-
 
 if __name__ == '__main__':
-    user_input_linked_list = Solution.create_linked_list_from_user_input()
+    user_input_linked_list = create_linked_list_from_user_input()
     # 打印原始链表
     print("原始链表:")
-    Solution.print_linked_list(user_input_linked_list)
+    print_linked_list(user_input_linked_list)
     n = int(input("要删除倒数第几个呢？"))
-    user_input_linked_list = Solution.removeNthFromEnd(user_input_linked_list, n)
+    user_input_linked_list = Solution().removeNthFromEnd(user_input_linked_list, n)
     # 打印翻转后的链表
-    print("翻转后的链表:")
-    Solution.print_linked_list(user_input_linked_list)
+    print("新链表:")
+    print_linked_list(user_input_linked_list)

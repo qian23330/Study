@@ -45,3 +45,4 @@ server:
 community:
   path:
     domain: http://localhost:8080
+    upload: /Users/qianlong/Git/Study/project/work/niuke-project/community/src/main/resources/upload

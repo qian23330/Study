@@ -130,32 +130,41 @@ export default {
     },
 
     submitForm() {
-      const phoneNumberPattern = /^\d+$/;
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (!phoneNumberPattern.test(this.people.telephone)) {
-        this.$message.error('Please enter a valid phone number (digits only)');
+      // Check if input fields are filled
+      if (!this.people.name || !this.people.email || !this.people.telephone) {
+        this.$message.error('Please fill in all the required fields');
         return;
       }
 
+      const phoneNumberPattern = /^\d+$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Validate email format
       if (!emailPattern.test(this.people.email)) {
         this.$message.error('Please enter a valid email address');
         return;
       }
 
+      // Validate phone number format
+      if (!phoneNumberPattern.test(this.people.telephone)) {
+        this.$message.error('Please enter a valid phone number (digits only)');
+        return;
+      }
+
+      // Proceed with form validation
       this.$refs.form.validate((valid) => {
         if (valid) {
-          // 表单验证通过，执行提交逻辑
+          // Rest of your existing logic for confirmation and submission
           this.$confirm("confirm to submit?", "Warning", {
             confirmButtonText: "Yes",
             cancelButtonText: "No",
             type: "warning",
           }).then(() => {
-            add(this.people) // 直接执行添加操作
+            add(this.people)
               .then((resp) => {
                 if (resp.data.code === 1) {
-                  this.$message.success({ message: 'successfully submitted', type: 'success' })
-                  // 可以根据需求做页面跳转或其他操作
+                  this.$message.success({ message: 'successfully submitted', type: 'success' });
+                  // Additional actions upon successful submission
                 } else {
                   this.$message.error(resp.data.msg);
                 }
@@ -163,16 +172,15 @@ export default {
               this.$message.error('An error occurred while submitting the form: ' + err.message);
             });
           }).catch(() => {
-            // 用户点击取消按钮
             this.$message.info("canceled");
           });
         } else {
-          // 表单验证失败，显示错误信息
           this.$message.error('Please fill in the required fields');
           return false;
         }
       });
     },
+
   }
 }
 </script>
