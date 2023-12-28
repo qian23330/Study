@@ -1,12 +1,8 @@
 ### 力扣-0019-删除链表倒数第N个结点 ###
 # 链表
-from linkedlist.linkedlist import create_linked_list_from_user_input, print_linked_list
 
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from linkedlist.linkedlist import create_linked_list_from_user_input, print_linked_list, ListNode
 
 
 class Solution:

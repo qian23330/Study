@@ -5,6 +5,7 @@ import com.bigc.mapper.LoginTicketMapper;
 import com.bigc.pojo.DiscussPost;
 import com.bigc.pojo.LoginTicket;
 import com.bigc.utils.MailClient;
+import com.bigc.utils.SensitiveFillter;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -81,4 +82,16 @@ class CommunityApplicationTests {
 
         loginTicketMapper.insertLoginTicket(loginTicket);
     }
+
+
+    @Autowired
+    private SensitiveFillter sensitiveFillter;
+
+    @Test
+    public void testSensitiveFilter() {
+        String text = "这里可以$赌$博$，可以x嫖x娼x，可以吸毒，可以开票。哈哈哈";
+        text = sensitiveFillter.filter(text);
+        System.out.println(text);
+    }
+
 }

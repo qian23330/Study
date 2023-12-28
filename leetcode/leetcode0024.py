@@ -1,13 +1,8 @@
 ### 力扣-0024-两两交换链表中的结点 ###
 # 链表
-from linkedlist.linkedlist import create_linked_list_from_user_input, print_linked_list
 
 
-# 虚拟头结点
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from linkedlist.linkedlist import create_linked_list_from_user_input, print_linked_list, ListNode
 
 
 class Solution:

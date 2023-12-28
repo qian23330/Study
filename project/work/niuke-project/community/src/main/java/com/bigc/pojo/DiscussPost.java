@@ -3,8 +3,7 @@ package com.bigc.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -16,7 +15,7 @@ public class DiscussPost {
     private String content;
     private int type;
     private int status;
-    private LocalDateTime createTime;
+    private Date createTime;
     private int commentCount;
     private double score;
 }

@@ -2,7 +2,7 @@
 # 链表-双链表
 
 
-class ListNode:
+class ListNode0:
     def __init__(self, val=0, prev=None, next=None):
         self.val = val
         self.prev = prev
@@ -31,7 +31,7 @@ class MyLinkedList:
         return current.val
 
     def addAtHead(self, val: int) -> None:
-        new_node = ListNode(val, None, self.head)
+        new_node = ListNode0(val, None, self.head)
         if self.head:
             self.head.prev = new_node
         else:
@@ -40,7 +40,7 @@ class MyLinkedList:
         self.size += 1
 
     def addAtTail(self, val: int) -> None:
-        new_node = ListNode(val, self.tail, None)
+        new_node = ListNode0(val, self.tail, None)
         if self.tail:
             self.tail.next = new_node
         else:
@@ -65,7 +65,7 @@ class MyLinkedList:
                 current = self.tail
                 for i in range(self.size - index):
                     current = current.prev
-            new_node = ListNode(val, current, current.next)
+            new_node = ListNode0(val, current, current.next)
             current.next.prev = new_node
             current.next = new_node
             self.size += 1
