@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="mapperFilesFolder" value="$PROJECT_DIR$/community/src/main/resources/com/bigc/mapper" />
+        <option name="mapperFilesFolderList">
+          <list>
+            <option value="$PROJECT_DIR$/community/src/main/resources/com/bigc/mapper" />
+          </list>
+        </option>
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

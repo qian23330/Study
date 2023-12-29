@@ -34,7 +34,7 @@
     </select>
 
     <insert id="insertDiscussPost" parameterType="com.bigc.pojo.DiscussPost">
-        insert into discuss_post(<include refid="insertFields"></include>)
+        insert into discuss_post(<include refid="insertFields"/>)
         values (#{userId}, #{title}, #{content}, #{type}, #{status}, #{createTime}, #{commentCount}, #{score})
     </insert>
 
@@ -45,4 +45,8 @@
         from discuss_post
         where id = #{id}
     </select>
+
+    <update id="updateCommentCount">
+        update discuss_post set comment_count = #{commentCount} where id = #{id}
+    </update>
 </mapper>
