@@ -20,7 +20,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list1 = create_linked_list_from_user_input()
-    list2 = create_linked_list_from_user_input()
-    res = Solution().mergeTwoLists(list1, list2)
+    l1 = create_linked_list_from_user_input()
+    l2 = create_linked_list_from_user_input()
+    res = Solution().mergeTwoLists(l1, l2)
     print_linked_list(res)

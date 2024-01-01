@@ -30,20 +30,3 @@ if __name__ == '__main__':
     # 打印翻转后的链表
     print("翻转后的链表:")
     print_linked_list(user_input_linked_list)
-
-
-# 递归
-# class Solution:
-#     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
-#         if head is None or head.next is None:
-#             return head
-#
-#         # 待翻转的两个node分别是pre和cur
-#         pre = head
-#         cur = head.next
-#         next = head.next.next
-#
-#         cur.next = pre  # 交换
-#         pre.next = self.swapPairs(next)  # 将以next为head的后续链表两两交换
-#
-#         return cur

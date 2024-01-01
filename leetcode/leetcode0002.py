@@ -33,7 +33,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    l1 = create_linked_list_from_user_input()
-    l2 = create_linked_list_from_user_input()
-    res = Solution().addTwoNumbers(l1, l2)
+    list1 = create_linked_list_from_user_input()
+    list2 = create_linked_list_from_user_input()
+    res = Solution().addTwoNumbers(list1, list2)
     print_linked_list(res)

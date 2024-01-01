@@ -4,6 +4,22 @@ class ListNode:
         self.next = next
 
 
+# 随机链表
+class Node:
+    def __init__(self, x: int, next=None, random=None):
+        self.val = int(x)
+        self.next = next
+        self.random = random
+
+
+class DLinkedNode:
+    def __init__(self, key=0, value=0):
+        self.key = key
+        self.value = value
+        self.prev = None
+        self.next = None
+
+
 def create_linked_list_from_user_input():
     values = input("请输入一系列整数，以空格分隔：").split()
     if len(values) != 0:

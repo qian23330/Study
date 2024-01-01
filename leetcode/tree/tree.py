@@ -1,7 +1,3 @@
-import collections
-from typing import Optional, List
-
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -18,8 +14,8 @@ def construct_binary_tree(nums: []) -> TreeNode:
     Tree = []
     # 将数组元素全部转化为树节点
     for i in range(len(nums)):
-        if nums[i] != 'null':
-            node = TreeNode(int(nums[i]))
+        if nums[i] != -1:
+            node = TreeNode(nums[i])
         else:
             node = None
         Tree.append(node)
@@ -34,20 +30,12 @@ def construct_binary_tree(nums: []) -> TreeNode:
     return root
 
 
-def print_tree(root: Optional[TreeNode]) -> List[int]:
+# 算法:中序遍历二叉树
+def print_tree(root: TreeNode) -> []:
+    T = []
     if not root:
-        return []
-    queue = collections.deque([root])
-    result = []
-    while queue:
-        # level = []
-        for _ in range(len(queue)):
-            cur = queue.popleft()
-            result.append(cur.val)
-            if cur.left:
-                queue.append(cur.left)
-            if cur.right:
-                queue.append(cur.right)
-        # result.append(level)
-    print(result)
-
+        return
+    print_tree(root.left)
+    T.append(root.val)
+    print_tree(root.right)
+    return T

@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.util.HtmlUtils;
 
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 @Service
 public class CommentServiceImpl implements CommentService, CommunityConstant {
@@ -40,7 +39,7 @@ public class CommentServiceImpl implements CommentService, CommunityConstant {
 
     @Override
     @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
-    public int addComment(Comment comment) {
+    public void addComment(Comment comment) {
         if (comment == null) {
             throw new IllegalArgumentException("参数不能为空！");
         }
@@ -55,6 +54,5 @@ public class CommentServiceImpl implements CommentService, CommunityConstant {
             int count = commentMapper.selectCountByEntity(comment.getEntityType(), comment.getEntityId());
             discussPostService.updateCommentCount(comment.getEntityId(), count);
         }
-        return rows;
     }
 }
