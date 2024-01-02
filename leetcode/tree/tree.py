@@ -6,7 +6,8 @@ class TreeNode:
 
 
 # 由数组转二叉树
-def construct_binary_tree(nums: []) -> TreeNode:
+def construct_binary_tree() -> TreeNode:
+    nums = input("请输入一系列整数，以空格分隔：").split()
     if not nums:
         return None
     # 用于存放构建好的节点
@@ -14,8 +15,8 @@ def construct_binary_tree(nums: []) -> TreeNode:
     Tree = []
     # 将数组元素全部转化为树节点
     for i in range(len(nums)):
-        if nums[i] != -1:
-            node = TreeNode(nums[i])
+        if nums[i] != 'null':
+            node = TreeNode(int(nums[i]))
         else:
             node = None
         Tree.append(node)

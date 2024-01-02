@@ -1,4 +1,4 @@
-### 力扣-0102-二叉树的层序遍历 ###
+# 力扣-102-二叉树的层序遍历
 # 二叉树-层序遍历
 
 
@@ -27,6 +27,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = [x for x in input().split()]
-    root = construct_binary_tree(list)
-    print(Solution().levelOrder(root))
+    tree = construct_binary_tree()
+    print(Solution().levelOrder(tree))

@@ -3,6 +3,8 @@ package com.bigc.controller;
 import com.bigc.pojo.User;
 import com.bigc.service.UserService;
 import com.bigc.utils.CommunityConstant;
+import com.bigc.utils.CommunityUtil;
+import com.bigc.utils.MailClient;
 import com.google.code.kaptcha.Producer;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,13 +17,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 
 import javax.imageio.ImageIO;
-import javax.servlet.ServletOutputStream;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.time.LocalDateTime;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 @Controller
 @RequestMapping("")
@@ -130,4 +135,60 @@ public class LoginController implements CommunityConstant {
         userService.logout(ticket);
         return "redirect:/login";
     }
+
+    @GetMapping("/forget")
+    public String getForgetPage() {
+        return "/site/forget";
+    }
+
+    // 获取验证码
+    @GetMapping("/getCode")
+    public String getCode(String email, Model model,HttpSession session) {
+        Map<String, Object> map = userService.getCode(email);
+        // 有错误的情况下
+        if (map.containsKey("emailMsg")) {
+            model.addAttribute("emailMsg", map.get("emailMsg"));
+            return "/site/forget";
+        } else {
+            // 正确的情况下，向邮箱发送了验证码
+            model.addAttribute("msg", "验证码已经发送到您的邮箱，5分钟内有效！");
+            model.addAttribute("target", "/forget");
+            // 将验证码存放在 session 中，后续和用户输入的信息进行比较
+            session.setAttribute("code", map.get("code"));
+            // 后续判断用户输入验证码的时候验证码是否已经过期
+            session.setAttribute("expirationTime", map.get("expirationTime"));
+            return "site/operate-result";
+        }
+
+    }
+
+
+    // 重置密码
+    @PostMapping("/forget/password")
+    public String forget(Model model, String email, String verifycode, String password, HttpSession session) {
+        // 验证验证码是否正确
+        if (!verifycode.equals(session.getAttribute("code"))) {
+            model.addAttribute("codeMsg", "输入的验证码不正确！");
+            return "site/forget";
+        }
+        // 验证码是否过期
+        if (LocalDateTime.now().isAfter((LocalDateTime) session.getAttribute("expirationTime"))) {
+            model.addAttribute("codeMsg", "输入的验证码已过期，请重新获取验证码！");
+            return "site/forget";
+        }
+
+        Map<String, Object> map = userService.forget(email, verifycode, password, session);
+        if (map == null || map.isEmpty()) {
+            model.addAttribute("msg", "密码修改成功，可以使用新密码登录了!");
+            model.addAttribute("target", "/login");
+            return "site/operate-result";
+        } else {
+            model.addAttribute("emailMsg", map.get("emailMsg"));
+            model.addAttribute("codeMsg", map.get("codeMsg"));
+            model.addAttribute("passwordMsg", map.get("passwordMsg"));
+            return "/site/forget";
+        }
+    }
+
+
 }

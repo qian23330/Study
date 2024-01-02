@@ -52,7 +52,6 @@ class LRUCache:
         self.head.next.prev = node
         self.head.next = node
 
-
     @staticmethod
     def removeNode(node):
         node.prev.next = node.next

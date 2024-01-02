@@ -2,6 +2,7 @@ package com.bigc.service;
 
 import com.bigc.pojo.LoginTicket;
 import com.bigc.pojo.User;
+import jakarta.servlet.http.HttpSession;
 
 import java.util.Map;
 
@@ -22,4 +23,10 @@ public interface UserService {
     void updateHeader(int userId, String headUrl);
 
     void updatePassword(int userId, String newPassword);
+
+    User findUserByName(String toName);
+
+    Map<String, Object> getCode(String email);
+
+    Map<String, Object> forget(String email, String verifycode, String password, HttpSession session);
 }

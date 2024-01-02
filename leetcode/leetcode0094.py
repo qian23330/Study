@@ -1,4 +1,4 @@
-### 力扣-0094-二叉树的中序遍历 ###
+### 力扣-94-二叉树的中序遍历 ###
 # 二叉树
 
 
@@ -25,7 +25,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    r = construct_binary_tree([int(x) for x in input().split()])
-    # print_tree(root)
+    r = construct_binary_tree()
     result = Solution().inorderTraversal(r)
     print(result)

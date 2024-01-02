@@ -2,8 +2,10 @@ package com.bigc;
 
 import com.bigc.mapper.DiscussPostMapper;
 import com.bigc.mapper.LoginTicketMapper;
+import com.bigc.mapper.MessageMapper;
 import com.bigc.pojo.DiscussPost;
 import com.bigc.pojo.LoginTicket;
+import com.bigc.pojo.Message;
 import com.bigc.utils.MailClient;
 import com.bigc.utils.SensitiveFillter;
 import org.junit.jupiter.api.Test;
@@ -92,6 +94,16 @@ class CommunityApplicationTests {
         String text = "这里可以$赌$博$，可以x嫖x娼x，可以吸毒，可以开票。哈哈哈";
         text = sensitiveFillter.filter(text);
         System.out.println(text);
+    }
+
+    @Autowired
+    private MessageMapper messageMapper;
+    @Test
+    public void testSelectLetters() {
+        List<Message> messages = messageMapper.selectConversations(111, 0, 20);
+        for (Message message : messages) {
+            System.out.println(message);
+        }
     }
 
 }

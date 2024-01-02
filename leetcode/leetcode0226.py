@@ -1,5 +1,5 @@
-# 力扣-0226-翻转二叉树
-# 二叉树
+# 力扣-226-翻转二叉树
+# 二叉树-前后层序遍历
 
 import collections
 from tree.tree import TreeNode, construct_binary_tree
@@ -42,7 +42,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = [x for x in input().split()]
-    root = construct_binary_tree(list)
-    # print(root)
+    root = construct_binary_tree()
     print(Solution().invertTree(root))

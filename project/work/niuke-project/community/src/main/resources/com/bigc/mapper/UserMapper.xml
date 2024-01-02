@@ -38,8 +38,7 @@
     <insert id="insertUser" parameterType="com.bigc.pojo.User" keyProperty="id">
         insert into user (<include refid="insertFields">
     </include>)
-        values(#{username}, #{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl},
-        #{createTime})
+        values(#{username}, #{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl}, #{createTime})
     </insert>
 
     <update id="updateStatus">

@@ -1,4 +1,4 @@
-# 力扣-0104-二叉树的最大深度
+# 力扣-104-二叉树的最大深度
 # 二叉树遍历-层序遍历
 
 
@@ -27,6 +27,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = [x for x in input().split()]
-    root = construct_binary_tree(list)
+    root = construct_binary_tree()
     print(Solution().maxDepth(root))
