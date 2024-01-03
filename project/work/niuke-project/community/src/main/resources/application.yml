@@ -1,10 +1,18 @@
 spring:
-  # 数据库连接信息
+  # MySQL数据库连接信息
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://58.206.100.88:3306/community
     username: root
     password: stu2023
+
+  # Redis配置
+  data:
+    redis:
+      database: 0
+      host: 58.206.100.88
+      port: 6379
+      password: stu2023
 
   # 关闭Thymeleaf的缓存
   thymeleaf:
@@ -24,6 +32,7 @@ spring:
           ssl:
             enable: true
     default-encoding: UTF-8
+
 
 mybatis:
   configuration:

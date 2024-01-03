@@ -1,3 +1,7 @@
+import collections
+from typing import Optional
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -6,7 +10,7 @@ class TreeNode:
 
 
 # 由数组转二叉树
-def construct_binary_tree() -> TreeNode:
+def construct_binary_tree() -> Optional[TreeNode]:
     nums = input("请输入一系列整数，以空格分隔：").split()
     if not nums:
         return None
@@ -31,12 +35,19 @@ def construct_binary_tree() -> TreeNode:
     return root
 
 
-# 算法:中序遍历二叉树
-def print_tree(root: TreeNode) -> []:
-    T = []
+def print_tree(root):
     if not root:
-        return
-    print_tree(root.left)
-    T.append(root.val)
-    print_tree(root.right)
-    return T
+        return []
+    queue = collections.deque([root])
+    result = []
+    while queue:
+        level = []
+        for _ in range(len(queue)):
+            cur = queue.popleft()
+            level.append(cur.val)
+            if cur.left:
+                queue.append(cur.left)
+            if cur.right:
+                queue.append(cur.right)
+        result.append(level)
+    print(result)

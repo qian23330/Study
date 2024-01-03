@@ -2,6 +2,7 @@ package com.bigc.controller;
 
 import com.bigc.annotation.LoginRequired;
 import com.bigc.pojo.User;
+import com.bigc.service.LikeService;
 import com.bigc.service.UserService;
 import com.bigc.utils.CommunityUtil;
 import com.bigc.utils.HostHolder;
@@ -41,6 +42,9 @@ public class UserController {
 
     @Autowired
     private HostHolder hostHolder;
+
+    @Autowired
+    private LikeService likeService;
 
     @LoginRequired
     @GetMapping("/setting")
@@ -135,5 +139,22 @@ public class UserController {
         userService.updatePassword(user.getId(), CommunityUtil.MD5(newPassword + user.getSalt()));
         userService.logout(ticket);
         return "redirect:/login";
+    }
+
+    // 个人主页
+    @GetMapping("/profile/{userId}")
+    public String getProfilePage(@PathVariable("userId") int userId, Model model) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("该用户不存在！");
+        }
+
+        // 用户
+        model.addAttribute("user", user);
+        // 点赞数量
+        int likeCount = likeService.findUserLikeCount(userId);
+        model.addAttribute("likeCount", likeCount);
+
+        return "/site/profile";
     }
 }

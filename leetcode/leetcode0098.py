@@ -1,8 +1,7 @@
-# 力扣-0098-验证二叉搜索树
+# 力扣-98-验证二叉搜索树
 # 二叉搜索树-中序遍历
 
 
-from tree import tree
 from tree.tree import construct_binary_tree
 
 
@@ -28,8 +27,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = [x for x in input().split()]
-    root = construct_binary_tree(list)
-
+    root = construct_binary_tree()
     result_tree = Solution().isValidBST(root)
     print(result_tree)

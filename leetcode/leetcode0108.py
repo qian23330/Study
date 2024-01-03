@@ -1,13 +1,13 @@
-# 力扣-0108-将有序数组转换为二叉搜索树
+# 力扣-108-将有序数组转换为二叉搜索树
 # 二叉搜索树
 
 
-from typing import List
+from typing import List, Optional
 from tree.tree import TreeNode, print_tree
 
 
 class Solution:
-    def traversal(self, nums: List[int], left: int, right: int) -> TreeNode:
+    def traversal(self, nums: List[int], left: int, right: int) -> Optional[TreeNode]:
         if left > right:
             return None
 
@@ -23,7 +23,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = [x for x in input().split()]
-    # root = tree.construct_binary_tree(list)
-    result_tree = Solution().sortedArrayToBST(list)
+    nums = [int(x) for x in input().split()]
+    result_tree = Solution().sortedArrayToBST(nums)
     print_tree(result_tree)

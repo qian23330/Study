@@ -14,9 +14,9 @@ function send_letter() {
 		function (data) {
 			data = $.parseJSON(data);
 			if (data.code === 0) {
-				$("hintBody").text("发送成功！")
+				$("#hintBody").text("发送成功！")
 			}else {
-				$("hintBody").text(data.msg)
+				$("#hintBody").text(data.msg)
 			}
 
 			$("#hintModal").modal("show");

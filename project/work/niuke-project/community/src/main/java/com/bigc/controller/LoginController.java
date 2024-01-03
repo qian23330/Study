@@ -143,7 +143,7 @@ public class LoginController implements CommunityConstant {
 
     // 获取验证码
     @GetMapping("/getCode")
-    public String getCode(String email, Model model,HttpSession session) {
+    public String getCode(String email, Model model, HttpSession session) {
         Map<String, Object> map = userService.getCode(email);
         // 有错误的情况下
         if (map.containsKey("emailMsg")) {
@@ -177,7 +177,7 @@ public class LoginController implements CommunityConstant {
             return "site/forget";
         }
 
-        Map<String, Object> map = userService.forget(email, verifycode, password, session);
+        Map<String, Object> map = userService.forget(email, verifycode, password);
         if (map == null || map.isEmpty()) {
             model.addAttribute("msg", "密码修改成功，可以使用新密码登录了!");
             model.addAttribute("target", "/login");

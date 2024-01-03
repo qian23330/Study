@@ -189,8 +189,8 @@ public class UserServiceImpl implements UserService, CommunityConstant {
     }
 
     @Override
-    public User findUserByName(String toName) {
-        return userMapper.selectByName(toName);
+    public User findUserByName(String username) {
+        return userMapper.selectByName(username);
     }
 
     @Override
@@ -234,13 +234,13 @@ public class UserServiceImpl implements UserService, CommunityConstant {
         String content = templateEngine.process("/mail/forget", context);
         mailClient.sendMail(email, "找回密码", content);
 
-        map.put("code",code); // map中存放一份，为了之后和用户输入的验证码进行对比
+        map.put("code", code); // map中存放一份，为了之后和用户输入的验证码进行对比
         map.put("expirationTime", LocalDateTime.now().plusMinutes(5L)); // 过期时间
         return map;
     }
 
     @Override
-    public Map<String, Object> forget(String email, String verifycode, String password, HttpSession session) {
+    public Map<String, Object> forget(String email, String verifycode, String password) {
         Map<String,Object> map = new HashMap<>();
         // 空值处理
         if (StringUtils.isBlank(email)){
@@ -259,7 +259,7 @@ public class UserServiceImpl implements UserService, CommunityConstant {
         // 邮箱在获取验证码那一步已经验证过了，是有效的邮箱，且验证码也有效
         User user = userMapper.selectByEmail(email);
         password = CommunityUtil.MD5(password + user.getSalt());
-        userMapper.updatePassword(user.getId(),password);
+        userMapper.updatePassword(user.getId(), password);
         return map;
     }
 

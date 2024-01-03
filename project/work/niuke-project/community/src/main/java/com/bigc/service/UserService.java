@@ -24,9 +24,9 @@ public interface UserService {
 
     void updatePassword(int userId, String newPassword);
 
-    User findUserByName(String toName);
+    User findUserByName(String username);
 
     Map<String, Object> getCode(String email);
 
-    Map<String, Object> forget(String email, String verifycode, String password, HttpSession session);
+    Map<String, Object> forget(String email, String verifycode, String password);
 }

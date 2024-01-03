@@ -4,8 +4,17 @@
     <data-source source="LOCAL" name="community@58.206.100.88 [2]" uuid="8e04624b-5799-4955-a154-6b65f2d0b95f">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <remarks>MySQL</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://58.206.100.88:3306/community</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="0@58.206.100.88" uuid="6fcb7746-311e-475a-940b-a700f9fdaaf5">
+      <driver-ref>redis</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>Redis</remarks>
+      <jdbc-driver>jdbc.RedisDriver</jdbc-driver>
+      <jdbc-url>jdbc:redis://58.206.100.88:6379/0</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
