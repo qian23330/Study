@@ -13,7 +13,7 @@ class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         self.vec = []  # 清空数组
         self.traversal(root)
-        print(self.vec)
+        # print(self.vec)
         return self.vec[k-1]
 
     def traversal(self, root):

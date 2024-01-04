@@ -2,8 +2,10 @@ package com.bigc.controller;
 
 import com.bigc.annotation.LoginRequired;
 import com.bigc.pojo.User;
+import com.bigc.service.FollowService;
 import com.bigc.service.LikeService;
 import com.bigc.service.UserService;
+import com.bigc.utils.CommunityConstant;
 import com.bigc.utils.CommunityUtil;
 import com.bigc.utils.HostHolder;
 import jakarta.servlet.http.HttpServletResponse;
@@ -22,9 +24,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UserController implements CommunityConstant {
 
     private static final Logger logger  = LoggerFactory.getLogger(UserController.class);
 
@@ -45,6 +48,9 @@ public class UserController {
 
     @Autowired
     private LikeService likeService;
+
+    @Autowired
+    private FollowService followService;
 
     @LoginRequired
     @GetMapping("/setting")
@@ -154,6 +160,18 @@ public class UserController {
         // 点赞数量
         int likeCount = likeService.findUserLikeCount(userId);
         model.addAttribute("likeCount", likeCount);
+        // 查询关注数量
+        long followeeCount = followService.findFolloweeCount(userId, ENTITY_TYPE_USER);
+        model.addAttribute("followeeCount", followeeCount);
+        // 粉丝数量
+        long followerCount = followService.findFollowerCount(ENTITY_TYPE_USER, userId);
+        model.addAttribute("followerCount", followerCount);
+        // 是否已关注
+        boolean hasFollowed = false;
+        if (hostHolder.getUser() != null) {
+            hasFollowed = followService.hasFollowed(hostHolder.getUser().getId(), ENTITY_TYPE_USER, userId);
+        }
+        model.addAttribute("hasFollowed", hasFollowed);
 
         return "/site/profile";
     }

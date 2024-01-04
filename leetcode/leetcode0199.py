@@ -1,4 +1,4 @@
-### 力扣-0199-二叉树的右视图 ###
+# 力扣-199-二叉树的右视图
 # 二叉树-层序遍历
 
 
@@ -14,7 +14,7 @@ class Solution:
 
         queue = collections.deque([root])
         right_view = []
-
+        # 把每一层最后一个节点存储到res数组
         while queue:
             level_size = len(queue)
             for i in range(level_size):
@@ -30,6 +30,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    list = [x for x in input().split()]
-    root = construct_binary_tree(list)
+    root = construct_binary_tree()
     print(Solution().rightSideView(root))

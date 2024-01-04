@@ -11,7 +11,7 @@ class TreeNode:
 
 # 由数组转二叉树
 def construct_binary_tree() -> Optional[TreeNode]:
-    nums = input("请输入一系列整数，以空格分隔：").split()
+    nums = input("请输入，以空格分隔：").split()
     if not nums:
         return None
     # 用于存放构建好的节点
@@ -44,10 +44,13 @@ def print_tree(root):
         level = []
         for _ in range(len(queue)):
             cur = queue.popleft()
-            level.append(cur.val)
-            if cur.left:
+            if cur:  # 检查当前节点是否存在
+                level.append(cur.val)
                 queue.append(cur.left)
-            if cur.right:
                 queue.append(cur.right)
-        result.append(level)
+            else:
+                level.append("null")  # 如果当前节点为空，添加None到结果中
+        if any(level):  # 如果这一层有非空节点，则添加到结果中
+            result.append(level)
     print(result)
+

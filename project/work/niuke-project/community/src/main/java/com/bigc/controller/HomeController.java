@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
 @Controller
-@RequestMapping("")
+@RequestMapping
 public class HomeController implements CommunityConstant {
 
     @Autowired

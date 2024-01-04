@@ -8,6 +8,7 @@ import com.bigc.pojo.LoginTicket;
 import com.bigc.pojo.Message;
 import com.bigc.utils.MailClient;
 import com.bigc.utils.SensitiveFillter;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,9 @@ import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.SessionCallback;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
@@ -112,6 +116,7 @@ class CommunityApplicationTests {
         }
     }
 
+    // Redis
     @Autowired
     private RedisTemplate redisTemplate;
 
@@ -213,4 +218,42 @@ class CommunityApplicationTests {
         System.out.println(obj);
     }
 
+    // Kafka
+    @Autowired
+    private KafkaProducer kafkaProducer;
+    @Test
+    public void testKafka() {
+        kafkaProducer.sendMessage("test", "Hello, Kafka!");
+        kafkaProducer.sendMessage("test", "Hello, QL!");
+
+        try {
+            Thread.sleep(1000 * 10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+
+@Component
+class KafkaProducer {
+
+    @Autowired
+    private KafkaTemplate kafkaTemplate;
+
+    public void sendMessage(String topic, String content) {
+        kafkaTemplate.send(topic, content);
+    }
+}
+
+@Component
+class KafkaConsumer {
+
+    @Autowired
+    private KafkaTemplate kafkaTemplate;
+
+    @KafkaListener(topics = {"test"}, groupId =  "community-consumer-group")
+    public void handleMessage(ConsumerRecord record) {
+        System.out.println(record.value());
+    }
 }

@@ -1,13 +1,13 @@
-# 力扣-0105-从前序和种序遍历序列构造二叉树
+# 力扣-105-从前序和中序遍历序列构造二叉树
 # 二叉树构造-切割
 
 
-from typing import List
+from typing import List, Optional
 from tree.tree import TreeNode, print_tree
 
 
 class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
         # 第一步: 特殊情况讨论: 树为空. 或者说是递归终止条件
         if not preorder:
             return None
@@ -36,6 +36,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    preorder = list(map(int, input().split()))
-    inorder = list(map(int, input().split()))
+    preorder = [int(x) for x in input().split()]
+    inorder = [int(x) for x in input().split()]
     print_tree(Solution().buildTree(preorder, inorder))

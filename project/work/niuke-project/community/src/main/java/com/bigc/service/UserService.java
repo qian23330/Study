@@ -2,7 +2,6 @@ package com.bigc.service;
 
 import com.bigc.pojo.LoginTicket;
 import com.bigc.pojo.User;
-import jakarta.servlet.http.HttpSession;
 
 import java.util.Map;
 
@@ -20,13 +19,21 @@ public interface UserService {
 
     LoginTicket findLoginTicket(String ticket);
 
-    void updateHeader(int userId, String headUrl);
+    int updateHeader(int userId, String headerUrl);
 
-    void updatePassword(int userId, String newPassword);
+    int updatePassword(int userId, String newPassword);
 
     User findUserByName(String username);
 
     Map<String, Object> getCode(String email);
 
     Map<String, Object> forget(String email, String verifycode, String password);
+
+    // redis缓存消息
+    // 1.优先从缓存中取值
+    User getCache(int userId);
+    // 2.取不到时初始化缓存数据
+    User initCache(int userId);
+    // 3.数据变更时清除缓存数据
+    void clearCache(int userId);
 }
