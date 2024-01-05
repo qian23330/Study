@@ -17,7 +17,6 @@ class Solution:
         self.traversal(root.right)
 
     def isValidBST(self, root):
-        self.vec = []  # 清空数组
         self.traversal(root)
         for i in range(1, len(self.vec)):
             # 注意要小于等于，搜索树里不能有相同元素

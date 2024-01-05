@@ -11,7 +11,7 @@ class TreeNode:
 
 # 由数组转二叉树
 def construct_binary_tree() -> Optional[TreeNode]:
-    nums = input("请输入，以空格分隔：").split()
+    nums = input("请输入，以','分隔：").split(",")
     if not nums:
         return None
     # 用于存放构建好的节点

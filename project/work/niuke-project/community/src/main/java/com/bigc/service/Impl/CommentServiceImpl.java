@@ -55,4 +55,9 @@ public class CommentServiceImpl implements CommentService, CommunityConstant {
             discussPostService.updateCommentCount(comment.getEntityId(), count);
         }
     }
+
+    @Override
+    public Comment findCommentById(int id) {
+        return commentMapper.selectCommentById(id);
+    }
 }

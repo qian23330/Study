@@ -11,7 +11,8 @@ public class RedisKeyUtil {
     private static final String PREFIX_FOLLOWER = "follower";
     private static final String PREFIX_KAPTCHA = "kaptcha";
     private static final String PREFIX_TICKET = "ticket";
-    private static final String  PREFIX_USER = "user";
+    private static final String PREFIX_USER = "user";
+    private static final String CODE_KEY_PREFIX = "code";
 
     // 某个实体的赞
     // like:entity:entityType:entityId -> set(userId)
@@ -50,5 +51,10 @@ public class RedisKeyUtil {
     // 用户
     public static String getUserKey(int userId) {
         return  PREFIX_USER + SPLIT + userId;
+    }
+
+    // 邮箱重置密码
+    public static String getCodeKey(String email) {
+        return CODE_KEY_PREFIX + SPLIT + email;
     }
 }

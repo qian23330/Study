@@ -166,7 +166,7 @@ public class LoginController implements CommunityConstant {
 
     // 获取验证码
     @GetMapping("/getCode")
-    public String getCode(String email, Model model, HttpSession session) {
+    public String getCode(String email, Model model) {
         Map<String, Object> map = userService.getCode(email);
         // 有错误的情况下
         if (map.containsKey("emailMsg")) {
@@ -176,30 +176,35 @@ public class LoginController implements CommunityConstant {
             // 正确的情况下，向邮箱发送了验证码
             model.addAttribute("msg", "验证码已经发送到您的邮箱，5分钟内有效！");
             model.addAttribute("target", "/forget");
-            // 将验证码存放在 session 中，后续和用户输入的信息进行比较
-            session.setAttribute("code", map.get("code"));
-            // 后续判断用户输入验证码的时候验证码是否已经过期
-            session.setAttribute("expirationTime", map.get("expirationTime"));
+
+            // 将验证码存放在 Redis 中，后续和用户输入的信息进行比较
+            String code = map.get("code").toString();
+            String redisKey = RedisKeyUtil.getCodeKey(email);
+            redisTemplate.opsForValue().set(redisKey, code, 300, TimeUnit.SECONDS);
+
             return "site/operate-result";
         }
-
     }
-
 
     // 重置密码
     @PostMapping("/forget/password")
-    public String forget(Model model, String email, String verifycode, String password, HttpSession session) {
-        // 验证验证码是否正确
-        if (!verifycode.equals(session.getAttribute("code"))) {
-            model.addAttribute("codeMsg", "输入的验证码不正确！");
-            return "site/forget";
-        }
-        // 验证码是否过期
-        if (LocalDateTime.now().isAfter((LocalDateTime) session.getAttribute("expirationTime"))) {
-            model.addAttribute("codeMsg", "输入的验证码已过期，请重新获取验证码！");
+    public String forget(Model model, String email, String verifycode, String password) {
+        // 从 Redis 中获取验证码
+        String redisKey = RedisKeyUtil.getCodeKey(email);
+        String code = (String) redisTemplate.opsForValue().get(redisKey);
+
+        if (StringUtils.isBlank(verifycode) || StringUtils.isBlank(code) || !code.equalsIgnoreCase(verifycode)) {
+            model.addAttribute("codeMsg", "验证码不正确！");
             return "site/forget";
         }
 
+//        // 检查验证码是否过期
+//        if (redisTemplate.getExpire(redisKey) <= 0) {
+//            model.addAttribute("codeMsg", "输入的验证码已过期，请重新获取验证码！");
+//            return "site/forget";
+//        }
+
+        // 进行密码重置操作
         Map<String, Object> map = userService.forget(email, verifycode, password);
         if (map == null || map.isEmpty()) {
             model.addAttribute("msg", "密码修改成功，可以使用新密码登录了!");
@@ -212,6 +217,7 @@ public class LoginController implements CommunityConstant {
             return "/site/forget";
         }
     }
+
 
 
 }
