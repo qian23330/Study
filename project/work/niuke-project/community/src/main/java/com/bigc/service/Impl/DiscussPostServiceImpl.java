@@ -1,6 +1,6 @@
 package com.bigc.service.Impl;
 
-import com.bigc.mapper.DiscussPostMapper;
+import com.bigc.dao.DiscussPostMapper;
 import com.bigc.pojo.DiscussPost;
 import com.bigc.service.DiscussPostService;
 import com.bigc.utils.SensitiveFillter;

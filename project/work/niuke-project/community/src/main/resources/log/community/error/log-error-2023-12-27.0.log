@@ -516,7 +516,7 @@ Caused by: org.mybatis.spring.MyBatisSystemException: null
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 ### The error may exist in com/bigc/mapper/LoginTicketMapper.java (best guess)
-### The error may involve com.bigc.mapper.LoginTicketMapper.selectByTicket
+### The error may involve com.bigc.dao.LoginTicketMapper.selectByTicket
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)

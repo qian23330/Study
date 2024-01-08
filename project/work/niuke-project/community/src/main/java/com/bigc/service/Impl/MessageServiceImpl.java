@@ -1,6 +1,6 @@
 package com.bigc.service.Impl;
 
-import com.bigc.mapper.MessageMapper;
+import com.bigc.dao.MessageMapper;
 import com.bigc.pojo.Message;
 import com.bigc.service.MessageService;
 import com.bigc.utils.SensitiveFillter;
@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -46,15 +45,15 @@ public class MessageServiceImpl implements MessageService {
     }
 
     @Override
-    public void addMessage(Message message) {
+    public int addMessage(Message message) {
         message.setContent(HtmlUtils.htmlEscape(message.getContent()));
         message.setContent(sensitiveFillter.filter(message.getContent()));
-        messageMapper.insertMessage(message);
+        return messageMapper.insertMessage(message);
     }
 
     @Override
-    public void readMessage(List<Integer> ids) {
-        messageMapper.updateStatus(ids, 1);
+    public int readMessage(List<Integer> ids) {
+        return messageMapper.updateStatus(ids, 1);
     }
 
     @Override
@@ -75,6 +74,11 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public int findNoticeUnreadCount(int userId, String topic) {
         return messageMapper.selectNoticeUnreadCount(userId, topic);
+    }
+
+    @Override
+    public List<Message> findNotices(int userId, String topic, int offset, int limit) {
+        return messageMapper.selectNotices(userId, topic, offset, limit);
     }
 
 }

@@ -1,6 +1,6 @@
 package com.bigc.service.Impl;
 
-import com.bigc.mapper.UserMapper;
+import com.bigc.dao.UserMapper;
 import com.bigc.pojo.LoginTicket;
 import com.bigc.pojo.User;
 import com.bigc.service.UserService;

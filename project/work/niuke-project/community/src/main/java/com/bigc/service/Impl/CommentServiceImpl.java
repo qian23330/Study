@@ -1,6 +1,6 @@
 package com.bigc.service.Impl;
 
-import com.bigc.mapper.CommentMapper;
+import com.bigc.dao.CommentMapper;
 import com.bigc.pojo.Comment;
 import com.bigc.service.CommentService;
 import com.bigc.service.DiscussPostService;

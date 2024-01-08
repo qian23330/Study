@@ -1,5 +1,5 @@
-### 力扣-200-岛屿数量 ###
-# bfs/dfs
+# 力扣-200-岛屿数量
+# bfs/dfs-图
 
 
 from collections import deque
@@ -72,5 +72,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    grid = [[i for i in num.split(',')] for num in input().split()]
+    grid = [[int(i) for i in num.split(',')] for num in input().split()]
     print(Solution().numIslands(grid))

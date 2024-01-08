@@ -1,8 +1,9 @@
 package com.bigc;
 
-import com.bigc.mapper.DiscussPostMapper;
-import com.bigc.mapper.LoginTicketMapper;
-import com.bigc.mapper.MessageMapper;
+import com.bigc.dao.DiscussPostMapper;
+import com.bigc.dao.LoginTicketMapper;
+import com.bigc.dao.MessageMapper;
+import com.bigc.dao.elasticsearch.DiscussPostRepository;
 import com.bigc.pojo.DiscussPost;
 import com.bigc.pojo.LoginTicket;
 import com.bigc.pojo.Message;
@@ -15,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate;
 import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -25,7 +27,6 @@ import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import java.io.StringWriter;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -232,6 +233,20 @@ class CommunityApplicationTests {
             e.printStackTrace();
         }
     }
+
+    // es
+    @Autowired
+    private DiscussPostRepository discussPostRepository;
+
+    @Autowired
+    private ElasticsearchTemplate elasticsearchTemplate;
+
+//    @Test
+//    public void testInsert() {
+//        discussPostRepository.save(discussPostMapper.selectDiscussPostById());
+//    }
+
+
 
 }
 

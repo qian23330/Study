@@ -16,9 +16,9 @@ public interface MessageService {
 
     int findLetterUnreadCount(int userId, String conversationId);
 
-    void addMessage(Message message);
+    int addMessage(Message message);
 
-    void readMessage(List<Integer> ids);
+    int readMessage(List<Integer> ids);
 
     void deleteMessage(int id);
 
@@ -27,4 +27,6 @@ public interface MessageService {
     int findNoticeCount(int userId, String topic);
 
     int findNoticeUnreadCount(int userId, String topic);
+
+    List<Message> findNotices(int userId, String topic, int offset, int limit);
 }

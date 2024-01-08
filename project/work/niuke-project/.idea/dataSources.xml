@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="community@58.206.100.88 [2]" uuid="8e04624b-5799-4955-a154-6b65f2d0b95f">
+    <data-source source="LOCAL" name="MySQL" uuid="8e04624b-5799-4955-a154-6b65f2d0b95f">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>MySQL</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://58.206.100.88:3306/community</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="0@58.206.100.88" uuid="6fcb7746-311e-475a-940b-a700f9fdaaf5">
+    <data-source source="LOCAL" name="Redis" uuid="6fcb7746-311e-475a-940b-a700f9fdaaf5">
       <driver-ref>redis</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>Redis</remarks>
       <jdbc-driver>jdbc.RedisDriver</jdbc-driver>
       <jdbc-url>jdbc:redis://58.206.100.88:6379/0</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="Elasticsearch" uuid="ad47f96d-0591-4811-b2f6-45cf0a9d0f51">
+      <driver-ref>elasticsearch</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.elasticsearch.xpack.sql.jdbc.EsDriver</jdbc-driver>
+      <jdbc-url>jdbc:es://58.206.100.88:9200/</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

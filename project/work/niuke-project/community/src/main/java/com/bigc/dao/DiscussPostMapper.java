@@ -1,4 +1,4 @@
-package com.bigc.mapper;
+package com.bigc.dao;
 
 import com.bigc.pojo.DiscussPost;
 import org.apache.ibatis.annotations.Mapper;

@@ -3,7 +3,7 @@
      
         values' at line 3
 ### The error may exist in com/bigc/mapper/DiscussPostMapper.xml
-### The error may involve com.bigc.mapper.DiscussPostMapper.insertDiscussPost-Inline
+### The error may involve com.bigc.dao.DiscussPostMapper.insertDiscussPost-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into discuss_post                   user_id, title, content, type, status, comment_count, score               values (?, ?, ?, ?, ?, ?, ?, ?)
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id, title, content, type, status, comment_count, score
@@ -99,7 +99,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
      
         values' at line 3
 ### The error may exist in com/bigc/mapper/DiscussPostMapper.xml
-### The error may involve com.bigc.mapper.DiscussPostMapper.insertDiscussPost-Inline
+### The error may involve com.bigc.dao.DiscussPostMapper.insertDiscussPost-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into discuss_post                   user_id, title, content, type, status, comment_count, score               values (?, ?, ?, ?, ?, ?, ?, ?)
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id, title, content, type, status, comment_count, score
@@ -195,7 +195,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
      
  ' at line 3
 ### The error may exist in com/bigc/mapper/DiscussPostMapper.xml
-### The error may involve com.bigc.mapper.DiscussPostMapper.insertDiscussPost-Inline
+### The error may involve com.bigc.dao.DiscussPostMapper.insertDiscussPost-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into discuss_post                   user_id, title, content, type, status, create_time, comment_count, score               values (?, ?, ?, ?, ?, ?, ?, ?)
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id, title, content, type, status, create_time, comment_count, score
@@ -291,7 +291,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
      
  ' at line 3
 ### The error may exist in com/bigc/mapper/DiscussPostMapper.xml
-### The error may involve com.bigc.mapper.DiscussPostMapper.insertDiscussPost-Inline
+### The error may involve com.bigc.dao.DiscussPostMapper.insertDiscussPost-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into discuss_post                   user_id, title, content, type, status, create_time, comment_count, score               values (?, ?, ?, ?, ?, ?, ?, ?, ?)
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id, title, content, type, status, create_time, comment_count, score
@@ -386,7 +386,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id, user_id, title, content, type, status, create_time, comment_count, score
    ' at line 3
 ### The error may exist in com/bigc/mapper/DiscussPostMapper.xml
-### The error may involve com.bigc.mapper.DiscussPostMapper.insertDiscussPost-Inline
+### The error may involve com.bigc.dao.DiscussPostMapper.insertDiscussPost-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into discuss_post                   id, user_id, title, content, type, status, create_time, comment_count, score               values (?, ?, ?, ?, ?, ?, ?, ?, ?)
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id, user_id, title, content, type, status, create_time, comment_count, score
