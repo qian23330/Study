@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ElasticsearchRequestHistory">
+    <option name="requestHistory">
+      <map>
+        <entry key="ac868514-ab1c-4646-a746-ff1c21c490dd">
+          <value>
+            <list>
+              <HistoryRequest>
+                <option name="body" value="{&#10;  &quot;from&quot;: 0,&#10;  &quot;size&quot;: 50,&#10;  &quot;query&quot;: {&#10;    &quot;match_all&quot;: {}&#10;  }&#10;}" />
+                <option name="path" value="/discusspost/_search" />
+              </HistoryRequest>
+              <HistoryRequest>
+                <option name="path" value="/_nodes/6a3KyXsHTzqoFTmo995QdQ" />
+              </HistoryRequest>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

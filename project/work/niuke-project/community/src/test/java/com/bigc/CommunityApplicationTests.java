@@ -1,5 +1,6 @@
 package com.bigc;
 
+
 import com.bigc.dao.DiscussPostMapper;
 import com.bigc.dao.LoginTicketMapper;
 import com.bigc.dao.MessageMapper;
@@ -10,13 +11,15 @@ import com.bigc.pojo.Message;
 import com.bigc.utils.MailClient;
 import com.bigc.utils.SensitiveFillter;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DataAccessException;
-import org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate;
+
+import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -27,6 +30,7 @@ import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -241,12 +245,43 @@ class CommunityApplicationTests {
     @Autowired
     private ElasticsearchTemplate elasticsearchTemplate;
 
-//    @Test
-//    public void testInsert() {
-//        discussPostRepository.save(discussPostMapper.selectDiscussPostById());
-//    }
+    @Test
+    public void testInsert() {
+        discussPostRepository.save(discussPostMapper.selectDiscussPostById(241));
+        discussPostRepository.save(discussPostMapper.selectDiscussPostById(242));
+        discussPostRepository.save(discussPostMapper.selectDiscussPostById(243));
+    }
 
+    @Test
+    public void testInsertList() {
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(101, 0, 100));
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(102, 0, 100));
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(103, 0, 100));
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(111, 0, 100));
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(112, 0, 100));
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(131, 0, 100));
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(132, 0, 100));
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(133, 0, 100));
+        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(134, 0, 100));
+    }
 
+    @Test
+    public void testUpdate() {
+        DiscussPost post = discussPostMapper.selectDiscussPostById(231);
+        post.setContent("我是新人，来打我");
+        discussPostRepository.save(post);
+    }
+
+    @Test
+    public void testDelete() {
+//        discussPostRepository.deleteById(231);
+        discussPostRepository.deleteAll();
+    }
+
+    @Test
+    public void testSearch() {
+
+    }
 
 }
 

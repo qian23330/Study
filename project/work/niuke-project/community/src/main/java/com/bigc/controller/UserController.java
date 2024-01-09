@@ -8,7 +8,7 @@ import com.bigc.service.UserService;
 import com.bigc.utils.CommunityConstant;
 import com.bigc.utils.CommunityUtil;
 import com.bigc.utils.HostHolder;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

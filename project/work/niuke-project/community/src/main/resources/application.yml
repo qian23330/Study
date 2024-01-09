@@ -7,16 +7,24 @@ spring:
     password: stu2023
 
   # Redis配置
-  data:
-    redis:
-      database: 0
-      host: 58.206.100.88
-      port: 6379
-      password: stu2023
+
+  redis:
+    database: 0
+    host: 58.206.100.88
+    port: 6379
+    password: stu2023
 
   # Elasticsearch配置
+  data:
+    elasticsearch:
+      cluster-nodes: 58.206.100.88:9300
+      cluster-name: bigc
   elasticsearch:
-    uris: http://58.206.100.88:9300
+    rest:
+      uris:
+        - http://58.206.100.88:9200
+
+
 
   # Kafka配置
   kafka:

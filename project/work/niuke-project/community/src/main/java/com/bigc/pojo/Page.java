@@ -1,9 +1,5 @@
 package com.bigc.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 /**
  * 分页相关信息
  */

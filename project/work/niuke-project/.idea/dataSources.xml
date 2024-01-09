@@ -15,12 +15,5 @@
       <jdbc-url>jdbc:redis://58.206.100.88:6379/0</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="Elasticsearch" uuid="ad47f96d-0591-4811-b2f6-45cf0a9d0f51">
-      <driver-ref>elasticsearch</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.elasticsearch.xpack.sql.jdbc.EsDriver</jdbc-driver>
-      <jdbc-url>jdbc:es://58.206.100.88:9200/</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
   </component>
 </project>

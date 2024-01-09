@@ -1,6 +1,6 @@
 package com.bigc.utils;
 
-import jakarta.annotation.PostConstruct;
+import javax.annotation.PostConstruct;
 import org.apache.commons.lang3.CharUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

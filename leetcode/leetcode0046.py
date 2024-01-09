@@ -1,4 +1,4 @@
-### 力扣-46-全排列 ###
+# 力扣-46-全排列
 # 回溯
 
 
@@ -23,5 +23,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = list(map(int, input().split()))
+    nums = [int(i) for i in input().split()]
     print(Solution().permute(nums))

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ElasticsearchConfiguration">
+    <option name="clusterConfigurations">
+      <map>
+        <entry key="ac868514-ab1c-4646-a746-ff1c21c490dd">
+          <value>
+            <ClusterConfigInternal>
+              <option name="id" value="ac868514-ab1c-4646-a746-ff1c21c490dd" />
+              <option name="label" value="es" />
+              <option name="url" value="http://58.206.100.88:9200" />
+              <option name="version" value="1" />
+            </ClusterConfigInternal>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="version" value="2" />
+  </component>
+</project>

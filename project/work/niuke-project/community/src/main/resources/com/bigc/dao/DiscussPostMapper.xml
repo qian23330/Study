@@ -33,7 +33,7 @@
         </if>
     </select>
 
-    <insert id="insertDiscussPost" parameterType="com.bigc.pojo.DiscussPost">
+    <insert id="insertDiscussPost" parameterType="com.bigc.pojo.DiscussPost" keyProperty="id">
         insert into discuss_post(<include refid="insertFields"/>)
         values (#{userId}, #{title}, #{content}, #{type}, #{status}, #{createTime}, #{commentCount}, #{score})
     </insert>
