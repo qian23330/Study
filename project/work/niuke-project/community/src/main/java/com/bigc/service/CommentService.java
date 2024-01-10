@@ -12,4 +12,8 @@ public interface CommentService {
     void addComment(Comment comment);
 
     Comment findCommentById(int id);
+
+    List<Comment> findCommentsByUser(int userId, int offset, int limit);
+
+    int findCommentCountByUser(int userId);
 }

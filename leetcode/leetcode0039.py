@@ -1,4 +1,4 @@
-### 力扣-39-组合总和 ###
+# 力扣-39-组合总和
 # 回溯
 
 
@@ -26,6 +26,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    candidates = list(map(int, input().split()))
+    candidates = [int(i) for i in input().split()]
     target = int(input())
     print(Solution().combinationSum(candidates, target))

@@ -1,8 +1,11 @@
 package com.bigc.event;
 
 import com.alibaba.fastjson.JSONObject;
+import com.bigc.pojo.DiscussPost;
 import com.bigc.pojo.Event;
 import com.bigc.pojo.Message;
+import com.bigc.service.DiscussPostService;
+import com.bigc.service.ElasticsearchService;
 import com.bigc.service.MessageService;
 import com.bigc.utils.CommunityConstant;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -23,6 +26,12 @@ public class EventConsumer implements CommunityConstant {
 
     @Autowired
     private MessageService messageService;
+
+    @Autowired
+    private DiscussPostService discussPostService;
+
+    @Autowired
+    private ElasticsearchService elasticsearchService;
 
     @KafkaListener(topics = {TOPIC_COMMENT, TOPIC_LIKE, TOPIC_FOLLOW})
     public void handleCommentMessage(ConsumerRecord record) {
@@ -72,5 +81,8 @@ public class EventConsumer implements CommunityConstant {
             logger.error("消息格式错误!");
             return;
         }
+
+        DiscussPost post = discussPostService.findDiscussPostById(event.getEntityId());
+        elasticsearchService.saveDiscussPost(post);
     }
 }

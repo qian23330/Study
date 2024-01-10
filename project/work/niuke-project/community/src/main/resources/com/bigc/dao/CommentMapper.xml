@@ -39,4 +39,20 @@
         from comment
         where id = #{id}
     </select>
+
+    <select id="selectCommentByEntityAndId" resultType="com.bigc.pojo.Comment">
+        select <include refid="selectFields"/>
+        from comment
+        where status = 0
+        and user_id=#{userId}
+        order by create_time desc
+        limit  #{offset}, #{limit}
+    </select>
+
+    <select id="selectCountById" resultType="int">
+        select count(id)
+        from comment
+        where status = 0
+        and user_id=#{userId}
+    </select>
 </mapper>

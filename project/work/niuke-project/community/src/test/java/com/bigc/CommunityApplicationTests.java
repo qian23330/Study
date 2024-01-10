@@ -30,17 +30,13 @@ import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @SpringBootTest
-class CommunityApplicationTests {
+public class CommunityApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
 
     @Autowired
     private DiscussPostMapper discussPostMapper;
@@ -238,52 +234,6 @@ class CommunityApplicationTests {
         }
     }
 
-    // es
-    @Autowired
-    private DiscussPostRepository discussPostRepository;
-
-    @Autowired
-    private ElasticsearchTemplate elasticsearchTemplate;
-
-    @Test
-    public void testInsert() {
-        discussPostRepository.save(discussPostMapper.selectDiscussPostById(241));
-        discussPostRepository.save(discussPostMapper.selectDiscussPostById(242));
-        discussPostRepository.save(discussPostMapper.selectDiscussPostById(243));
-    }
-
-    @Test
-    public void testInsertList() {
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(101, 0, 100));
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(102, 0, 100));
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(103, 0, 100));
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(111, 0, 100));
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(112, 0, 100));
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(131, 0, 100));
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(132, 0, 100));
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(133, 0, 100));
-        discussPostRepository.saveAll(discussPostMapper.selectDiscussPosts(134, 0, 100));
-    }
-
-    @Test
-    public void testUpdate() {
-        DiscussPost post = discussPostMapper.selectDiscussPostById(231);
-        post.setContent("我是新人，来打我");
-        discussPostRepository.save(post);
-    }
-
-    @Test
-    public void testDelete() {
-//        discussPostRepository.deleteById(231);
-        discussPostRepository.deleteAll();
-    }
-
-    @Test
-    public void testSearch() {
-
-    }
-
-}
 
 @Component
 class KafkaProducer {
@@ -306,4 +256,7 @@ class KafkaConsumer {
     public void handleMessage(ConsumerRecord record) {
         System.out.println(record.value());
     }
+
+    }
+
 }

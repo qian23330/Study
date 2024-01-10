@@ -1,10 +1,11 @@
 package com.bigc.controller;
 
 import com.bigc.annotation.LoginRequired;
+import com.bigc.pojo.Comment;
+import com.bigc.pojo.DiscussPost;
+import com.bigc.pojo.Page;
 import com.bigc.pojo.User;
-import com.bigc.service.FollowService;
-import com.bigc.service.LikeService;
-import com.bigc.service.UserService;
+import com.bigc.service.*;
 import com.bigc.utils.CommunityConstant;
 import com.bigc.utils.CommunityUtil;
 import com.bigc.utils.HostHolder;
@@ -23,6 +24,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -51,6 +56,12 @@ public class UserController implements CommunityConstant {
 
     @Autowired
     private FollowService followService;
+
+    @Autowired
+    private DiscussPostService discussPostService;
+
+    @Autowired
+    private CommentService commentService;
 
     @LoginRequired
     @GetMapping("/setting")
@@ -174,5 +185,68 @@ public class UserController implements CommunityConstant {
         model.addAttribute("hasFollowed", hasFollowed);
 
         return "/site/profile";
+    }
+
+    // 我的帖子
+    @GetMapping("/profile/{userId}/post")
+    public String getMyPostPage(@PathVariable("userId") int userId, Model model, Page page) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("该用户不存在！");
+        }
+
+        int rows = discussPostService.findDiscussPostRows(userId);
+        page.setLimit(5);
+        page.setRows(rows);
+        page.setPath("/user/profile/" + userId + "/post");
+
+        model.addAttribute("count", rows);
+        List<DiscussPost> list = discussPostService.findDiscussPosts(userId, page.getOffset(), page.getLimit());
+        List<Map<String, Object>> disscussPosts = new ArrayList<>();
+        if (list != null) {
+            for (DiscussPost post: list) {
+                Map<String, Object> map = new HashMap<>();
+                map.put("post", post);
+                long likeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, post.getId());
+                map.put("likeCount", likeCount);
+
+                disscussPosts.add(map);
+            }
+        }
+        model.addAttribute("discussPosts", disscussPosts);
+
+
+        return "/site/my-post";
+    }
+    // 我的回复
+    @GetMapping("/profile/{userId}/reply")
+    public String getMyReplyPage(@PathVariable("userId") int userId,  Model model, Page page) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("该用户不存在！");
+        }
+
+        int rows = commentService.findCommentCountByUser(userId);
+        page.setLimit(5);
+        page.setRows(rows);
+        page.setPath("/user/profile/" + userId + "/reply");
+
+        model.addAttribute("count", rows);
+        List<Comment> list = commentService.findCommentsByUser(userId, page.getOffset(), page.getLimit());
+        List<Map<String, Object>> comments = new ArrayList<>();
+        if (list != null) {
+            for (Comment comment: list) {
+                Map<String, Object> map = new HashMap<>();
+                map.put("comment", comment);
+                DiscussPost post = discussPostService.findDiscussPostById(comment.getEntityId());
+                map.put("post", post);
+
+                comments.add(map);
+            }
+        }
+        model.addAttribute("comments", comments);
+
+
+        return "/site/my-reply";
     }
 }
