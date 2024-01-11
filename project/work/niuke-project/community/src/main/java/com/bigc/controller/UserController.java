@@ -127,6 +127,7 @@ public class UserController implements CommunityConstant {
         }
     }
 
+    // 修改密码
     @LoginRequired
     @PostMapping ("/password")
     public String changePassword(String oldPassword, String newPassword, String confirmPassword, Model model, @CookieValue("ticket") String ticket) {

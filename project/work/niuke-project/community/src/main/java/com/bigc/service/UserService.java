@@ -2,7 +2,9 @@ package com.bigc.service;
 
 import com.bigc.pojo.LoginTicket;
 import com.bigc.pojo.User;
+import org.springframework.security.core.GrantedAuthority;
 
+import java.util.Collection;
 import java.util.Map;
 
 public interface UserService {
@@ -36,4 +38,6 @@ public interface UserService {
     User initCache(int userId);
     // 3.数据变更时清除缓存数据
     void clearCache(int userId);
+
+    Collection<? extends GrantedAuthority> getAuthorities(int userId);
 }

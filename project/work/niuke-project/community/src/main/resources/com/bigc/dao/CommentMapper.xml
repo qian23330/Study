@@ -40,7 +40,7 @@
         where id = #{id}
     </select>
 
-    <select id="selectCommentByEntityAndId" resultType="com.bigc.pojo.Comment">
+    <select id="selectCommentsById" resultType="com.bigc.pojo.Comment">
         select <include refid="selectFields"/>
         from comment
         where status = 0
