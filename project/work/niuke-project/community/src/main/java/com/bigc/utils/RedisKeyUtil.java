@@ -2,6 +2,8 @@ package com.bigc.utils;
 
 import com.bigc.pojo.Page;
 
+import java.lang.ref.PhantomReference;
+
 public class RedisKeyUtil {
 
     private static final String SPLIT = ":";
@@ -13,6 +15,9 @@ public class RedisKeyUtil {
     private static final String PREFIX_TICKET = "ticket";
     private static final String PREFIX_USER = "user";
     private static final String CODE_KEY_PREFIX = "code";
+
+    private static final String PREFIX_UV = "uv";
+    private static final String PREFIX_DAU = "dau";
 
     // 某个实体的赞
     // like:entity:entityType:entityId -> set(userId)
@@ -56,5 +61,25 @@ public class RedisKeyUtil {
     // 邮箱重置密码
     public static String getCodeKey(String email) {
         return CODE_KEY_PREFIX + SPLIT + email;
+    }
+
+    // 单日UV
+    public static String getUVKey(String date) {
+        return PREFIX_UV + SPLIT + date;
+    }
+
+    // 区间UV
+    public static String getUVKey(String startDate, String endDate) {
+        return PREFIX_UV + SPLIT + startDate + SPLIT + endDate;
+    }
+
+    // 单日活跃用户
+    public static String getDAUKey(String date) {
+        return PREFIX_DAU + SPLIT + date;
+    }
+
+    // 区间活跃用户
+    public static String getDAYKey(String startDate, String endDate) {
+        return PREFIX_DAU + SPLIT + startDate + SPLIT + endDate;
     }
 }

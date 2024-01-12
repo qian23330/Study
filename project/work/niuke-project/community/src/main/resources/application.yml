@@ -7,7 +7,6 @@ spring:
     password: stu2023
 
   # Redis配置
-
   redis:
     database: 0
     host: 58.206.100.88
@@ -23,8 +22,6 @@ spring:
     rest:
       uris:
         - http://58.206.100.88:9200
-
-
 
   # Kafka配置
   kafka:
