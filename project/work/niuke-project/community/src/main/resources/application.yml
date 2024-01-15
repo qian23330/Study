@@ -75,11 +75,6 @@ mybatis:
     map-underscore-to-camel-case: true
     use-generated-keys: true
 
-# spring事务管理日志
-logging:
-  level:
-    org.springframework.jdbc.support.JdbcTransactionManager: DEBUG
-
 # 路径
 server:
   servlet:
@@ -90,3 +85,9 @@ community:
   path:
     domain: http://localhost:8080
     upload: /Users/qianlong/Git/Study/project/work/niuke-project/community/src/main/resources/upload
+
+# caffeine
+caffeine:
+  posts:
+    max-size: 15
+    expire-seconds: 180
