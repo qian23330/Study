@@ -7,6 +7,12 @@
           <value>
             <list>
               <HistoryRequest>
+                <option name="path" value="/_template/.ml-anomalies-" />
+              </HistoryRequest>
+              <HistoryRequest>
+                <option name="path" value="/_nodes/6a3KyXsHTzqoFTmo995QdQ" />
+              </HistoryRequest>
+              <HistoryRequest>
                 <option name="body" value="{&#10;  &quot;from&quot;: 0,&#10;  &quot;size&quot;: 50,&#10;  &quot;query&quot;: {&#10;    &quot;match_all&quot;: {}&#10;  }&#10;}" />
                 <option name="path" value="/discusspost/_search" />
               </HistoryRequest>
