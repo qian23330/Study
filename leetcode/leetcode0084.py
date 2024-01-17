@@ -1,5 +1,5 @@
 # 力扣-84-柱状图中最大的矩形
-# 栈
+# 单调栈
 
 
 from typing import List
