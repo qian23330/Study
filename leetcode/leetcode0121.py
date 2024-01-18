@@ -1,5 +1,5 @@
 # 力扣-121-买卖股票的最佳时机
-# 贪心/动态规划
+# 贪心
 
 
 from typing import List
