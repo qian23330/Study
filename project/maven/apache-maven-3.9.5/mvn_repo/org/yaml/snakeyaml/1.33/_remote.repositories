@@ -1,4 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Wed Nov 15 21:27:39 CST 2023
+#Wed Jan 17 16:12:34 CST 2024
 snakeyaml-1.33.pom>alimaven=
+snakeyaml-1.33-sources.jar>alimaven=
 snakeyaml-1.33.jar>alimaven=
