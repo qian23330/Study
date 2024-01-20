@@ -1,4 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Wed Nov 15 17:38:24 CST 2023
+#Sat Jan 20 21:05:43 CST 2024
 jsr305-3.0.2.pom>alimaven=
 jsr305-3.0.2.jar>alimaven=
+jsr305-3.0.2-sources.jar>alimaven=
