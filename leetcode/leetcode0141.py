@@ -1,5 +1,5 @@
-### 力扣-141-环形链表 ###
-# 链表-哈希
+# 力扣-141-环形链表
+# hot100-链表-哈希
 
 
 from typing import Optional

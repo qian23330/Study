@@ -1,5 +1,5 @@
-### 力扣-148-排序链表 ###
-# 链表-归并排序
+# 力扣-148-排序链表
+# hot100-链表-归并排序
 
 
 from linkedlist.linkedlist import ListNode, print_linked_list, create_linked_list_from_user_input

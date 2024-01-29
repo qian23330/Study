@@ -1,5 +1,5 @@
 # 力扣-35-搜索插入位置
-# 数组-二分查找
+# hot100-数组-二分查找
 
 
 from typing import List

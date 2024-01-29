@@ -1,5 +1,5 @@
 # 力扣-230-二叉搜索树中第K小的元素
-# 二叉搜索树-中序遍历
+# hot100-二叉搜索树-中序遍历
 
 
 from typing import Optional

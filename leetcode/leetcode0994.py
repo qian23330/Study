@@ -1,5 +1,5 @@
 # 力扣-994-腐烂的橘子
-# bfs-矩阵
+# hot100-bfs-矩阵
 
 
 import collections

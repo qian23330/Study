@@ -8,6 +8,7 @@ from typing import List
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
         p = [i for i in range(n)]
+        
         def find(i):
             if p[i] != i:
                 p[i] = find(p[i])

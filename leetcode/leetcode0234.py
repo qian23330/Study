@@ -1,5 +1,5 @@
-### 力扣-234-回文链表 ###
-# 链表
+# 力扣-234-回文链表
+# hot100-链表
 
 
 from linkedlist.linkedlist import ListNode, create_linked_list_from_user_input

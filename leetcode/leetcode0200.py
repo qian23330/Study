@@ -1,5 +1,5 @@
 # 力扣-200-岛屿数量
-# bfs/dfs-图
+# hot100-bfs/dfs-图
 
 
 from collections import deque

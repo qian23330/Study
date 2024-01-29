@@ -1,5 +1,5 @@
 ### 力扣-0001-两数之和 ###
-# 哈希表
+# hot100-哈希表
 
 from typing import List
 

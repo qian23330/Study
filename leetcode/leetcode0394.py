@@ -1,5 +1,5 @@
 # 力扣-394-字符串解码
-# 栈
+# hot100-栈
 
 
 class Solution:

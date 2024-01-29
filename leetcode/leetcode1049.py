@@ -10,7 +10,7 @@ class Solution:
         for stone in stones:
             for j in range(target, stone - 1, -1):
                 dp[j] = max(dp[j], dp[j - stone] + stone)
-        return total_sum - 2* dp[-1]
+        return total_sum - 2 * dp[-1]
 
 
 if __name__ == '__main__':

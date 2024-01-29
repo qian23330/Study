@@ -1,5 +1,5 @@
-### 力扣-24-两两交换链表中的结点 ###
-# 链表
+# 力扣-24-两两交换链表中的结点
+# hot100-链表
 
 
 from linkedlist.linkedlist import create_linked_list_from_user_input, print_linked_list, ListNode

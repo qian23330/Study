@@ -1,5 +1,5 @@
 # 力扣-62-最小路径和
-# 动态规划
+# hot100-动态规划
 
 
 from typing import List

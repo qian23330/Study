@@ -1,5 +1,5 @@
-### 力扣-19-删除链表倒数第N个结点 ###
-# 链表-双指针
+# 力扣-19-删除链表倒数第N个结点
+# hot100-链表-双指针
 
 
 from linkedlist.linkedlist import create_linked_list_from_user_input, print_linked_list, ListNode

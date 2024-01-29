@@ -1,5 +1,5 @@
 # 力扣-51-N皇后
-# 回溯
+# hot100-回溯
 
 
 from typing import List

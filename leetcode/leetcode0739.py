@@ -1,5 +1,5 @@
 # 力扣-739-每日温度
-# 单调栈
+# hot100-单调栈
 
 
 from typing import List

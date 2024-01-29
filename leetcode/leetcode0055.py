@@ -1,5 +1,5 @@
 # 力扣-55-跳跃游戏
-# 贪心
+# hot100-贪心
 
 
 from typing import List

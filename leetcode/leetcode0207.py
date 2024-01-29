@@ -1,5 +1,5 @@
 # 力扣-207-课程表
-# dfs/bfs-图
+# hot100-dfs/bfs-图
 
 
 from collections import deque

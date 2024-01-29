@@ -1,5 +1,5 @@
 # 力扣-31-下一个排列
-# 数组
+# hot100-数组
 
 
 from typing import List

@@ -1,5 +1,5 @@
-### 力扣-2-两数相加 ###
-# 链表
+# 力扣-2-两数相加
+# hot100-链表
 
 
 from typing import Optional

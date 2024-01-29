@@ -1,5 +1,5 @@
 # 力扣-39-组合总和
-# 回溯
+# hot100-回溯
 
 
 class Solution:

@@ -1,5 +1,5 @@
-### 力扣-146-LRU缓存 ###
-# 链表-双向链表-哈希
+# 力扣-146-LRU缓存
+# hot100-链表-双向链表-哈希
 
 
 from linkedlist.linkedlist import DLinkedNode

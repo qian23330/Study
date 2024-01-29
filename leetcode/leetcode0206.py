@@ -1,5 +1,5 @@
-### 力扣-206-反转链表 ###
-# 链表-递归/迭代
+# 力扣-206-反转链表
+# hot100-链表-递归/迭代
 
 
 from linkedlist.linkedlist import ListNode, create_linked_list_from_user_input, print_linked_list

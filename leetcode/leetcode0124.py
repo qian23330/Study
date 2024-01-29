@@ -1,5 +1,5 @@
 # 力扣-124-二叉树中的最大路径和
-# 二叉树-递归
+# hot100-二叉树-递归
 
 
 from tree.tree import TreeNode, construct_binary_tree

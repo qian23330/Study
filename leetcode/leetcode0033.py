@@ -1,5 +1,5 @@
 # 力扣-33-搜索旋转排序数组
-# 数组-二分查找
+# hot100-数组-二分查找
 
 
 from typing import List

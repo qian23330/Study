@@ -1,5 +1,5 @@
-### 力扣-283-移动零 ###
-# 数组-双指针
+# 力扣-283-移动零
+# hot100-数组-双指针
 
 class Solution:
     def moveZeroes(self, nums: list[int]):  # -> None:

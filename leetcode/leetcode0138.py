@@ -1,5 +1,5 @@
-### 力扣-138-随机链表的复制 ###
-# 链表-哈希
+# 力扣-138-随机链表的复制
+# hot100-链表-哈希
 
 
 from linkedlist.linkedlist import Node

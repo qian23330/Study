@@ -1,5 +1,5 @@
 # 力扣-75-颜色分类
-# 数组
+# hot100-数组
 
 
 from typing import List

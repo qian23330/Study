@@ -1,5 +1,5 @@
 # 力扣-74-搜索二维矩阵
-# 矩阵-二分查找
+# hot100-矩阵-二分查找
 
 
 from typing import List

@@ -1,5 +1,5 @@
 # 力扣-20-有效的括号
-# 栈
+# hot100-栈
 
 
 class Solution:

@@ -1,5 +1,5 @@
 # 力扣-300-最长递增子序列
-# 动态规划
+# hot100-动态规划
 
 
 from typing import List

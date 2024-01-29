@@ -1,5 +1,5 @@
 # 力扣-169-多数元素
-# 数组-哈希-分治
+# hot100-数组-哈希-分治
 
 
 from typing import List

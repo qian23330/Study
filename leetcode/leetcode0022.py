@@ -1,5 +1,5 @@
 # 力扣-22-括号生成
-# 回溯
+# hot100-回溯
 
 
 from typing import List

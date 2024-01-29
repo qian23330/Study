@@ -1,5 +1,5 @@
 # 力扣-198-打家劫舍
-# 动态规划
+# hot100-动态规划
 
 
 from typing import List

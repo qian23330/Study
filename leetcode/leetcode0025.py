@@ -1,5 +1,5 @@
-### 力扣-25-K个一组翻转链表 ###
-# 链表-递归
+# 力扣-25-K个一组翻转链表
+# hot100-链表-递归
 
 
 from linkedlist.linkedlist import ListNode, print_linked_list, create_linked_list_from_user_input

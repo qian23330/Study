@@ -1,5 +1,5 @@
 # 力扣-136-只出现一次的数字
-# 数组-异或运算
+# hot100-数组-异或运算
 
 
 from typing import List

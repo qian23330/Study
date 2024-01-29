@@ -1,5 +1,5 @@
 # 力扣-79-单词搜索
-# 回溯
+# hot100-回溯
 
 
 from typing import List

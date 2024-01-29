@@ -1,5 +1,5 @@
 # 力扣-98-验证二叉搜索树
-# 二叉搜索树-中序遍历
+# hot100-二叉搜索树-中序遍历
 
 
 from tree.tree import construct_binary_tree

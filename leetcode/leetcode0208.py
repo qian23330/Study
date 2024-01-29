@@ -1,5 +1,5 @@
 # 力扣-208-实现 Trie (前缀树)
-# 字典树/哈希
+# hot100-字典树/哈希
 
 
 import collections

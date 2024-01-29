@@ -1,5 +1,5 @@
 # 力扣-763-划分字母区间
-# 贪心
+# hot100-贪心
 
 
 from typing import List
