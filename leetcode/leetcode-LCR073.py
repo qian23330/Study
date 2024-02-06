@@ -8,10 +8,10 @@ from typing import List
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
         left, right = 1, max(piles)
-        while left < right:
+        while left <= right:
             speed = (right + left) >> 1
             if sum([(speed + p - 1) // speed for p in piles]) <= h:
-                right = speed
+                right = speed + 1
             else:
                 left = speed + 1
         return left
