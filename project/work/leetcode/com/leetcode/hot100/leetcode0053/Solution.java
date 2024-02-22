@@ -23,8 +23,9 @@ public class Solution {
     }
 
     public static void main(String[] args) {
+        System.out.println("请输入几个数并用逗号隔开：");
         Scanner scanner = new Scanner(System.in);
-        String[] inputArray = scanner.nextLine().split(" ");
+        String[] inputArray = scanner.nextLine().split(",");
         int[] nums = new int[inputArray.length];
         for (int i = 0; i < inputArray.length; i++) {
             nums[i] = Integer.parseInt(inputArray[i]);
