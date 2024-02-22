@@ -1,20 +1,27 @@
+package com.leetcode.leetcode0146;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class LRUCache {
-    class DLinkedNode {
-        int key;
-        int value;
-        DLinkedNode prev;
-        DLinkedNode next;
-        public DLinkedNode() {}
-        public DLinkedNode(int _key, int _value) {key = _key; value = _value;}
-    }
+/*
+力扣-146-LRU缓存
+com.leetcode.hot100-链表-双向链表-哈希
+*/
 
-    private Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
+class DLinkedNode {
+    int key;
+    int value;
+    DLinkedNode prev;
+    DLinkedNode next;
+    DLinkedNode() {}
+    DLinkedNode(int _key, int _value) {key = _key; value = _value;}
+}
+class LRUCache {
+
+    private final Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
     private int size;
-    private int capacity;
-    private DLinkedNode head, tail;
+    private final int capacity;
+    private final DLinkedNode head, tail;
 
     public LRUCache(int capacity) {
         this.size = 0;
@@ -82,6 +89,10 @@ public class LRUCache {
         DLinkedNode res = tail.prev;
         removeNode(res);
         return res;
+    }
+
+    public static void main(String[] args) {
+
     }
 }
 
