@@ -18,7 +18,7 @@ class Solution:
             left = i + 1
             right = len(nums) - 1
 
-            while right > left:
+            while left < right:
                 sum = nums[i] + nums[left] + nums[right]
                 if sum < 0:
                     left += 1
@@ -27,9 +27,9 @@ class Solution:
                 else:
                     result.append([nums[i], nums[left], nums[right]])
                     # 跳过相同的元素以避免重复
-                    while right > left and nums[right] == nums[right - 1]:
+                    while left < right and nums[right] == nums[right - 1]:
                         right -= 1
-                    while right > left and nums[left] == nums[left + 1]:
+                    while left < right and nums[left] == nums[left + 1]:
                         left += 1
                     right -= 1
                     left += 1
@@ -41,5 +41,4 @@ if __name__ == '__main__':
     input_str = input()
     nums = list(map(int, input_str.split()))
     print(Solution().threeSum(nums))
-
 

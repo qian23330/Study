@@ -39,4 +39,3 @@ if __name__ == '__main__':
 #         temp = cur.next
 #         cur.next = pre
 #         return self.reverse(temp, cur)
-
