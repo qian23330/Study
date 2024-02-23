@@ -6,7 +6,7 @@ import java.util.Scanner;
 力扣-53-最大子序和
 hot100-贪心
  */
-public class Solution {
+class Solution {
     public int maxSubArray(int[] nums) {
         int result = Integer.MIN_VALUE;
         int count = 0;

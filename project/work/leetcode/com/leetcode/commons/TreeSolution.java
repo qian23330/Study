@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class TreeSolution {
     public static TreeNode constructBinaryTree() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入，以','分隔：");
+        System.out.println("请输入数据，以逗号分隔：");
         String line = scanner.nextLine();
         if (line.isEmpty()) {
             return null;
@@ -22,9 +22,6 @@ public class TreeSolution {
             } else {
                 tree[i] = null;
             }
-            if (i == 0) {
-                root = tree[i];
-            }
         }
         for (int i = 0; i < tree.length; i++) {
             if (tree[i] != null && 2 * i + 1 < tree.length) {
@@ -34,6 +31,7 @@ public class TreeSolution {
                 }
             }
         }
+        root = tree[0];
         return root;
     }
 

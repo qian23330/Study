@@ -3,9 +3,9 @@ package com.leetcode.commons;
 import java.util.Scanner;
 
 public class LinkedlistSolution {
-    static ListNode createLinkedListFromUserInput() {
+    public static ListNode createLinkedListFromUserInput() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入一系列整数，以','分隔：");
+        System.out.println("请输入一系列整数，以逗号分隔：");
         String[] values = scanner.nextLine().split(",");
 
         if (values.length == 0) return null;
@@ -21,7 +21,7 @@ public class LinkedlistSolution {
         return head;
     }
 
-    static void printLinkedList(ListNode head) {
+    public static void printLinkedList(ListNode head) {
         ListNode current = head;
 
         if (head == null) {
