@@ -1,9 +1,7 @@
 package com.leetcode.commons;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class TreeSolution {
     public static TreeNode constructBinaryTree() {
@@ -14,7 +12,7 @@ public class TreeSolution {
             return null;
         }
         String[] nums = line.split(",");
-        TreeNode root = null;
+        TreeNode root;
         TreeNode[] tree = new TreeNode[nums.length];
         for (int i = 0; i < nums.length; i++) {
             if (!nums[i].equalsIgnoreCase("null")) {
@@ -59,6 +57,7 @@ public class TreeSolution {
                 result.add(level);
             }
         }
-        System.out.println(result);
+        List<String> res = result.stream().flatMap(List::stream).toList();
+        System.out.println(res);
     }
 }

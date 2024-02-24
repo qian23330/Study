@@ -57,8 +57,7 @@ class quicksortSolution {
     public static void main(String[] args) {
         System.out.println("请输入几个数并用逗号隔开：");
         Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        String[] arr  = str.split(",");
+        String[] arr = scanner.nextLine().split(",");
         int[] nums = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             nums[i] = Integer.parseInt(arr[i]);
