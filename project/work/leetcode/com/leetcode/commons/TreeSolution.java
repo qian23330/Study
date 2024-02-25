@@ -37,11 +37,11 @@ public class TreeSolution {
         if (root == null) {
             return;
         }
-        LinkedList<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         List<List<String>> result = new ArrayList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
-            ArrayList<String> level = new ArrayList<>();
+            List<String> level = new ArrayList<>();
             int levelSize = queue.size();
             for (int i = 0; i < levelSize; i++) {
                 TreeNode cur = queue.poll();

@@ -39,14 +39,14 @@ class Solution {
         return hair.next;
     }
 
-    public ListNode[] reverse(ListNode head, ListNode tail) {
-        ListNode prev = tail.next;
-        ListNode curr = head;
-        while (prev != tail) {
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
+    private ListNode[] reverse(ListNode head, ListNode tail) {
+        ListNode pre = tail.next;
+        ListNode cur = head;
+        while (pre != tail) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
         }
         return new ListNode[]{tail, head};
     }
