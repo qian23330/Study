@@ -27,8 +27,8 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head1 = LinkedlistSolution.createLinkedListFromUserInput();
-        ListNode head2 = LinkedlistSolution.createLinkedListFromUserInput();
+        ListNode head1 = LinkedlistSolution.createLinkedList();
+        ListNode head2 = LinkedlistSolution.createLinkedList();
         LinkedlistSolution.printLinkedList(new Solution().mergeTwoLists(head1, head2));
     }
 }

@@ -22,7 +22,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head = LinkedlistSolution.createLinkedListFromUserInput();
+        ListNode head = LinkedlistSolution.createLinkedList();
         LinkedlistSolution.printLinkedList(new Solution().reverseList(head));
     }
 }

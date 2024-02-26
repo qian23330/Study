@@ -1,7 +1,6 @@
 package com.leetcode.commons;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class TreeSolution {
     public static TreeNode constructBinaryTree() {
@@ -11,9 +10,11 @@ public class TreeSolution {
         if (line.isEmpty()) {
             return null;
         }
+
         String[] nums = line.split(",");
         TreeNode root;
         TreeNode[] tree = new TreeNode[nums.length];
+
         for (int i = 0; i < nums.length; i++) {
             if (!nums[i].equalsIgnoreCase("null")) {
                 tree[i] = new TreeNode(Integer.parseInt(nums[i]));
@@ -21,6 +22,7 @@ public class TreeSolution {
                 tree[i] = null;
             }
         }
+
         for (int i = 0; i < tree.length; i++) {
             if (tree[i] != null && 2 * i + 1 < tree.length) {
                 tree[i].left = tree[2 * i + 1];
@@ -33,13 +35,30 @@ public class TreeSolution {
         return root;
     }
 
+    public static TreeNode findNode(TreeNode root, int val) {
+        if(root == null || root.val == val) {
+            return root;
+        }
+
+        TreeNode left = findNode(root.left, val);
+        TreeNode right = findNode(root.right, val);
+
+        if(left != null) {
+            return left;
+        } else {
+            return right;
+        }
+    }
+
     public static void printTree(TreeNode root) {
         if (root == null) {
             return;
         }
+
         Queue<TreeNode> queue = new LinkedList<>();
         List<List<String>> result = new ArrayList<>();
         queue.add(root);
+
         while (!queue.isEmpty()) {
             List<String> level = new ArrayList<>();
             int levelSize = queue.size();
@@ -57,6 +76,7 @@ public class TreeSolution {
                 result.add(level);
             }
         }
+
         List<String> res = result.stream().flatMap(List::stream).toList();
         System.out.println(res);
     }

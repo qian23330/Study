@@ -72,5 +72,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    grid = [[int(i) for i in num.split(',')] for num in input().split()]
+    grid = [[i for i in num.split(',')] for num in input().split()]
     print(Solution().numIslands(grid))

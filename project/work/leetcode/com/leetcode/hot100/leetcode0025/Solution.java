@@ -52,7 +52,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head = LinkedlistSolution.createLinkedListFromUserInput();
+        ListNode head = LinkedlistSolution.createLinkedList();
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入k值：");
         int k = scanner.nextInt();

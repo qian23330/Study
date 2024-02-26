@@ -15,13 +15,13 @@ import java.util.Scanner;
 class Solution {
     public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
         int n = preorder.length;
-        if (n == 0) { // 空节点
+        if (n == 0) {  // 空节点
             return null;
         }
-        if (n == 1) { // 叶子节点
+        if (n == 1) {  // 叶子节点
             return new TreeNode(preorder[0]);
         }
-        int leftSize = indexOf(postorder, preorder[1]) + 1; // 左子树的大小
+        int leftSize = indexOf(postorder, preorder[1]) + 1;  // 左子树的大小
         int[] pre1 = Arrays.copyOfRange(preorder, 1, 1 + leftSize);
         int[] pre2 = Arrays.copyOfRange(preorder, 1 + leftSize, n);
         int[] post1 = Arrays.copyOfRange(postorder, 0, leftSize);

@@ -6,9 +6,12 @@ package com.leetcode.others.everyday.leetcode2476;
 */
 
 import com.leetcode.commons.TreeNode;
+import com.leetcode.commons.TreeSolution;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 class Solution {
     public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {
@@ -56,6 +59,11 @@ class Solution {
     }
 
     public static void main(String[] args) {
-
+        TreeNode root = TreeSolution.constructBinaryTree();
+        System.out.println("请输入一组数据，以逗号分隔：");
+        Scanner scanner = new Scanner(System.in);
+        String[] input = scanner.nextLine().split(",");
+        List<Integer> queries = Arrays.stream(input).map(Integer::parseInt).toList();
+        System.out.println(new Solution().closestNodes(root, queries));
     }
 }
