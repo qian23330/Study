@@ -17,6 +17,7 @@ class quicksortSolution {
         quickSort(nums, 0, nums.length - 1);
         return nums;
     }
+
     /* 元素交换 */
     private void swap(int[] nums, int i, int j) {
         int tmp = nums[i];
