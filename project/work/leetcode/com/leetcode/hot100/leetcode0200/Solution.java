@@ -5,10 +5,7 @@ package com.leetcode.hot100.leetcode0200;
 hot100-bfs/dfs-图
  */
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 class Solution {
     public int numIslands(char[][] grid) {
@@ -54,12 +51,17 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("请输入一组数据，以空格分隔行，以逗号分隔列：");
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
         Scanner scanner = new Scanner(System.in);
-        String[] inputLines = scanner.nextLine().split(" ");
-        char[][] grid = Arrays.stream(inputLines)
-                .map(line -> line.replace(",", "").toCharArray())
-                .toArray(char[][]::new);
+        List<char[]> list = new ArrayList<>();
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            if (line.isEmpty()) break;
+            char[] chars = line.replace(" ", "").toCharArray();
+            list.add(chars);
+        }
+        char[][] grid = list.toArray(new char[0][]);
+
         System.out.println(new Solution().numIslands(grid));
     }
 
