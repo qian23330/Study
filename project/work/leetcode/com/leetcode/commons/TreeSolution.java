@@ -3,21 +3,14 @@ package com.leetcode.commons;
 import java.util.*;
 
 public class TreeSolution {
-    public static TreeNode constructBinaryTree() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入数据，以逗号分隔：");
-        String line = scanner.nextLine();
-        if (line.isEmpty()) {
-            return null;
-        }
+    public static TreeNode constructBinaryTree(String[] args) {
 
-        String[] nums = line.split(",");
         TreeNode root;
-        TreeNode[] tree = new TreeNode[nums.length];
+        TreeNode[] tree = new TreeNode[args.length];
 
-        for (int i = 0; i < nums.length; i++) {
-            if (!nums[i].equalsIgnoreCase("null")) {
-                tree[i] = new TreeNode(Integer.parseInt(nums[i]));
+        for (int i = 0; i < args.length; i++) {
+            if (!args[i].equalsIgnoreCase("null")) {
+                tree[i] = new TreeNode(Integer.parseInt(args[i]));
             } else {
                 tree[i] = null;
             }

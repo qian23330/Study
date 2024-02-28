@@ -33,12 +33,14 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeSolution.constructBinaryTree();
-        System.out.println("请输入low和high，以逗号分隔：");
         Scanner scanner = new Scanner(System.in);
-        String[] input = scanner.nextLine().split(",");
-        int low = Integer.parseInt(input[0]);
-        int high = Integer.parseInt(input[1]);
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] input = scanner.nextLine().split(" ");
+        TreeNode root = TreeSolution.constructBinaryTree(input);
+        System.out.println("请输入low和high，以空格分隔：");
+        String[] arr = scanner.nextLine().split(" ");
+        int low = Integer.parseInt(arr[0]);
+        int high = Integer.parseInt(arr[1]);
         System.out.println(new Solution().rangeSumBST(root, low, high));
     }
 }

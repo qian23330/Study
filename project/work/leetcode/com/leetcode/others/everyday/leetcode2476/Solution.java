@@ -59,11 +59,15 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeSolution.constructBinaryTree();
-        System.out.println("请输入一组数据，以逗号分隔：");
         Scanner scanner = new Scanner(System.in);
-        String[] input = scanner.nextLine().split(",");
-        List<Integer> queries = Arrays.stream(input).map(Integer::parseInt).toList();
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] input = scanner.nextLine().split(" ");
+        TreeNode root = TreeSolution.constructBinaryTree(input);
+        System.out.println("请输入一组数据，以空格分隔：");
+        String[] arr = scanner.nextLine().split(" ");
+        List<Integer> queries = Arrays.stream(arr)
+                .map(Integer::parseInt)
+                .toList();
         System.out.println(new Solution().closestNodes(root, queries));
     }
 }

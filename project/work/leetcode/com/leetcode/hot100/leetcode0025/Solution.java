@@ -52,8 +52,10 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head = LinkedlistSolution.createLinkedList();
         Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] values = scanner.nextLine().split(" ");
+        ListNode head = LinkedlistSolution.createLinkedList(values);
         System.out.println("请输入k值：");
         int k = scanner.nextInt();
         ListNode res = new Solution().reverseKGroup(head, k);

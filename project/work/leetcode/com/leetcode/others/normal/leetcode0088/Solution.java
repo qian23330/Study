@@ -34,16 +34,14 @@ class Solution {
         System.out.println("请输入nums1数组，以逗号分隔：");
         Scanner scanner = new Scanner(System.in);
         String[] input1 = scanner.nextLine().split(",");
-        int nums1[] = new int[input1.length];
-        for (int i = 0; i < input1.length; i++) {
-            nums1[i] = Integer.parseInt(input1[i]);
-        }
+        int[] nums1 = Arrays.stream(input1)
+                            .mapToInt(Integer::parseInt)
+                            .toArray();
         System.out.println("请输入nums2数组，以逗号分隔：");
         String[] input2 = scanner.nextLine().split(",");
-        int nums2[] = new int[input2.length];
-        for (int i = 0; i < input2.length; i++) {
-            nums2[i] = Integer.parseInt(input2[i]);
-        }
+        int[] nums2 = Arrays.stream(input2)
+                            .mapToInt(Integer::parseInt)
+                            .toArray();
         System.out.println("请输入m：");
         int m = scanner.nextInt();
         System.out.println("请输入n：");

@@ -28,13 +28,12 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("请输入数据，以逗号分隔：");
+        System.out.println("请输入一组数字，以空格分隔：");
         Scanner scanner = new Scanner(System.in);
-        String[] str = scanner.nextLine().split(",");
-        int[] nums = new int[str.length];
-        for (int i = 0; i < str.length; i++) {
-            nums[i] = Integer.parseInt(str[i]);
-        }
+        String[] input = scanner.nextLine().split(" ");
+        int[] nums = Arrays.stream(input)
+                .mapToInt(Integer::parseInt)
+                .toArray();
         System.out.println("请输入k值：");
         int k = scanner.nextInt();
         System.out.println(new Solution().findKthLargest(nums, k));

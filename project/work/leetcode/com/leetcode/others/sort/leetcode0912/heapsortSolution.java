@@ -61,10 +61,9 @@ class heapsortSolution {
         System.out.println("请输入几个数并用逗号隔开：");
         Scanner scanner = new Scanner(System.in);
         String[] arr = scanner.nextLine().split(",");
-        int[] nums = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            nums[i] = Integer.parseInt(arr[i]);
-        }
+        int[] nums = Arrays.stream(arr)
+                .mapToInt(Integer::parseInt)
+                .toArray();
         System.out.println(Arrays.toString(new heapsortSolution().sortArray(nums)));
     }
 }

@@ -5,6 +5,7 @@ package com.leetcode.hot100.leetcode0200;
 hot100-bfs/dfs-图
  */
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -56,10 +57,9 @@ class Solution {
         System.out.println("请输入一组数据，以空格分隔行，以逗号分隔列：");
         Scanner scanner = new Scanner(System.in);
         String[] inputLines = scanner.nextLine().split(" ");
-        char[][] grid = new char[inputLines.length][];
-        for (int i = 0; i < inputLines.length; i++) {
-            grid[i] = inputLines[i].replace(",", "").toCharArray();
-        }
+        char[][] grid = Arrays.stream(inputLines)
+                .map(line -> line.replace(",", "").toCharArray())
+                .toArray(char[][]::new);
         System.out.println(new Solution().numIslands(grid));
     }
 

@@ -26,12 +26,14 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeSolution.constructBinaryTree();
-        System.out.println("请输入p、q的值，以逗号分隔：");
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        int a = Integer.parseInt(input.split(",")[0]);
-        int b = Integer.parseInt(input.split(",")[1]);
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] input = scanner.nextLine().split(" ");
+        TreeNode root = TreeSolution.constructBinaryTree(input);
+        System.out.println("请输入p、q的值，以空格分隔：");
+        String arr = scanner.nextLine();
+        int a = Integer.parseInt(arr.split(" ")[0]);
+        int b = Integer.parseInt(arr.split(" ")[1]);
         TreeNode p = TreeSolution.findNode(root, a);
         TreeNode q = TreeSolution.findNode(root, b);
         TreeNode res = new Solution().lowestCommonAncestor(root, p, q);

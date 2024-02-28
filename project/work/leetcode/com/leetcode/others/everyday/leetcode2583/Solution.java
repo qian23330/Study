@@ -38,9 +38,11 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeSolution.constructBinaryTree();
-        System.out.println("请输入K的值：");
         Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] input = scanner.nextLine().split(" ");
+        TreeNode root = TreeSolution.constructBinaryTree(input);
+        System.out.println("请输入K的值：");
         int k = scanner.nextInt();
         System.out.println(new Solution().kthLargestLevelSum(root, k));
     }

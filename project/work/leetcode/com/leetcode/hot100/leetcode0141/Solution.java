@@ -9,6 +9,7 @@ import com.leetcode.commons.LinkedlistSolution;
 import com.leetcode.commons.ListNode;
 
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 class Solution {
@@ -36,7 +37,12 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head = LinkedlistSolution.buildCircularLinkedList();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] values = scanner.nextLine().split(" ");
+        System.out.println("请输入环形链表连接点pos：");
+        int pos = scanner.nextInt();
+        ListNode head = LinkedlistSolution.buildCircularLinkedList(values, pos);
         System.out.println(new Solution().hasCycle(head));
     }
 }

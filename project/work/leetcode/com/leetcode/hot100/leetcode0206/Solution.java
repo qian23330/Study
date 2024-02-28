@@ -8,6 +8,8 @@ hot100-链表
 import com.leetcode.commons.LinkedlistSolution;
 import com.leetcode.commons.ListNode;
 
+import java.util.Scanner;
+
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode pre = null;
@@ -22,7 +24,10 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head = LinkedlistSolution.createLinkedList();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] values = scanner.nextLine().split(" ");
+        ListNode head = LinkedlistSolution.createLinkedList(values);
         LinkedlistSolution.printLinkedList(new Solution().reverseList(head));
     }
 }

@@ -14,6 +14,7 @@ public class Solution {
     // 埃氏筛
     private static final int N = 100001;
     private static boolean[] isPrime = new boolean[N];
+
     static {
         Arrays.fill(isPrime, true);
         isPrime[1] = false;
@@ -81,15 +82,12 @@ public class Solution {
         int n = scanner.nextInt();
         scanner.nextLine();  // 消耗掉换行符
         System.out.println("请输入一组数据，以空格分隔不同边，以逗号分隔节点");
-        String[] input = scanner.nextLine().split(" ");
-        int[][] edges = new int[input.length][];
-        for (int i = 0; i < input.length; i++) {
-            String[] numbers = input[i].split(",");
-            edges[i] = new int[numbers.length];
-            for (int j = 0; j < numbers.length; j++) {
-                edges[i][j] = Integer.parseInt(numbers[j]);
-            }
-        }
+        String[] inputLines = scanner.nextLine().split(" ");
+        int[][] edges = Arrays.stream(inputLines)
+                    .map(line -> Arrays.stream(line.split(","))
+                            .mapToInt(Integer::parseInt)
+                            .toArray())
+                    .toArray(int[][]::new);
         System.out.println(new Solution().countPaths(n, edges));
     }
 }

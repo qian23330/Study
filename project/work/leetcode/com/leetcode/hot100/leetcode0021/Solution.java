@@ -8,6 +8,8 @@ hot100-链表
 import com.leetcode.commons.LinkedlistSolution;
 import com.leetcode.commons.ListNode;
 
+import java.util.Scanner;
+
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(0);
@@ -27,8 +29,12 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head1 = LinkedlistSolution.createLinkedList();
-        ListNode head2 = LinkedlistSolution.createLinkedList();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] values1 = scanner.nextLine().split(" ");
+        String[] values2 = scanner.nextLine().split(" ");
+        ListNode head1 = LinkedlistSolution.createLinkedList(values1);
+        ListNode head2 = LinkedlistSolution.createLinkedList(values2);
         LinkedlistSolution.printLinkedList(new Solution().mergeTwoLists(head1, head2));
     }
 }

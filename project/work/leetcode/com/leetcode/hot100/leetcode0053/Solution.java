@@ -1,5 +1,6 @@
 package com.leetcode.hot100.leetcode0053;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -23,13 +24,12 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("请输入几个数并用逗号隔开：");
+        System.out.println("请输入一组数字，以空格分隔：");
         Scanner scanner = new Scanner(System.in);
-        String[] inputArray = scanner.nextLine().split(",");
-        int[] nums = new int[inputArray.length];
-        for (int i = 0; i < inputArray.length; i++) {
-            nums[i] = Integer.parseInt(inputArray[i]);
-        }
+        String[] input = scanner.nextLine().split(" ");
+        int[] nums = Arrays.stream(input)
+                .mapToInt(Integer::parseInt)
+                .toArray();
         System.out.println(new Solution().maxSubArray(nums));
     }
 }

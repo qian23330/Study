@@ -24,13 +24,12 @@ class insertsortSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println("请输入几个数并用逗号隔开：");
+        System.out.println("请输入一组数字，以空格分隔：");
         Scanner scanner = new Scanner(System.in);
-        String[] arr = scanner.nextLine().split(",");
-        int[] nums = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            nums[i] = Integer.parseInt(arr[i]);
-        }
+        String[] input = scanner.nextLine().split(" ");
+        int[] nums = Arrays.stream(input)
+                .mapToInt(Integer::parseInt)
+                .toArray();
         System.out.println(Arrays.toString(new insertsortSolution().sortArray(nums)));
     }
 }

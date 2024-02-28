@@ -5,6 +5,7 @@ package com.leetcode.hot100.leetcode0121;
 hot100-贪心
  */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 class Solution {
@@ -18,13 +19,12 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("请输入一组数据，以逗号分隔：");
+        System.out.println("请输入一组数字，以空格分隔：");
         Scanner scanner = new Scanner(System.in);
-        String[] input = scanner.nextLine().split(",");
-        int[] prices = new int[input.length];
-        for (int i = 0; i < input.length; i++) {
-            prices[i] = Integer.parseInt(input[i]);
-        }
+        String[] input = scanner.nextLine().split(" ");
+        int[] prices = Arrays.stream(input)
+                .mapToInt(Integer::parseInt)
+                .toArray();
         System.out.println(new Solution().maxProfit(prices));
     }
 }

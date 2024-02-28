@@ -29,7 +29,10 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeSolution.constructBinaryTree();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
+        String[] input = scanner.nextLine().split(" ");
+        TreeNode root = TreeSolution.constructBinaryTree(input);
         TreeSolution.printTree(root);
         System.out.println(new Solution().inorderTraversal(root));
     }

@@ -30,13 +30,12 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("请输入一组数字，以逗号分隔：");
+        System.out.println("请输入一组数字，以空格分隔：");
         Scanner scanner = new Scanner(System.in);
-        String[] input = scanner.nextLine().split(",");
-        int[] nums = new int[input.length];
-        for (int i = 0; i < input.length; i++) {
-            nums[i] = Integer.parseInt(input[i]);
-        }
+        String[] input = scanner.nextLine().split(" ");
+        int[] nums = Arrays.stream(input)
+                .mapToInt(Integer::parseInt)
+                .toArray();
         System.out.println(new Solution().permute(nums));
     }
 }

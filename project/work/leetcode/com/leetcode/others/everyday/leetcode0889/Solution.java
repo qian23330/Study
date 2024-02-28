@@ -45,18 +45,16 @@ class Solution {
         Scanner scanner = new Scanner(System.in);
         String str1 = scanner.nextLine();
         String[] arr1  = str1.split(",");
-        int[] pre = new int[arr1.length];
-        for (int i = 0; i < arr1.length; i++) {
-            pre[i] = Integer.parseInt(arr1[i]);
-        }
+        int[] pre = Arrays.stream(arr1)
+                .mapToInt(Integer::parseInt)
+                .toArray();
 
         System.out.println("后序数组，请输入几个数并用逗号隔开：");
         String str2 = scanner.nextLine();
         String[] arr2  = str2.split(",");
-        int[] post = new int[arr2.length];
-        for (int i = 0; i < arr2.length; i++) {
-            post[i] = Integer.parseInt(arr2[i]);
-        }
+        int[] post = Arrays.stream(arr2)
+                .mapToInt(Integer::parseInt)
+                .toArray();
         TreeSolution.printTree(new Solution().constructFromPrePost(pre, post));
     }
 }
