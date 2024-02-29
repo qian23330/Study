@@ -9,13 +9,14 @@ import java.util.*;
 
 class Solution {
     List<List<Integer>> result = new ArrayList<>();
-    Deque<Integer> path = new LinkedList<>();
+    List<Integer> path = new ArrayList<>();
+
     public List<List<Integer>> permute(int[] nums) {
-        backtracking(nums, path);
+        backtracking(nums);
         return result;
     }
 
-    private void backtracking(int[] nums, Deque<Integer> path) {
+    private void backtracking(int[] nums) {
         if (path.size() == nums.length) {
             result.add(new ArrayList<>(path));
         }
@@ -23,9 +24,9 @@ class Solution {
             if (path.contains(num)) {
                 continue;
             }
-            path.push(num);
-            backtracking(nums, path);
-            path.pop();
+            path.add(num);
+            backtracking(nums);
+            path.remove(path.size() - 1);
         }
     }
 
