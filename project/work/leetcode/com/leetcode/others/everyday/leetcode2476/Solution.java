@@ -5,8 +5,8 @@ package com.leetcode.others.everyday.leetcode2476;
 每日一题-24.02.24-二叉搜索树-中序遍历
 */
 
-import com.leetcode.commons.TreeNode;
-import com.leetcode.commons.TreeSolution;
+import com.leetcode.util.TreeNode;
+import com.leetcode.util.TreeSolution;
 
 import java.util.ArrayList;
 import java.util.Arrays;

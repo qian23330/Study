@@ -5,8 +5,9 @@ package com.leetcode.hot100.二叉树.leetcode0102;
 hot100-二叉树-层序遍历
  */
 
-import com.leetcode.commons.TreeNode;
-import com.leetcode.commons.TreeSolution;
+
+import com.leetcode.util.TreeNode;
+import com.leetcode.util.TreeSolution;
 
 import java.util.*;
 

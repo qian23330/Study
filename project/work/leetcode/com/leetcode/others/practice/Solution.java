@@ -5,8 +5,8 @@ package com.leetcode.others.practice;
 practice-练习
  */
 
-import com.leetcode.commons.TreeNode;
-import com.leetcode.commons.TreeSolution;
+import com.leetcode.util.TreeNode;
+import com.leetcode.util.TreeSolution;
 
 import java.util.*;
 

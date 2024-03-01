@@ -5,8 +5,8 @@ package com.leetcode.hot100.双指针.leetcode0019;
 hot100-快慢指针
  */
 
-import com.leetcode.commons.LinkedlistSolution;
-import com.leetcode.commons.ListNode;
+import com.leetcode.util.LinkedlistSolution;
+import com.leetcode.util.ListNode;
 
 import java.util.Scanner;
 

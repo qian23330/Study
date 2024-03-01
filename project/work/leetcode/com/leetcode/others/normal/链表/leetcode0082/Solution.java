@@ -5,8 +5,8 @@ package com.leetcode.others.normal.链表.leetcode0082;
 normal-链表
  */
 
-import com.leetcode.commons.LinkedlistSolution;
-import com.leetcode.commons.ListNode;
+import com.leetcode.util.LinkedlistSolution;
+import com.leetcode.util.ListNode;
 
 import java.util.Scanner;
 

@@ -5,8 +5,8 @@ package com.leetcode.hot100.链表.leetcode0025;
 hot100-链表
  */
 
-import com.leetcode.commons.LinkedlistSolution;
-import com.leetcode.commons.ListNode;
+import com.leetcode.util.LinkedlistSolution;
+import com.leetcode.util.ListNode;
 
 import java.util.Scanner;
 

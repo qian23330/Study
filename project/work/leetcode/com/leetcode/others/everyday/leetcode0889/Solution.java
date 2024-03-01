@@ -5,8 +5,8 @@ package com.leetcode.others.everyday.leetcode0889;
 每日一题-24.02.22-二叉树-构造
 */
 
-import com.leetcode.commons.TreeNode;
-import com.leetcode.commons.TreeSolution;
+import com.leetcode.util.TreeNode;
+import com.leetcode.util.TreeSolution;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -5,8 +5,8 @@ package com.leetcode.hot100.二叉树.leetcode0094;
 hot100-二叉树
  */
 
-import com.leetcode.commons.TreeNode;
-import com.leetcode.commons.TreeSolution;
+import com.leetcode.util.TreeNode;
+import com.leetcode.util.TreeSolution;
 
 import java.util.*;
 
