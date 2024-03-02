@@ -1,4 +1,4 @@
-package com.leetcode.hot100.leetcode0070;
+package com.leetcode.hot100.动态规划.leetcode0070;
 
 /*
 力扣-70-爬楼梯
