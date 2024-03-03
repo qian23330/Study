@@ -11,6 +11,7 @@ import java.util.LinkedList;
 class MyQueue {
     private Deque<Integer> A;
     private Deque<Integer> B;
+
     public MyQueue() {
         A = new LinkedList<>();
         B = new LinkedList<>();

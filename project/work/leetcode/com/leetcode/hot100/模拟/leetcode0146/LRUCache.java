@@ -5,7 +5,7 @@ import java.util.Map;
 
 /*
 力扣-146-LRU缓存
-com.leetcode.hot100-链表-双向链表-哈希
+hot100-双向链表-哈希
 */
 
 class DLinkedNode {
@@ -16,6 +16,8 @@ class DLinkedNode {
     DLinkedNode() {}
     DLinkedNode(int _key, int _value) {key = _key; value = _value;}
 }
+
+
 class LRUCache {
 
     private final Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
@@ -60,8 +62,7 @@ class LRUCache {
                 cache.remove(tail.key);
                 --size;
             }
-        }
-        else {
+        } else {
             // 如果 key 存在，先通过哈希表定位，再修改 value，并移到头部
             node.value = value;
             moveToHead(node);
@@ -89,10 +90,6 @@ class LRUCache {
         DLinkedNode res = tail.prev;
         removeNode(res);
         return res;
-    }
-
-    public static void main(String[] args) {
-
     }
 }
 
