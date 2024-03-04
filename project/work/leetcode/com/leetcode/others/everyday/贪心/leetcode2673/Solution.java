@@ -1,4 +1,4 @@
-package com.leetcode.others.everyday.leetcode2673;
+package com.leetcode.others.everyday.贪心.leetcode2673;
 
 /*
 力扣-2673-使二叉树所有路径值相等的最小代价

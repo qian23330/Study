@@ -1,4 +1,4 @@
-package com.leetcode.others.everyday.leetcode0938;
+package com.leetcode.others.everyday.二叉树.leetcode0938;
 
 /*
 力扣-938-二叉搜索树的范围和

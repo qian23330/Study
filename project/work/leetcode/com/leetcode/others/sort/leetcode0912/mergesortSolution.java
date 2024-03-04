@@ -15,6 +15,19 @@ class mergesortSolution {
         return nums;
     }
 
+    /* 归并排序 */
+    public void mergeSort(int[] nums, int left, int right) {
+        // 终止条件
+        if (left >= right)
+            return;                      // 当子数组长度为 1 时终止递归
+        // 划分阶段
+        int mid = (left + right) / 2;    // 计算中点
+        mergeSort(nums, left, mid);      // 递归左子数组
+        mergeSort(nums, mid + 1, right); // 递归右子数组
+        // 合并阶段
+        merge(nums, left, mid, right);
+    }
+
     /* 合并左子数组和右子数组 */
     // 左子数组区间 [left, mid]
     // 右子数组区间 [mid + 1, right]
@@ -39,19 +52,6 @@ class mergesortSolution {
             else
                 nums[k] = tmp[j++];
         }
-    }
-
-    /* 归并排序 */
-    public void mergeSort(int[] nums, int left, int right) {
-        // 终止条件
-        if (left >= right)
-            return;                      // 当子数组长度为 1 时终止递归
-        // 划分阶段
-        int mid = (left + right) / 2;    // 计算中点
-        mergeSort(nums, left, mid);      // 递归左子数组
-        mergeSort(nums, mid + 1, right); // 递归右子数组
-        // 合并阶段
-        merge(nums, left, mid, right);
     }
 
     public static void main(String[] args) {

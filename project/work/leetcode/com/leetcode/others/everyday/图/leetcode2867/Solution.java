@@ -1,4 +1,4 @@
-package com.leetcode.others.everyday.leetcode2867;
+package com.leetcode.others.everyday.图.leetcode2867;
 
 /*
 力扣-2867-统计树中的合法路径数目

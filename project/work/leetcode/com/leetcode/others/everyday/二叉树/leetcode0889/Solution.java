@@ -1,4 +1,4 @@
-package com.leetcode.others.everyday.leetcode0889;
+package com.leetcode.others.everyday.二叉树.leetcode0889;
 
 /*
 力扣-889-根据前序和后序遍历构造二叉树

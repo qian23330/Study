@@ -1,4 +1,4 @@
-package com.leetcode.others.everyday.leetcode2476;
+package com.leetcode.others.everyday.二叉树.leetcode2476;
 
 /*
 力扣-2476-二叉搜索树最近节点查询

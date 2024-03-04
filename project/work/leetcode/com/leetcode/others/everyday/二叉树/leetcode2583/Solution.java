@@ -1,4 +1,4 @@
-package com.leetcode.others.everyday.leetcode2583;
+package com.leetcode.others.everyday.二叉树.leetcode2583;
 
 /*
 力扣-2583-二叉树中的第 K 大层和

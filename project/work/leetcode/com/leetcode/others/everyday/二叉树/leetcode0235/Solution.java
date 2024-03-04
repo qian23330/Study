@@ -1,4 +1,4 @@
-package com.leetcode.others.everyday.leetcode0235;
+package com.leetcode.others.everyday.二叉树.leetcode0235;
 
 /*
 力扣-235-二叉搜索树的最近公共祖先

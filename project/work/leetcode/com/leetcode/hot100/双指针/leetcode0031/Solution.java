@@ -5,6 +5,9 @@ package com.leetcode.hot100.双指针.leetcode0031;
 hot100-双指针
  */
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 class Solution {
     public void nextPermutation(int[] nums) {
         int i = nums.length - 2;
@@ -33,5 +36,13 @@ class Solution {
         nums[i] = nums[j];
         nums[j] = tmp;
 
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] input = scanner.nextLine().split(" ");
+        int[] nums = Arrays.stream(input).mapToInt(Integer::parseInt).toArray();
+        new Solution().nextPermutation(nums);
+        System.out.println(Arrays.toString(nums));
     }
 }

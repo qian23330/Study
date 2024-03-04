@@ -1,8 +1,8 @@
-package com.leetcode.others.practice;
+package com.leetcode.others.everyday.栈与队列.leetcode0232;
 
 /*
-力扣
-practice-练习
+力扣-232-用栈实现队列
+每日一题-24.03.04-栈-模拟
  */
 
 import java.util.Deque;
@@ -22,9 +22,9 @@ class MyQueue {
     }
 
     public int pop() {
-        int x = peek();
+        int peek = peek();
         B.pop();
-        return x;
+        return peek;
     }
 
     public int peek() {
@@ -40,4 +40,3 @@ class MyQueue {
         return A.isEmpty() && B.isEmpty();
     }
 }
-
