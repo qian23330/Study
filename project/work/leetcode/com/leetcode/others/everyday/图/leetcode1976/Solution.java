@@ -1,8 +1,8 @@
-package com.leetcode.others.everyday.图.leetcode2867.leetcode1976;
+package com.leetcode.others.everyday.图.leetcode1976;
 
 /*
 力扣-1976-到达目的地的方案数
-每日一题-24.03.05-图-dfs
+每日一题-24.03.05-图-Dijkstra 算法
 */
 
 import java.util.*;
@@ -11,9 +11,7 @@ class Solution {
     public int countPaths(int n, int[][] roads) {
         int mod = 1000000007;
         List<int[]>[] e = new ArrayList[n];
-        for (int i = 0; i < n; i++) {
-            e[i] = new ArrayList<>();
-        }
+        Arrays.setAll(e, i -> new ArrayList<int[]>());
         for (int[] road : roads) {
             int x = road[0], y = road[1], t = road[2];
             e[x].add(new int[]{y, t});

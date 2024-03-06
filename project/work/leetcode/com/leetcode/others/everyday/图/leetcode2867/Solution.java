@@ -29,9 +29,7 @@ public class Solution {
 
     public long countPaths(int n, int[][] edges) {
         List<Integer>[] G = new ArrayList[n + 1];
-        for (int i = 0; i <= n; i++) {
-            G[i] = new ArrayList<>();
-        }
+        Arrays.setAll(G, i -> new ArrayList<>());
 
         for (int[] edge : edges) {
             int i = edge[0], j = edge[1];

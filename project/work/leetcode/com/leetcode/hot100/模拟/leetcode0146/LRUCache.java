@@ -20,7 +20,7 @@ class DLinkedNode {
 
 class LRUCache {
 
-    private final Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
+    private final Map<Integer, DLinkedNode> cache = new HashMap<>();
     private int size;
     private final int capacity;
     private final DLinkedNode head, tail;
