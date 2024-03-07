@@ -15,7 +15,7 @@ class Solution {
         for (int i = 0; i < length; i++) {
             char c = strs[0].charAt(i);
             for (String str : strs) {
-                if (i == str.length() || str.charAt(i) != c) {
+                if (i == count || str.charAt(i) != c) {
                     return strs[0].substring(0, i);
                 }
             }

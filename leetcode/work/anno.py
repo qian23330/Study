@@ -29,6 +29,9 @@ def anno(file):
 
     df = pd.DataFrame(result)
     df = df.reindex(columns=['SNP', 'A1', 'A2', 'CHR', 'POS', 'p.placo'])
+    df['CHR'] = pd.to_numeric(df['CHR'], errors='coerce')
+    df['POS'] = pd.to_numeric(df['POS'], errors='coerce')
+    df = df.sort_values(by=['CHR', 'POS'])
     df.to_csv(file + '.annotated', index=False, sep='\t')
 
 
