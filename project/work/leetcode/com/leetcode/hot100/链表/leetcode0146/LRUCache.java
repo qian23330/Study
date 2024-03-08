@@ -1,4 +1,4 @@
-package com.leetcode.hot100.模拟.leetcode0146;
+package com.leetcode.hot100.链表.leetcode0146;
 
 import java.util.HashMap;
 import java.util.Map;

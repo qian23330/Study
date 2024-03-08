@@ -39,8 +39,8 @@ class Solution {
             String line = scanner.nextLine();
             if (line.isBlank()) break;
             int[] nums = Arrays.stream(line.split(" "))
-                            .mapToInt(Integer::parseInt)
-                                    .toArray();
+                    .mapToInt(Integer::parseInt)
+                    .toArray();
             list.add(nums);
         }
         int[][] grid =  list.toArray(new int[0][]);

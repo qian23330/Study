@@ -1,8 +1,8 @@
-package com.leetcode.hot100.模拟.leetcode0054;
+package com.leetcode.hot100.矩阵.leetcode0054;
 
 /*
 力扣-54-螺旋矩阵
-hot100-数组
+hot100-矩阵
  */
 
 import java.util.ArrayList;

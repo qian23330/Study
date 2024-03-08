@@ -19,7 +19,7 @@ class Solution {
                 }
             }
             if (cnt >= k) {
-                res |= 1 << i;
+                res |= 1 << i;  // 在res的第i位上赋值为1
             }
         }
         return res;

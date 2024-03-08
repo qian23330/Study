@@ -1,4 +1,4 @@
-package com.leetcode.others.normal.模拟.leetcode0204;
+package com.leetcode.others.normal.数学.leetcode0204;
 
 /*
 力扣-204-计数质数
