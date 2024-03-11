@@ -1,10 +1,9 @@
-package com.leetcode.others.practice;
+package com.leetcode.others.normal.链表.leetcode0083;
 
 /*
-力扣
-practice-练习
+力扣-83-删除排序链表中的重复元素
+normal-链表
  */
-
 
 import com.leetcode.util.LinkedlistSolution;
 import com.leetcode.util.ListNode;
@@ -32,4 +31,3 @@ class Solution {
         LinkedlistSolution.printLinkedList(new Solution().deleteDuplicates(head));
     }
 }
-

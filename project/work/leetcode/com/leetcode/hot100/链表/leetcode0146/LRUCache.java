@@ -8,17 +8,16 @@ import java.util.Map;
 hot100-双向链表-哈希
 */
 
-class DLinkedNode {
-    int key;
-    int value;
-    DLinkedNode prev;
-    DLinkedNode next;
-    DLinkedNode() {}
-    DLinkedNode(int _key, int _value) {key = _key; value = _value;}
-}
-
 
 class LRUCache {
+    private static class DLinkedNode {
+        int key;
+        int value;
+        DLinkedNode prev;
+        DLinkedNode next;
+        DLinkedNode() {}
+        DLinkedNode(int _key, int _value) {key = _key; value = _value;}
+    }
 
     private final Map<Integer, DLinkedNode> cache = new HashMap<>();
     private int size;
