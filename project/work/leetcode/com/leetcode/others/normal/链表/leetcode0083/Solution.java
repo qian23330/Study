@@ -7,7 +7,6 @@ normal-链表
 
 import com.leetcode.util.LinkedlistSolution;
 import com.leetcode.util.ListNode;
-
 import java.util.Scanner;
 
 class Solution {
