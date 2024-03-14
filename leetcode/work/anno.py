@@ -32,11 +32,7 @@ def anno(file):
     df['CHR'] = pd.to_numeric(df['CHR'], errors='coerce')
     df['POS'] = pd.to_numeric(df['POS'], errors='coerce')
     df = df.sort_values(by=['CHR', 'POS'])
-    df1 = df.drop('P2', axis=1)
-    df2 = df.drop('P1', axis=1)
     df.to_csv(file + '.annotated', index=False, sep='\t')
-    df1.to_csv(file + '.annotated.p1', index=False, sep='\t')
-    df2.to_csv(file + '.annotated.p2', index=False, sep='\t')
 
 
 if __name__ == '__main__':
