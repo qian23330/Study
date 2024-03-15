@@ -18,3 +18,12 @@
 # 输出描述：
 # 输出q行，每行输出两个正整数，代表所有元素之和的最小值和最大值。
 
+
+n, q = map(int, input().split())
+nums = [int(i) for i in input().split()]
+
+zeros = nums.count(0)
+sum_ = sum(nums)
+for _ in range(q):
+    left, right = map(int, input().split())
+    print(sum_ + zeros * left, sum_ + zeros * right)

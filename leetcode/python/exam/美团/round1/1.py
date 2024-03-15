@@ -13,3 +13,9 @@
 # 输出描述：
 # 输出操作结束后最多共有多少个'M'和'T'字符。
 
+
+n, k = map(int, input().split())
+string = input()
+
+cnt = string.count("M") + string.count("T")
+print(cnt + min(cnt, n - cnt))
