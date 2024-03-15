@@ -10,8 +10,11 @@ import java.util.*;
 class Solution {
     List<List<Integer>> result = new ArrayList<>();
     List<Integer> path = new ArrayList<>();
+    boolean[] used;
 
     public List<List<Integer>> permute(int[] nums) {
+        if (nums.length == 0) return result;
+        used = new boolean[nums.length];
         backtracking(nums);
         return result;
     }
@@ -19,14 +22,17 @@ class Solution {
     private void backtracking(int[] nums) {
         if (path.size() == nums.length) {
             result.add(new ArrayList<>(path));
+            return;
         }
-        for (int num : nums) {
-            if (path.contains(num)) {
+        for (int i = 0; i < nums.length; i++) {
+            if (used[i]) {
                 continue;
             }
-            path.add(num);
+            used[i] = true;
+            path.add(nums[i]);
             backtracking(nums);
             path.remove(path.size() - 1);
+            used[i] = false;
         }
     }
 
