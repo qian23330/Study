@@ -1,4 +1,4 @@
-package com.leetcode.util;
+package com.leetcode.utils;
 
 public class LinkedlistSolution {
     public static ListNode createLinkedList(String[] args) {

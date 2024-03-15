@@ -5,8 +5,8 @@ package com.leetcode.others.normal.二叉树.leetcode0662;
 normal-二叉树-dfs
  */
 
-import com.leetcode.util.TreeNode;
-import com.leetcode.util.TreeSolution;
+import com.leetcode.utils.TreeNode;
+import com.leetcode.utils.TreeSolution;
 
 import java.util.HashMap;
 import java.util.Map;

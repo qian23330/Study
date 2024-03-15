@@ -5,8 +5,8 @@ package com.leetcode.others.normal.链表.leetcode0876;
 normal-链表-快慢指针
  */
 
-import com.leetcode.util.LinkedlistSolution;
-import com.leetcode.util.ListNode;
+import com.leetcode.utils.LinkedlistSolution;
+import com.leetcode.utils.ListNode;
 
 import java.util.Scanner;
 

@@ -5,8 +5,8 @@ package com.leetcode.hot100.二叉树.leetcode0098;
 hot100-二叉搜索树-中序
  */
 
-import com.leetcode.util.TreeNode;
-import com.leetcode.util.TreeSolution;
+import com.leetcode.utils.TreeNode;
+import com.leetcode.utils.TreeSolution;
 
 import java.util.ArrayList;
 import java.util.List;

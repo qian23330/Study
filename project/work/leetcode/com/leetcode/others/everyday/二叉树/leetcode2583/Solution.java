@@ -5,8 +5,8 @@ package com.leetcode.others.everyday.二叉树.leetcode2583;
 每日一题-24.02.23-二叉树-层序遍历
 */
 
-import com.leetcode.util.TreeNode;
-import com.leetcode.util.TreeSolution;
+import com.leetcode.utils.TreeNode;
+import com.leetcode.utils.TreeSolution;
 
 import java.util.*;
 

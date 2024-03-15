@@ -5,7 +5,7 @@ package com.leetcode.hot100.链表.leetcode0160;
 hot100-链表
  */
 
-import com.leetcode.util.ListNode;
+import com.leetcode.utils.ListNode;
 
 class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

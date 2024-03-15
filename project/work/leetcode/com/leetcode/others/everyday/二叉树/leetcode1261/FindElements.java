@@ -5,7 +5,7 @@ package com.leetcode.others.everyday.二叉树.leetcode1261;
 每日一题-24.03.12-二叉树-哈希
 */
 
-import com.leetcode.util.TreeNode;
+import com.leetcode.utils.TreeNode;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -5,8 +5,8 @@ package com.leetcode.others.normal.链表.leetcode0143;
 normal-链表-反转/合并/中点
  */
 
-import com.leetcode.util.LinkedlistSolution;
-import com.leetcode.util.ListNode;
+import com.leetcode.utils.LinkedlistSolution;
+import com.leetcode.utils.ListNode;
 
 import java.util.Scanner;
 

@@ -5,8 +5,8 @@ package com.leetcode.LCR.leetcodeLCR140;
 LCR-链表-双指针
  */
 
-import com.leetcode.util.LinkedlistSolution;
-import com.leetcode.util.ListNode;
+import com.leetcode.utils.LinkedlistSolution;
+import com.leetcode.utils.ListNode;
 
 import java.util.Scanner;
 

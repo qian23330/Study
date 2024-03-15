@@ -1,4 +1,4 @@
-package com.leetcode.util;
+package com.leetcode.utils;
 
 /*
 二叉树
