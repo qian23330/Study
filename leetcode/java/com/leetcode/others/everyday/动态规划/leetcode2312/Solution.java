@@ -1,4 +1,4 @@
-package com.leetcode.others.everyday.动态规划.leetcode2312.leetcode2312;
+package com.leetcode.others.everyday.动态规划.leetcode2312;
 
 /*
 力扣-2312-卖木头块
