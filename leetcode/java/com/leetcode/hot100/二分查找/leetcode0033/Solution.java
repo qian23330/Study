@@ -14,7 +14,7 @@ class Solution {
         if (len == 0) {
             return -1;
         }
-        int left = 0, right = len - 1, mid = 0;
+        int left = 0, right = len - 1, mid;
         while (left <= right) {
             mid = left + (right - left) / 2;
             if (nums[mid] == target) {
