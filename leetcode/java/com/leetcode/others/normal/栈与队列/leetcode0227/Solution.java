@@ -5,10 +5,7 @@ package com.leetcode.others.normal.栈与队列.leetcode0227;
 normal-栈-模拟
  */
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 class Solution {                        //// 解决所有表达式计算问题 ////
     // 使用 map 维护一个运算符优先级
@@ -96,5 +93,11 @@ class Solution {                        //// 解决所有表达式计算问题 /
     }
     boolean isNumber(char c) {
         return Character.isDigit(c);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        System.out.println(new Solution().calculate(s));
     }
 }
