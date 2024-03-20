@@ -45,6 +45,11 @@
                 <!-- <p>Apply To</p> -->
                 <h3>Click To Register</h3>
                 <a href="#/submission" class="btn btn-primary btn">Register</a>
+                <div class="notice-block">
+                  <h3>Notice</h3>
+                  <p>Please Download this file to check the format for submission!</p>
+                  <a href="/static/file/notice.pdf" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
+                </div>
               </div>
             </div>
           </div>
@@ -138,12 +143,37 @@ import FooterComponent from "@/components/FooterComponent.vue";
 import Slider from "@/components/SliderComponent.vue";
 export default {
   name: 'HomeView',
-  components: {Slider, FooterComponent, HeaderComponent}
+  components: {Slider, FooterComponent, HeaderComponent},
+  methods: {
+    downloadFile(event) {
+      const url = event.target.href;  // 获取链接的url
+      fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+          // 创建Blob URL并用于异步下载
+          const downloadUrl = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = downloadUrl;
+          link.download = 'notice.pdf'; // 设置下载的文件名
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        })
+        .catch(() => {
+          this.$message.error('Download error');
+        });
+    }
+  }
 }
 </script>
 
 <style scoped>
 .mytext {
   text-transform: capitalize;
+}
+.notice-block {
+  margin-top: 30px;
+  padding: 60px;
+  border-radius: 5px;
 }
 </style>

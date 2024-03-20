@@ -15,13 +15,6 @@ public class PeopleController {
     @Autowired
     private PeopleService peopleService;
 
-//    @GetMapping("/getRegisteredCount")
-//    public Result getRegisteredCount() {
-//        log.info("查询总注册人数");
-//        int registerCount = PeopleService.getRegisteredCount();
-//        return Result.success(registerCount);
-//    }
-
     @PostMapping
     public Result add(@RequestBody People people) {
         log.info("新增信息：{}", people);

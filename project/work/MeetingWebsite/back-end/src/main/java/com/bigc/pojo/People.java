@@ -14,8 +14,8 @@ public class People {
     private String name;
     private String email;
     private String telephone;
+    private String institution;
     private String title;
-    private String content;
-    private String file;
+    private short topic;
     private LocalDateTime createTime;
 }

@@ -17,35 +17,48 @@
         <el-form ref="form" :model="people" label-width="100px" :rules="formRules">
           <el-row :gutter="20">
             <el-col :span="12">
-              <el-form-item label="Name :" prop="name">
+              <el-form-item label="姓名 :" prop="name">
                 <el-input v-model="people.name" placeholder="Name" ></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="Email :" prop="email">
+              <el-form-item label="邮箱 :" prop="email">
                 <el-input v-model="people.email" placeholder="Email"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="Tel :" prop="telephone">
+              <el-form-item label="电话 :" prop="telephone">
                 <el-input v-model="people.telephone" placeholder="Telephone"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="Title :">
+              <el-form-item label="单位 :" prop="institution">
+                <el-input v-model="people.institution" placeholder="Institution"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12">
+              <el-form-item label="文章题目 :">
                 <el-input v-model="people.title" placeholder="Title"></el-input>
               </el-form-item>
             </el-col>
-            <el-col :span="24">
-              <el-form-item label="Content :">
-                <el-input type="textarea" v-model="people.content" rows="12"></el-input>
+            <el-col :span="12">
+              <el-form-item label="投稿主题 :" prop="选择框">
+                <el-select v-model="people.topic" placeholder="Topic" style="width: 100%;">
+                  <el-option label="生物信息学与统计方法/Bioinformatics and Statistical Methods" value="0"></el-option>
+                  <el-option label="人工智能、大数据与精准医疗/Artificial Intelligence, Big Data, and Precision Medicine" value="1"></el-option>
+                  <el-option label="多组学、生物标志物、疾病诊断和风险预测/Multi-omics, Biomarkers, Disease Diagnosis, and Risk Prediction" value="2"></el-option>
+                  <el-option label="药物、靶点、疾病机制和治疗/Drugs, Targets, Disease Mechanisms, and Treatment" value="3"></el-option>
+                </el-select>
               </el-form-item>
             </el-col>
+
             <el-col :span="24">
               <div class="submit-button">
                 <el-button type="primary" @click="submitForm" class="enlarged-button">Register Now</el-button>
               </div>
             </el-col>
+
+
 
             <el-col :span="24">
               <br><br><br>
@@ -62,6 +75,7 @@
                   </el-upload>
                 </el-form-item>
               </el-col>
+
           </el-row>
         </el-form>
       </div>
@@ -83,11 +97,9 @@ export default {
         name: "",
         email: "",
         telephone: "",
+        institution: "",
         title: "",
-        content: "",
-        attach: {
-          files: '',
-        }
+        topic: ""
       },
       fileList: [],
       formRules: {
