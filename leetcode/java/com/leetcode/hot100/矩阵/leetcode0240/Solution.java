@@ -1,7 +1,7 @@
 package com.leetcode.hot100.矩阵.leetcode0240;
 
 /*
-力扣-240-搜索二维矩阵 II
+力扣-240-搜索二维矩阵 II / 74-搜索二维矩阵
 hot100-矩阵-二叉搜索树
  */
 
