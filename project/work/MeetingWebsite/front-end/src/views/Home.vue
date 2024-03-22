@@ -10,11 +10,11 @@
           <div class="row">
             <div class="col-md-4 modern-class">
               <div class="modern-inner">
-                <h4>会议地点/Address</h4>
-                <p>西安交通大学</p>
-                <p>(中国西部科技创新港)</p>
-                <p>Xi'an Jiaotong University</p>
-                <p>(Western China Science And Technology Innovation Harbor)</p>
+                <h4>会议地点 / Address</h4>
+                <p>西安交通大学（创新港校区）</p>
+                <p>陕西省西安市西咸新区沣西新城河堤路与梧桐东路交叉路口南</p>
+                <p>Xi'an Jiaotong University(Western China Science And Technology Innovation Harbor)</p>
+                <p>South of the Intersection of Hedi Road and Wutong East Road, Fengxi New City, Xixian New Area, Xi'an City, Shaanxi Province.</p>
                 <div class="modern-btn">
                   <a href="#/traffic">learn more<i class="fa fa-long-arrow-right"></i></a>
                 </div>
@@ -25,13 +25,13 @@
             </div>
             <div class="col-md-4 modern-class">
               <div class="modern-inner">
-                <h4>重要日期/Important Date</h4>
-                <p>论文投稿/Submission：</p>
-                <p>2024.01.01-2024.05.01</p>
-                <p>参会注册/Register：</p>
-                <p>2024.01.01-2024.06.12</p>
-                <p>会议时间/Meeting：</p>
-                <p>2024.06.13-2024.06.16</p>
+                <h4>重要日期 / Important Date</h4>
+                <p>论文投稿 / Submission：</p>
+                <p>2024.01.01 - 05.01</p>
+                <p>参会注册 / Register：</p>
+                <p>2024.01.01 - 06.12</p>
+                <p>会议时间 / Meeting：</p>
+                <p>2024.06.13 - 06.16</p>
                 <div class="modern-btn">
                   <a href="#/schedule">learn more<i class="fa fa-long-arrow-right"></i></a>
                 </div>
@@ -47,7 +47,7 @@
                 <a href="#/submission" class="btn btn-primary btn">Register</a>
                 <div class="notice-block">
                   <h3>Notice</h3>
-                  <p>Please Download this file to check the format for submission!</p>
+                  <p>Please Download this file for details of this meeting.</p>
                   <a href="/static/file/notice.pdf" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
                 </div>
               </div>
@@ -59,7 +59,27 @@
           <div class="row mx-auto d-flex justify-content-center">
             <div class="col-md-8">
               <div class="title">
-                <h2 class="d-flex justify-content-center">会议议题/Agenda</h2>
+                <h2 class="d-flex justify-content-center">会议主题 / Theme</h2>
+              </div>
+              <div class="welcome-inner">
+                <div class="row">
+                  <h6 style="text-align: justify; text-indent: 2em; line-height: 2">大会议题包括GWAS与后GWAS的数据分析与挖掘、精准医学和转化医学、
+                    联合多组学和医学影像的疾病诊疗与药物重定位研究、基于基因组信息和AI的疾病风险模型预测、AI在多组学数据挖掘中的应用研究、生物信息学与统计方法开发等。
+                    本次大会将邀请多位海内外知名学者和专家与会，并将设置四大专题报告和墙报专栏，以供学科前沿进展研讨，促进海内外的学术交流与合作。</h6>
+                  <hr><br>
+                  <h6 style="text-align: justify; text-indent: 2em; line-height: 1.8">The conference topics include GWAS and post-GWAS data analysis and mining,
+                    precision medicine and translational medicine, disease diagnosis and drug repositioning research using integrated multi-omics and medical imaging,
+                    disease risk prediction models based on genomic information and AI, the application of AI in multi-omics data mining, and the development of bioinformatics
+                    and statistical methods. The conference will invite renowned scholars and experts from home and abroad and will feature four major thematic presentations
+                    and a poster section for in-depth discussions on cutting-edge developments in the field, promoting academic exchange and collaboration both domestically
+                    and internationally.</h6>
+                  <br><br>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="title">
+                <h2 class="d-flex justify-content-center">会议议题 / Agenda</h2>
               </div>
               <div class="welcome-inner">
                 <div class="row">
@@ -123,10 +143,10 @@
     <section class="popular-course section grey-background">
       <div class="container">
         <div class="title sec-title">
-          <h2 class="mytext">主办与承办单位/Host and organizer</h2>
-          <h6>西安交通大学/Xi'an Jiaotong University</h6>
+          <h2 class="mytext">主办与承办单位 / Host and organizer</h2>
+          <h6>西安交通大学 / Xi'an Jiaotong University</h6>
           <br>
-          <h6>西安简介/Introduction of Xi'an :</h6>
+          <h6>西安简介 / Introduction of Xi'an :</h6>
         </div>
         <div class="pupular-course-inner">
             <Slider></Slider>
@@ -175,5 +195,12 @@ export default {
   margin-top: 30px;
   padding: 60px;
   border-radius: 5px;
+}
+hr {
+  height: 5px;
+  color: rgb(0, 78, 151);  /*对应于下边框的颜色*/
+  background-color: rgb(0, 78, 151);  /*对应于下边框的颜色*/
+  width: 100%;
+  margin: auto; /*将横线居中显示*/
 }
 </style>

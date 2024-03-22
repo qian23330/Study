@@ -18,6 +18,6 @@ public class PeopleServiceImpl implements PeopleService {
     @Override
     public void add(People people) {
         people.setCreateTime(LocalDateTime.now());
-        peopleMapper.add(people);
+        peopleMapper.addOrUpdate(people);
     }
 }

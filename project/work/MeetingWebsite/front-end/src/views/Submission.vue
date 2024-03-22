@@ -12,72 +12,99 @@
     <section class="clients section">
       <div class="col-md-6 mx-auto">
         <div class="title sec-title">
-          <h2 class="mytext">Register/Submission</h2>
+          <h2 class="mytext">Register / Submission</h2>
         </div>
-        <el-form ref="form" :model="people" label-width="100px" :rules="formRules">
-          <el-row :gutter="20">
-            <el-col :span="12">
-              <el-form-item label="姓名 :" prop="name">
-                <el-input v-model="people.name" placeholder="Name" ></el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="12">
-              <el-form-item label="邮箱 :" prop="email">
-                <el-input v-model="people.email" placeholder="Email"></el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="12">
-              <el-form-item label="电话 :" prop="telephone">
-                <el-input v-model="people.telephone" placeholder="Telephone"></el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="12">
-              <el-form-item label="单位 :" prop="institution">
-                <el-input v-model="people.institution" placeholder="Institution"></el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="12">
-              <el-form-item label="文章题目 :">
-                <el-input v-model="people.title" placeholder="Title"></el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="12">
-              <el-form-item label="投稿主题 :" prop="选择框">
-                <el-select v-model="people.topic" placeholder="Topic" style="width: 100%;">
-                  <el-option label="生物信息学与统计方法/Bioinformatics and Statistical Methods" value="0"></el-option>
-                  <el-option label="人工智能、大数据与精准医疗/Artificial Intelligence, Big Data, and Precision Medicine" value="1"></el-option>
-                  <el-option label="多组学、生物标志物、疾病诊断和风险预测/Multi-omics, Biomarkers, Disease Diagnosis, and Risk Prediction" value="2"></el-option>
-                  <el-option label="药物、靶点、疾病机制和治疗/Drugs, Targets, Disease Mechanisms, and Treatment" value="3"></el-option>
-                </el-select>
-              </el-form-item>
-            </el-col>
+        <div class="col-md-4 modern-class modern-apply text-center mx-auto">
+          <div class="modern-apply-inner">
+            <div class="notice-block">
+              <p>This is about how to pay and how to submit. </p>
+              <h1>↓</h1>
+              <a href="/static/file/notice.pdf" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="modern-inner mx-auto align-content-center">
+            <el-form ref="form" :model="people" label-width="100px" :rules="formRules">
+              <el-row :gutter="20">
+                <el-col :span="12">
+                  <el-form-item label="姓名 :" prop="name">
+                    <el-input v-model="people.name" placeholder="Name" ></el-input>
+                  </el-form-item>
+                </el-col>
+                <el-col :span="12">
+                  <el-form-item label="邮箱 :" prop="email">
+                    <el-input v-model="people.email" placeholder="Email"></el-input>
+                  </el-form-item>
+                </el-col>
+                <el-col :span="12">
+                  <el-form-item label="电话 :" prop="telephone">
+                    <el-input v-model="people.telephone" placeholder="Telephone"></el-input>
+                  </el-form-item>
+                </el-col>
+                <el-col :span="12">
+                  <el-form-item label="单位 :" prop="institution">
+                    <el-input v-model="people.institution" placeholder="Institution"></el-input>
+                  </el-form-item>
+                </el-col>
+                <el-col :span="12">
+                  <el-form-item label="文章题目 :">
+                    <el-input v-model="people.title" placeholder="Title"></el-input>
+                  </el-form-item>
+                </el-col>
+                <el-col :span="12">
+                  <el-form-item label="投稿主题 :" prop="选择框">
+                    <el-select v-model="people.topic" placeholder="Topic" style="width: 100%;">
+                      <el-option label="生物信息学与统计方法/Bioinformatics and Statistical Methods" value="0"></el-option>
+                      <el-option label="人工智能、大数据与精准医疗/Artificial Intelligence, Big Data, and Precision Medicine" value="1"></el-option>
+                      <el-option label="多组学、生物标志物、疾病诊断和风险预测/Multi-omics, Biomarkers, Disease Diagnosis, and Risk Prediction" value="2"></el-option>
+                      <el-option label="药物、靶点、疾病机制和治疗/Drugs, Targets, Disease Mechanisms, and Treatment" value="3"></el-option>
+                    </el-select>
+                  </el-form-item>
+                </el-col>
 
-            <el-col :span="24">
-              <div class="submit-button">
-                <el-button type="primary" @click="submitForm" class="enlarged-button">Register Now</el-button>
-              </div>
-            </el-col>
-
-
-
-            <el-col :span="24">
-              <br><br><br>
-                <el-form-item>
-                  <el-upload class="upload-demo" drag action="/api/upload" multiple :limit="1"
-                             name="doc" :on-exceed="handleExceed"
-                             :before-upload="beforeAvatarUpload" :on-success="handleAvatarSuccess"
-                             :file-list="fileList">
-                    <i class="el-icon-upload"></i>
-                    <div class="el-upload__text">Drag the file here, or <em> click to upload</em></div>
-                    <div class="el-upload__tip" slot="tip">Please change the file name to 'Name - Title'!<br>
-                      Note: Only .pdf/.doc files are supported and do not exceed 10MB.<br>
-                      Only 1 file can be uploaded at a time. Please check it.</div>
-                  </el-upload>
-                </el-form-item>
-              </el-col>
-
-          </el-row>
-        </el-form>
+                <el-col :span="24">
+                  <div class="submit-button">
+                    <el-button type="primary" @click="submitForm" class="btn btn-primary btn">Register Now</el-button>
+                  </div>
+                  <br><br><br>
+                </el-col>
+                <el-col :span="24">
+                    <el-form-item>
+                      <el-upload class="upload-demo" drag action="/api/upload" multiple :limit="1"
+                                 name="doc" :on-exceed="handleExceed"
+                                 :before-upload="beforeAvatarUpload" :on-success="handleAvatarSuccess"
+                                 :file-list="fileList">
+                        <i class="el-icon-upload"></i>
+                        <div class="el-upload__text">Drag the file here, or <em> click to upload</em></div>
+                        <div class="el-upload__tip" slot="tip">Please change the file name to 'Name - Title'!<br>
+                          Note: Only .pdf/.doc files are supported and do not exceed 10MB.<br>
+                          Only 1 file can be uploaded at a time. Please check it.</div>
+                      </el-upload>
+                    </el-form-item>
+                </el-col>
+              </el-row>
+            </el-form>
+          </div>
+        </div>
+<!--        <div class="row text-center">-->
+<!--          <div class="modern-inner mx-auto align-content-center">-->
+<!--            <h4>缴费方式</h4>-->
+<!--            <p>账户名称：西安交通大学</p>-->
+<!--            <p>银行账号：3700023509088100314</p>-->
+<!--            <p>开户银行：中国工商银行西安互助路支行</p>-->
+<!--            <p>备注：姓名 + 注册费 + 邮箱（请保留转账或汇款回执）</p>-->
+<!--            <br>-->
+<!--            <h4>Pay</h4>-->
+<!--            <p>Account name: Xi 'an Jiaotong University</p>-->
+<!--            <p>Bank account number: 3700023509088100314</p>-->
+<!--            <p>Opening Bank: Xi 'an Huzhu Road Branch of Industrial and Commercial Bank of China</p>-->
+<!--            <p>Remark: Name + Registration fee + Email (please keep transfer or remittance receipt)</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="row mx-auto d-flex justify-content-center text-center">-->
+<!--          <FeeTable></FeeTable>-->
+<!--        </div>-->
       </div>
     </section>
     <FooterComponent></FooterComponent>
@@ -88,9 +115,11 @@
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import { add, update } from "@/api/send.js";
+import Table from "@/components/TimetableComponent.vue";
+import FeeTable from "@/components/Fee.vue";
 
 export default {
-  components: { HeaderComponent, FooterComponent },
+  components: {FeeTable, Table, HeaderComponent, FooterComponent },
   data() {
     return {
       people: {
@@ -110,6 +139,24 @@ export default {
     };
   },
   methods: {
+    downloadFile(event) {
+      const url = event.target.href;  // 获取链接的url
+      fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+          // 创建Blob URL并用于异步下载
+          const downloadUrl = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = downloadUrl;
+          link.download = 'notice.pdf'; // 设置下载的文件名
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        })
+        .catch(() => {
+          this.$message.error('Download error');
+        });
+    },
     handleExceed(){
       this.$message({
         type:'warning',

@@ -26,9 +26,10 @@
         <div class="row mx-auto d-flex justify-content-center">
           <div class="col-md-4 col-sm-12 col-xs-12">
             <div class="footer-widget">
-              <h2>联系方式/Contact Info</h2>
+              <h2>联系方式 / Contact Info</h2>
               <div class="widget-content">
-                <div class="text">如有任何问题，请随时联系。/Feel free to contact us.</div>
+                <div class="text">如有任何问题，请随时联系。</div>
+                <div class="text">Feel free to contact us.</div>
                 <address class="add">
                   <p><i class="fa fa-map-marker"></i> 朱老师 / Dr. Zhu</p>
                   <p><i class="fa fa-phone"></i>+86-18192703755</p>
@@ -40,12 +41,13 @@
 
           <div class="col-md-5 col-sm-6 col-xs-12">
             <div class="footer-widget links-widget">
-              <h2>参会意向/Registration Intention Survey</h2>
+              <h2>参会意向 / Registration Intention Survey</h2>
 
               <div class="row">
                 <div class="col-md-6 col-sm-6 col-sm-12">
                   <ul>
-                    <li><a href="#/">为了更好的举办本届会议，请有意向参会的人员长按二维码填写 “参会意向表”/Please scan the QR code to register.</a></li>
+                    <li><a class="text-center" style="text-transform: initial">为了更好的举办本届会议，请有意向参会的人员长按二维码填写 “参会意向表” /
+                      If you are interested in participating, please scan the QR code. Thank you!</a></li>
                   </ul>
                 </div>
                 <div class="col-md-6 col-sm-6 col-sm-12">
@@ -61,7 +63,7 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="row">
-            <div class="text-left">Copyright &copy; 2023 Biomedical Informatics & Genomics Center, Xi’an Jiaotong University, China. All rights reserved.
+            <div class="text-left">Copyright &copy; 2024 Biomedical Informatics & Genomics Center, Xi’an Jiaotong University, China. All rights reserved.
           </div>
         </div>
       </div>

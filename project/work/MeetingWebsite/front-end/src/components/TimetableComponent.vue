@@ -5,23 +5,23 @@
       height="450" class="fontchange">
     <el-table-column
         prop="date"
-        label="日期/Date"
+        label="日期 / Date"
         width="150">
     </el-table-column>
     <el-table-column
         prop="time"
-        label="时间/Time"
+        label="时间 / Time"
         width="160">
     </el-table-column>
     <el-table-column
         prop="location"
-        label="地点/Location"
+        label="地点 / Location"
         width="140">
     </el-table-column>
     <el-table-column
         fixed
         prop="topic"
-        label="主题/Topic"
+        label="主题 / Topic"
         width="200">
     </el-table-column>
   </el-table>

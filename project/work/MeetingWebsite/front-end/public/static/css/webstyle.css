@@ -1817,8 +1817,7 @@ slider-bottom
 
 
 .modern-inner {
-    padding-top: 40px;
-    padding-bottom: 20px;
+  padding: 40px 20px 20px;
 }
 
 .modern-inner:hover .modern-icon {

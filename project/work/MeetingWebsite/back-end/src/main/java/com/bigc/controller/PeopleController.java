@@ -17,8 +17,13 @@ public class PeopleController {
 
     @PostMapping
     public Result add(@RequestBody People people) {
-        log.info("新增信息：{}", people);
-        peopleService.add(people);
-        return Result.success();
+        try {
+            log.info("新增信息：{}", people);
+            peopleService.add(people);
+            return Result.success();
+        } catch (Exception ex) {
+            return Result.error("System failed, please try again later.");
+        }
+
     }
 }

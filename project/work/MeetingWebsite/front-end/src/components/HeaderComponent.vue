@@ -47,11 +47,11 @@ export default {
         link: "/schedule",
         id: 3
       },{
-        name: "Register/Submission",
+        name: "Register / Submission",
         link: "/submission",
         id: 4
       },{
-        name: "Traffic/Hotel",
+        name: "Traffic / Hotel",
         link: "/traffic",
         id: 5
       },{

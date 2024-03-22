@@ -9,29 +9,42 @@
 <!--        <span><a href="#/">Home</a></span><span><i class="fa fa-angle-right"></i>Traffic/Hotel</span>-->
 <!--      </div>-->
 <!--    </section>-->
-    <section class="contact-page inner-page">
+    <section class="clients section">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-left">
             <div class="title sec-title">
-              <h2 class="mytext">Traffic/Hotel</h2>
+              <h2 class="mytext">Traffic / Hotel</h2>
             </div>
-            <div class="contact-info">
-              <p class="newtext"><i class="fa fa-map-marker"></i>Take Xi‘an metro line 5 to CHUANGXINGANG <br>
-                or CHUANGXINGANGDONG station and get off</p>
-            </div>
+        <div class="col-md-8 mx-auto">
+          <div class="contact-info">
+            <p class="newtext" ><i class="fa fa-map-marker"></i>乘坐西安地铁5号线至 “创新港/创新港东” 站</p>
+            <p class="newtext" >Take Xi‘an metro line 5 to CHUANG XIN GANG
+              or CHUANG XIN GANG DONG station.</p>
           </div>
-          <div class="col-md-6">
-            <div class="Mapcontainer">
-              <Map></Map>
-            </div>
+          <div class="contact-info">
+            <p class="newtext"><i class="fa fa-map-marker"></i>如果您乘坐出租车或驾驶私家车来创新港，大致时间距离约为：
+              - 从西安火车站至创新港
+              67 分钟/30 公里
+              - 从西安咸阳国际机场至创新港
+              50 分钟/25 公里
+            </p>
+            <p class="newtext">
+              You can drive a car or take a taxi to XJTU iharbour, the approximate travel time and distance is:  - From Xi'an Railway Station
+              67 min/30 km  - From Xi'an Xianyang International Airport
+              50 min/25 km.
+            </p>
+            <br>
+          </div>
+          <div class="Mapcontainer">
+            <Map></Map>
           </div>
         </div>
+
+
       </div>
     </section>
     <div class="container">
       <div class="title sec-title">
-        <p class="newtext">蔓兰酒店/Man Lan Hotel</p>
+        <h6>蔓兰酒店/Man Lan Hotel</h6>
       </div>
     </div>
     <section class="introduction">
@@ -63,8 +76,8 @@
 
 <style scoped>
 .Mapcontainer {
-  height: 40vh;
-  width: 40vw;
+  height: 50vh;
+  width: 100%;
 }
 .introduction {
   width: auto;
@@ -176,7 +189,9 @@
   text-transform: capitalize;
 }
 .newtext {
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
 }
 </style>
 <script>
