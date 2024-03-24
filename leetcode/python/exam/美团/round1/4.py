@@ -1,7 +1,4 @@
 ### 美团笔试-春招/实习 24-03-09 ###
-import bisect
-from itertools import accumulate
-
 
 # 小美的区间删除
 # 小美拿到了一个大小为n的数组，她希望删除一个区间后，使得剩余所有元素的乘积末尾至少有k个 0。
@@ -14,6 +11,9 @@ from itertools import accumulate
 
 # 输出描述
 # 一个整数，代表删除的方案数。
+import bisect
+from itertools import accumulate
+
 
 n, k = map(int, input().split())
 A = [int(c) for c in input().split()]
