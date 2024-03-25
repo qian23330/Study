@@ -10,10 +10,9 @@ import java.util.Scanner;
 class Solution {
     public String maximumOddBinaryNumber(String s) {
         int cnt = (int) s.chars().filter(c -> c == '1').count();
-        StringBuilder res = new StringBuilder();
-        return res.append(('1' + "").repeat(cnt - 1))
-                .append(('0' + "").repeat(s.length() - cnt))
-                .append('1' + "").toString();
+        return ('1' + "").repeat(cnt - 1) +
+                ('0' + "").repeat(s.length() - cnt) +
+                '1';
     }
 
     public static void main(String[] args) {
