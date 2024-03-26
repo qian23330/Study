@@ -76,10 +76,11 @@
                                  :before-upload="beforeAvatarUpload" :on-success="handleAvatarSuccess"
                                  :file-list="fileList">
                         <i class="el-icon-upload"></i>
-                        <div class="el-upload__text">Drag the file here, or <em> click to upload</em></div>
-                        <div class="el-upload__tip" slot="tip">Please change the file name to 'Name - Title'!<br>
-                          Note: Only .pdf/.doc files are supported and do not exceed 10MB.<br>
-                          Only 1 file can be uploaded at a time. Please check it.</div>
+                        <div class="el-upload__text">将文件拖到此处或<em>点击上传</em>。</div>
+                        <div class="el-upload__text">Drag the file here, or <em>click to upload</em>.</div>
+                        <div class="el-upload__tip" slot="tip">请将投稿摘要文件重命名为“姓名-题目-邮箱” / Please change the file name to 'Name - Title - Email'!<br>
+                          仅支持上传pdf或doc格式的文件，请不要超过10MB。 / Only .pdf/.doc files are supported and do not exceed 10MB.<br>
+                          一次仅支持上传一个文件。 / Only 1 file can be uploaded at a time. Please check it.</div>
                       </el-upload>
                     </el-form-item>
                 </el-col>
@@ -128,7 +129,8 @@ export default {
         telephone: "",
         institution: "",
         title: "",
-        topic: ""
+        topic: "",
+        attach: {files: ""}
       },
       fileList: [],
       formRules: {

@@ -1,4 +1,4 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
   <div>
     <HeaderComponent></HeaderComponent>
     <br><br><br>
@@ -13,7 +13,8 @@
       <div class="container">
         <div class="title sec-title">
           <h2 class="mytext">Speakers</h2>
-          <p>Here are the introduction of our speakers.(Underdetermined)</p>
+          <p>发言人名单 / Speakers list</p>
+          <p>(待定 / Underdetermined)</p>
         </div>
       </div>
     </section>
@@ -26,18 +27,18 @@
         <a href="#">了解更多</a>
       </div>
       <div class="card">
-        <div class="photo"><img src="/static/photos/bigc/杨铁林.jpg" alt=""></div>
-        <h1>杨铁林</h1>
-        <h2>教授，博士生导师</h2>
-        <p>西安交通大学生物医学信息与基因组学中心</p>
-        <a href="https://gr.xjtu.edu.cn/en/web/yangtielin/1">了解更多</a>
+        <div class="photo"><img src="" alt=""></div>
+        <h1>待定</h1>
+        <h2>待定</h2>
+        <p>待定</p>
+        <a href="#">了解更多</a>
       </div>
       <div class="card">
-        <div class="photo"><img src="/static/photos/bigc/郭燕.jpg" alt=""></div>
-        <h1>郭燕</h1>
-        <h2>教授，博士生导师</h2>
-        <p>西安交通大学生物医学信息与基因组学中心</p>
-        <a href="https://gr.xjtu.edu.cn/en/web/guoyan253">了解更多</a>
+        <div class="photo"><img src="" alt=""></div>
+        <h1>待定</h1>
+        <h2>待定</h2>
+        <p>待定</p>
+        <a href="#">了解更多</a>
       </div>
     </section>
     <section class="introduction">

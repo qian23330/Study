@@ -14,6 +14,8 @@
         <div class="title sec-title">
           <h2 class="mytext">Schedule</h2>
           <p>会议具体时间安排如下：</p>
+          <p>The specific schedule of the meeting is as follows:</p>
+          <br><br><br>
           <img src="/static/file/table.png" alt="table.png">
         </div>
       </div>
