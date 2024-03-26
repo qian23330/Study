@@ -8,7 +8,6 @@ import java.util.Map;
 hot100-双向链表-哈希
 */
 
-
 class LRUCache {
     private static class DLinkedNode {
         int key;

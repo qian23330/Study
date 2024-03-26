@@ -9,9 +9,18 @@ practice-练习
 import java.util.*;
 
 class Solution {
-    public static void main(String[] args) {
-        int x = 4;
-        System.out.println("value is" + ((x > 4) ? 99.9 : 9));
+    public void m(int[] nums) {
+        if (nums == null) return;
+        int len = nums.length;
+        int j = 0;
+        for (int i = 0; i < len; i++) {
+            if (nums[i] != 0) {
+                nums[j++] = nums[i];
+            }
+        }
+        for (int i = j; i < len; i++) {
+            nums[i] = 0;
+        }
     }
 }
 
