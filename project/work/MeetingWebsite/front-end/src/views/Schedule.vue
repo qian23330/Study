@@ -9,18 +9,15 @@
 <!--        <span><a href="#/">Home</a></span><span><i class="fa fa-angle-right"></i>Schedule</span>-->
 <!--      </div>-->
 <!--    </section>-->
-    <section class="homepage-event section">
+    <section class="clients section">
       <div class="container">
         <div class="title sec-title">
           <h2 class="mytext">Schedule</h2>
-          <p>会议具体时间安排如下：(Underdetermined)</p>
-        </div>
-        <div class="row mx-auto d-flex justify-content-center">
-          <div class="col-md-8 ">
-            <Table></Table>
-          </div>
+          <p>会议具体时间安排如下：</p>
+          <img src="/static/file/table.png" alt="table.png">
         </div>
       </div>
+
     </section>
     <FooterComponent></FooterComponent>
   </div>

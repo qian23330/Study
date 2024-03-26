@@ -2,7 +2,7 @@
   <el-table
       :data="tableData"
       style="width: 100%"
-      height="450" class="fontchange">
+      height="600" class="fontchange">
     <el-table-column
         prop="date"
         label="日期 / Date"
@@ -16,13 +16,13 @@
     <el-table-column
         prop="location"
         label="地点 / Location"
-        width="140">
+        width="210">
     </el-table-column>
     <el-table-column
         fixed
         prop="topic"
-        label="主题 / Topic"
-        width="200">
+        label="会议安排或议题 / Topic"
+        width="400">
     </el-table-column>
   </el-table>
 </template>
@@ -33,12 +33,12 @@ export default {
   data() {
     return {
       tableData: [{
-        date: '2023-06-13',
-        time: '8:30-12:00 a.m.',
-        location: '18-2081',
-        topic: 'Single cell RNA-seq'
+        date: '2024-06-13',
+        time: '8:30-22:00',
+        location: '曼兰酒店 / Man Lan Hotel',
+        topic: '报到注册 / Register'
       }, {
-        date: '2023-06-13',
+        date: '2023-06-14',
         time: '2:30-5:30 p.m.',
         location: '18-2081',
         topic: 'Single cell RNA-seq'
