@@ -16,7 +16,7 @@ class Solution {
         for (int i = 0; i < t.length(); i++) {
             need.merge(t.charAt(i), 1, Integer::sum);
         }
-        int needCnt = need.size();
+        int needCnt = t.length();
         int[] minRes = new int[]{0, Integer.MAX_VALUE};
         int len = s.length();
         for (int i = 0, j = 0; j < len; j++) {

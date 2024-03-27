@@ -26,7 +26,7 @@ class Solution {
             slow = slow.next;
             fast = fast.next.next;
         }
-        return slow.next;
+        return slow;
     }
 
     private ListNode reverseList(ListNode head) {
