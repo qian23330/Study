@@ -58,13 +58,13 @@
                 </el-col>
 
                 <el-col :span="24">
-                  <div class="submit-button">
+                  <div class="submit-button" id="target">
                     <el-button type="primary" @click="submitForm" class="btn btn-primary btn">Register Now</el-button>
                   </div>
                   <br><br><br>
                 </el-col>
               </el-row>
-              <div class="title sec-title" id="target">
+              <div class="title sec-title">
                 <h2 class="mytext">Submission</h2>
               </div>
               <div class="col-md-4 modern-class modern-apply text-center mx-auto">
