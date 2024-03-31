@@ -12,21 +12,15 @@
     <section class="clients section">
       <div class="col-md-6 mx-auto">
         <div class="title sec-title">
-          <h2 class="mytext">Register / Submission</h2>
+          <h2 class="mytext">Register</h2>
         </div>
-        <div class="col-md-4 modern-class modern-apply text-center mx-auto">
-          <div class="modern-apply-inner">
-            <div class="notice-block">
-              <p>This is about how to pay and how to submit. </p>
-              <h1>↓</h1>
-              <a href="/static/file/notice.pdf" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
-            </div>
-          </div>
-        </div>
+        <img src="/static/file/bank.png" alt="bank.png">
+        <br>
+        <img src="/static/file/fee.png" alt="fee.png">
         <div class="row text-center">
           <div class="modern-inner mx-auto align-content-center">
-            <el-form ref="form" :model="people" label-width="100px" :rules="formRules">
-              <el-row :gutter="20">
+            <el-form ref="form" :model="people"  :rules="formRules">
+              <el-row :gutter="24">
                 <el-col :span="12">
                   <el-form-item label="姓名 :" prop="name">
                     <el-input v-model="people.name" placeholder="Name" ></el-input>
@@ -69,43 +63,40 @@
                   </div>
                   <br><br><br>
                 </el-col>
-                <el-col :span="24">
-                    <el-form-item>
-                      <el-upload class="upload-demo" drag action="/api/upload" multiple :limit="1"
-                                 name="doc" :on-exceed="handleExceed"
-                                 :before-upload="beforeAvatarUpload" :on-success="handleAvatarSuccess"
-                                 :file-list="fileList">
-                        <i class="el-icon-upload"></i>
-                        <div class="el-upload__text">将文件拖到此处或<em>点击上传</em>。</div>
-                        <div class="el-upload__text">Drag the file here, or <em>click to upload</em>.</div>
-                        <div class="el-upload__tip" slot="tip">请将投稿摘要文件重命名为“姓名-题目-邮箱” / Please change the file name to 'Name - Title - Email'!<br>
-                          仅支持上传pdf或doc格式的文件，请不要超过10MB。 / Only .pdf/.doc files are supported and do not exceed 10MB.<br>
-                          一次仅支持上传一个文件。 / Only 1 file can be uploaded at a time. Please check it.</div>
-                      </el-upload>
-                    </el-form-item>
-                </el-col>
               </el-row>
+              <div class="title sec-title" id="target">
+                <h2 class="mytext">Submission</h2>
+              </div>
+              <div class="col-md-4 modern-class modern-apply text-center mx-auto">
+                <div class="modern-apply-inner">
+                  <div class="notice-block">
+                    <h6>投稿模版 / Templates</h6>
+                    <a href="/static/file/templates.zip" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
+                  </div>
+                  <br>
+                </div>
+              </div>
+              <el-col :span="24">
+                <el-form-item>
+                  <el-upload class="upload-demo" drag action="/api/upload" multiple :limit="1"
+                             name="doc" :on-exceed="handleExceed"
+                             :before-upload="beforeAvatarUpload" :on-success="handleAvatarSuccess"
+                             :file-list="fileList">
+                    <i class="el-icon-upload"></i>
+                    <div class="el-upload__text">将文件拖到此处或<em>点击上传</em>。</div>
+                    <div class="el-upload__text">Drag the file here, or <em>click to upload</em>.</div>
+                    <div class="el-upload__tip" slot="tip">请将投稿摘要文件重命名为“题目-邮箱”<br>
+                      仅支持上传pdf或doc格式的文件，请不要超过10MB<br>
+                      一次仅支持上传一个文件</div>
+                    <div class="el-upload__tip" slot="tip">Please change the file name to 'Title-Email'.<br>
+                      Only .pdf/.doc files are supported and do not exceed 10MB.<br>
+                      Only one file can be uploaded at a time. Please check it.</div>
+                  </el-upload>
+                </el-form-item>
+              </el-col>
             </el-form>
           </div>
         </div>
-<!--        <div class="row text-center">-->
-<!--          <div class="modern-inner mx-auto align-content-center">-->
-<!--            <h4>缴费方式</h4>-->
-<!--            <p>账户名称：西安交通大学</p>-->
-<!--            <p>银行账号：3700023509088100314</p>-->
-<!--            <p>开户银行：中国工商银行西安互助路支行</p>-->
-<!--            <p>备注：姓名 + 注册费 + 邮箱（请保留转账或汇款回执）</p>-->
-<!--            <br>-->
-<!--            <h4>Pay</h4>-->
-<!--            <p>Account name: Xi 'an Jiaotong University</p>-->
-<!--            <p>Bank account number: 3700023509088100314</p>-->
-<!--            <p>Opening Bank: Xi 'an Huzhu Road Branch of Industrial and Commercial Bank of China</p>-->
-<!--            <p>Remark: Name + Registration fee + Email (please keep transfer or remittance receipt)</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="row mx-auto d-flex justify-content-center text-center">-->
-<!--          <FeeTable></FeeTable>-->
-<!--        </div>-->
       </div>
     </section>
     <FooterComponent></FooterComponent>
@@ -120,6 +111,11 @@ import Table from "@/components/TimetableComponent.vue";
 import FeeTable from "@/components/Fee.vue";
 
 export default {
+  mounted() {
+    if (this.$route.hash) {
+      this.scrollToElement(this.$route.hash.slice(1));
+    }
+  },
   components: {FeeTable, Table, HeaderComponent, FooterComponent },
   data() {
     return {
@@ -141,6 +137,14 @@ export default {
     };
   },
   methods: {
+    scrollToElement(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    },
     downloadFile(event) {
       const url = event.target.href;  // 获取链接的url
       fetch(url)
@@ -150,7 +154,7 @@ export default {
           const downloadUrl = window.URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = downloadUrl;
-          link.download = 'notice.pdf'; // 设置下载的文件名
+          link.download = 'templates.zip'; // 设置下载的文件名
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
@@ -246,7 +250,6 @@ export default {
 }
 </script>
 <style scoped>
-
 .mytext {
   text-transform: capitalize;
 }
@@ -255,11 +258,6 @@ export default {
   justify-content: right;
   margin-top: 20px; /* Adjust as needed */
 }
-.enlarged-button {
-  font-size: 16px; /* Adjust the font size as needed */
-  padding: 12px 20px; /* Adjust the padding to increase button size */
-}
-
 .el-upload__tip {
   width: 100%; /* 文本框宽度占比 */
   font-size: 14px;

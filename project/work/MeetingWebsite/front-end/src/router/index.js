@@ -64,7 +64,16 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior(to, from, savedPosition) {
+    // 如果有指定的滚动位置，则直接滚动到指定位置
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    }
+    // 否则滚动到顶部
+    return { x: 0, y: 0 }
+  },
   routes
 })
 

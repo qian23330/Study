@@ -43,13 +43,12 @@
             <div class="col-md-4 modern-class modern-apply text-center">
               <div class="modern-apply-inner">
                 <!-- <p>Apply To</p> -->
+                <br><br>
                 <h3>Click To Register</h3>
                 <a href="#/submission" class="btn btn-primary btn">Register</a>
-                <div class="notice-block">
-                  <h3>Notice</h3>
-                  <p>Please Download this file for details of this meeting.</p>
-                  <a href="/static/file/notice.pdf" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
-                </div>
+                <br><br><br>
+                <h3>Click To Submit</h3>
+                <div @click="tiaozhuan" class="btn btn-primary btn">Submit</div>
               </div>
             </div>
           </div>
@@ -57,6 +56,29 @@
 
         <div class="welcome section pdb0 clear">
           <div class="row mx-auto d-flex justify-content-center">
+            <div class="col-md-8">
+              <div class="title">
+                <h2 class="d-flex justify-content-center">会议简介 / About this meeting</h2>
+              </div>
+              <div class="welcome-inner">
+                <div class="row">
+                  <h6 style="text-align: justify; text-indent: 2em; line-height: 2">基因组学研究是揭示序列变异与基因功能、生命发育、疾病发生发展、人类表型的复杂调控关系的必然手段。近年来，多组学（基因组、转录组、表观组、三维基因组、微生物组等）
+                    测序技术、AI技术和生物信息学、统计遗传学方法的不断进步极大推动了功能基因组学研究的快速发展。转化医学是连接基因组学基础研究与临床应用的桥梁。</h6>
+                  <h6 style="text-align: justify; text-indent: 2em; line-height: 2">为进一步加强国内外基因组与转化医学研究界的交流与合作，推动生物医学发展和疾病药物研发，“第二届基因组与转化医学国际研讨会”将邀请多位海内外知名学者和专家与会，大会将设置多个专题报告和墙报专栏。
+                    热忱欢迎相关领域学者和学生与会，共商学科大计，共享盛举！</h6>
+                  <hr><br>
+                  <h6 style="text-align: justify; text-indent: 2em; line-height: 1.8">Genomic research is essential for revealing the complex regulatory relationships between genetic variants, gene functions,
+                    disease pathogenesis and other complex traits. In recent years, advancements in multi-omics sequencing technologies, artificial intelligence,
+                    bioinformatic and statistical methods have speeded up the development of functional genomic research. At the same time, the connection between basic
+                    genomic research and clinical applications is facilitated by translational medicine research.</h6>
+                  <h6 style="text-align: justify; text-indent: 2em; line-height: 1.8">The goal of "Second International Symposium on Genomics and Translational Medicine" is to enhance communication and collaboration between
+                    the domestic and international communities in genomic and translational medicine research field and promote the development of biomedicine.
+                    We have invited renowned scholars and experts from China and abroad, and will feature several thematic presentations and poster sessions.
+                    We warmly welcome every scholar and student in relevant fields to participate and share advanced research in this symposium!</h6>
+                  <br><br>
+                </div>
+              </div>
+            </div>
             <div class="col-md-8">
               <div class="title">
                 <h2 class="d-flex justify-content-center">会议主题 / Theme</h2>
@@ -182,6 +204,9 @@ export default {
         .catch(() => {
           this.$message.error('Download error');
         });
+    },
+    tiaozhuan(){
+      this.$router.push({path: '/submission', hash: '#target'})
     }
   }
 }

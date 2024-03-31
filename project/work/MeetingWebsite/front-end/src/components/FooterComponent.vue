@@ -46,7 +46,7 @@
               <div class="row">
                 <div class="col-md-6 col-sm-6 col-sm-12">
                   <ul>
-                    <li><a class="text-center" style="text-transform: initial">为了更好的举办本届会议，请有意向参会的人员长按二维码填写 “参会意向表” /
+                    <li><a class="text-center" style="text-transform: initial">为了更好的举办本届会议，请有意向参会的人员扫描二维码填写 “参会意向表” /
                       If you are interested in participating, please scan the QR code. Thank you!</a></li>
                   </ul>
                 </div>
