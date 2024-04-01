@@ -1,7 +1,7 @@
 package com.leetcode.others.practice;
 
 public class BlockingQueue {
-    private int[] items;
+    private final int[] items;
     volatile private int head = 0;
     volatile private int tail = 0;
     volatile private int size = 0;
@@ -64,7 +64,7 @@ public class BlockingQueue {
             while (true){
                 try {
                     queue.put(count);
-                    System.out.println("生产元素:>"+count);
+                    System.out.println("生产元素:>" + count);
                     count++;
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -78,7 +78,7 @@ public class BlockingQueue {
             while (true){
                 try {
                     int elem = queue.take();
-                    System.out.println("消费元素:>"+elem);
+                    System.out.println("消费元素:>" + elem);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
