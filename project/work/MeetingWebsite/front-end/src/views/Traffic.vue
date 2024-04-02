@@ -49,32 +49,40 @@
         <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html" class="btn-link">酒店详情 / Hotel Details</a>
         <br><br>
         <p>订房电话：18191061030（张丽）/ Booking phone number: 18191061030 (Zhang Li)</p>
-        <p>预定时备注“ISGTM-2”或“第二届基因组学与转化医学国际研讨会”可享受优惠价！</p>
-        <p>Please note "ISGTM-2" or "2nd International Symposium on Genomics and Translational Medicine" when booking to enjoy discounted prices!</p>
+        <p>预定时备注“ISGTM-2”或“第二届基因组学与转化医学国际研讨会”可享受优惠价！（单床房和双床房，团队会务价430元/间）</p>
+<!--        <p>Please note "ISGTM-2" or "2nd International Symposium on Genomics and Translational Medicine" when booking to enjoy discounted prices!</p>-->
       </div>
     </div>
     <section class="introduction">
       <div class="card">
-        <div class="photo"><img src="/static/photos/hotel/标注_精品大床房.png" alt=""></div>
+        <div class="photo"><img src="/static/photos/hotel/图片1.png" alt=""></div>
+        <h1></h1>
+        <h2>精品双床房 / Deluxe Twin Room</h2>
+        <p>￥479</p>
+        <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html">酒店详情 / Hotel Details</a>
+      </div>
+      <div class="card">
+        <div class="photo"><img src="/static/photos/hotel/图片2.png" alt=""></div>
         <h1></h1>
         <h2>精品大床房 / Deluxe King Room</h2>
-        <p>￥478</p>
+        <p>￥479</p>
         <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html">酒店详情 / Hotel Details</a>
       </div>
       <div class="card">
-        <div class="photo"><img src="/static/photos/hotel/标注_观景大床房.png" alt=""></div>
+        <div class="photo"><img src="/static/photos/hotel/图片3.png" alt=""></div>
         <h1></h1>
         <h2>观景大床房 / Scenic View King Room</h2>
-        <p>￥768</p>
+        <p>￥559</p>
         <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html">酒店详情 / Hotel Details</a>
       </div>
       <div class="card">
-        <div class="photo"><img src="/static/photos/hotel/标注_蔓兰套房.png" alt=""></div>
+        <div class="photo"><img src="/static/photos/hotel/图片4.png" alt=""></div>
         <h1></h1>
         <h2>蔓兰套房 / Manlan Suite</h2>
-        <p>￥1288</p>
+        <p>￥1200</p>
         <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html">酒店详情 / Hotel Details</a>
       </div>
+
     </section>
     <FooterComponent></FooterComponent>
   </div>
@@ -99,7 +107,7 @@
 .card{
   /* 相对定位 */
   position: relative;
-  width: 30%;
+  width: 20%;
   height: 20vw;
   margin: 10px;
   background-color: #758a99;

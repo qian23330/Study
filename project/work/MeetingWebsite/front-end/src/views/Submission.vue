@@ -16,10 +16,14 @@
           <h3>注册费 / Registration Fee</h3>
           <br>
           <p>会议注册费缴纳方式为银行转账汇款或现场缴费</p>
-          <p>The payment method for conference registration is bank transfer remittance or on-site payment</p>
-          <p>（注：注册时选择预定住宿者，住宿费需入住当日现场缴费；<em><strong>请在转账备注信息中备注您的姓名及邮箱，保证与注册邮箱一致。</strong></em>）</p>
-          <p>(Note: When registering, if you select the accommodation, the accommodation fee needs to be paid on-site on the day of check-in.
-            <em><strong>Please note your name and email in the transfer remarks to ensure consistency with your registered email.</strong></em>)</p>
+<!--          <p>The payment method for conference registration is bank transfer remittance or on-site payment</p>-->
+          <p>（注：注册时选择预定住宿者，住宿费需入住当日现场缴费；<em><strong>请在转账备注信息中备注"姓名+ISGTM"。</strong></em>）</p>
+<!--          <p>(Note: When registering, if you select the accommodation, the accommodation fee needs to be paid on-site on the day of check-in.-->
+<!--            <em><strong>Please note your name and email in the transfer remarks to ensure consistency with your registered email.</strong></em>)</p>-->
+          <br>
+          <div>
+            <img src="/static/file/fee.png" alt="fee.png">
+          </div>
           <br>
           <h3>账户信息 / Account information：</h3>
           <br>
@@ -40,13 +44,11 @@
           <p>Hong Kong dollar / 港币账号：103200215157</p>
           <p>SWIFT CODE / 银行代码:BKCHCNBJ620</p>
           <p>Telephone / 银行电话：029-82582595</p>
-          <br>
-          <h3>会议收费标准 / Conference fee：</h3>
-          <img src="/static/file/fee.png" alt="fee.png">
         </div>
-
         <div class="row text-center">
           <div class="modern-inner mx-auto align-content-center">
+            <h5>请填写以下信息完成注册。</h5>
+            <h5>Please fill in the following information to complete registration.</h5>
             <el-form ref="form" :model="people"  :rules="formRules">
               <el-row :gutter="24">
                 <el-col :span="12">
@@ -100,9 +102,10 @@
                   <el-col :span="12">
                     <el-form-item label="房型 :" prop="roomType">
                       <el-select v-model="people.roomType" placeholder="Room Type">
-                        <el-option label="精品大床房 / Deluxe King Room" value="0"></el-option>
-                        <el-option label="观景大床房 / Scenic View King Room" value="1"></el-option>
-                        <el-option label="蔓兰套房 / Manlan Suite" value="2"></el-option>
+                        <el-option label="精品双床房 / Deluxe Twin Room" value="0"></el-option>
+                        <el-option label="精品大床房 / Deluxe King Room" value="1"></el-option>
+                        <el-option label="观景大床房 / Scenic View King Room" value="2"></el-option>
+                        <el-option label="蔓兰套房 / Manlan Suite" value="3"></el-option>
                       </el-select>
                     </el-form-item>
                   </el-col>
@@ -179,10 +182,10 @@
                     <i class="el-icon-upload"></i>
                     <div class="el-upload__text">将文件拖到此处或<em>点击上传</em>。</div>
                     <div class="el-upload__text">Drag the file here, or <em>click to upload</em>.</div>
-                    <div class="el-upload__tip" slot="tip">请将投稿摘要文件重命名为“题目-邮箱”<br>
+                    <div class="el-upload__tip" slot="tip">请将投稿摘要文件重命名为“题目-姓名”<br>
                       仅支持上传pdf或doc格式的文件，请不要超过10MB<br>
                       一次仅支持上传一个文件</div>
-                    <div class="el-upload__tip" slot="tip">Please change the file name to 'Title-Email'.<br>
+                    <div class="el-upload__tip" slot="tip">Please change the file name to 'Title-Name'.<br>
                       Only .pdf/.doc files are supported and do not exceed 10MB.<br>
                       Only one file can be uploaded at a time. Please check it.</div>
                   </el-upload>
