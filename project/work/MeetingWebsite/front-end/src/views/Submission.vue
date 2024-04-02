@@ -12,11 +12,39 @@
     <section class="clients section">
       <div class="col-md-6 mx-auto">
         <div class="title sec-title">
-          <h2 class="mytext">Register</h2>
+          <h2 class="mytext">Registration</h2>
+          <h3>注册费 / Registration Fee</h3>
+          <br>
+          <p>会议注册费缴纳方式为银行转账汇款或现场缴费</p>
+          <p>The payment method for conference registration is bank transfer remittance or on-site payment</p>
+          <p>（注：注册时选择预定住宿者，住宿费需入住当日现场缴费；<em><strong>请在转账备注信息中备注您的姓名及邮箱，保证与注册邮箱一致。</strong></em>）</p>
+          <p>(Note: When registering, if you select the accommodation, the accommodation fee needs to be paid on-site on the day of check-in.
+            <em><strong>Please note your name and email in the transfer remarks to ensure consistency with your registered email.</strong></em>)</p>
+          <br>
+          <h3>账户信息 / Account information：</h3>
+          <br>
+          <h5>1. 国内汇款：</h5>
+          <p>账户名称：西安交通大学</p>
+          <p>银行账号：3700023509088100314</p>
+          <p>开户银行：中国工商银行西安互助路支行</p>
+          <p>联行行号：102791000162</p>
+          <br>
+          <h5>2. Overseas Remittance / 国外汇款：</h5>
+          <p>Account Name / 账户名：XI’AN JIAOTONG UNIVERSITY 西安交通大学</p>
+          <p>Bank Name / 开户行：BANK OF CHINA SHAANXI BRANCH XI’AN JIAODA SUB-BRANCH 中国银行西安交大支行</p>
+          <p>Bank Address / 开户行地址：NO.8D YouYiDongLu XI’AN SHAANXI CHINA 陕西省西安市友谊东路8D号</p>
+          <p>Account Number / 账户号码:</p>
+          <p>US dollar / 美元账号：103600215153</p>
+          <p>European dollar / 欧元账号：102400215168</p>
+          <p>Japanese Yen / 日元账号：102000215162</p>
+          <p>Hong Kong dollar / 港币账号：103200215157</p>
+          <p>SWIFT CODE / 银行代码:BKCHCNBJ620</p>
+          <p>Telephone / 银行电话：029-82582595</p>
+          <br>
+          <h3>会议收费标准 / Conference fee：</h3>
+          <img src="/static/file/fee.png" alt="fee.png">
         </div>
-        <img src="/static/file/bank.png" alt="bank.png">
-        <br>
-        <img src="/static/file/fee.png" alt="fee.png">
+
         <div class="row text-center">
           <div class="modern-inner mx-auto align-content-center">
             <el-form ref="form" :model="people"  :rules="formRules">
@@ -56,6 +84,72 @@
                     </el-select>
                   </el-form-item>
                 </el-col>
+
+                <!-- 预定酒店预订 -->
+                <el-col :span="12">
+                  <el-form-item label="预定酒店:" prop="bookHotel">
+                    <el-select v-model="people.bookHotel" placeholder="Book Hotel">
+                      <el-option label="是 / Yes" value="yes"></el-option>
+                      <el-option label="否 / No" value="no"></el-option>
+                    </el-select>
+                  </el-form-item>
+                </el-col>
+
+                <template v-if="people.bookHotel === 'yes'">
+                  <!-- 房型选择 -->
+                  <el-col :span="12">
+                    <el-form-item label="房型 :" prop="roomType">
+                      <el-select v-model="people.roomType" placeholder="Room Type">
+                        <el-option label="精品大床房 / Deluxe King Room" value="0"></el-option>
+                        <el-option label="观景大床房 / Scenic View King Room" value="1"></el-option>
+                        <el-option label="蔓兰套房 / Manlan Suite" value="2"></el-option>
+                      </el-select>
+                    </el-form-item>
+                  </el-col>
+
+                  <!-- 开始日期选择 -->
+                  <el-col :span="24">
+                    <el-form-item label="入住日期 :" prop="checkInDate">
+                      <el-date-picker
+                        v-model="people.checkInDate"
+                        type="date"
+                        placeholder="Check In Date"
+                        start-placeholder="开始 / Start"
+                        end-placeholder="结束 / End"
+                        value-format="yyyy-MM-dd"
+                        format="yyyy-MM-dd"
+                        @change="checkDate"
+                        :default-value="new Date(2024,5,14)"
+                        :picker-options="{
+                          disabledDate(time) {
+                          let checkInDate = new Date(2024, 5, 13); // 月份是从0开始，所以6月是5
+                          let checkOutDate = new Date(2024, 5, 16);
+                          return time.getTime() < checkInDate.getTime() || time.getTime() > checkOutDate.getTime();}}"
+                      ></el-date-picker>
+                    </el-form-item>
+                  </el-col>
+
+                  <!-- 结束日期选择 -->
+                  <el-col :span="24">
+                    <el-form-item label="退房日期 :" prop="checkOutDate">
+                      <el-date-picker
+                        v-model="people.checkOutDate"
+                        type="date"
+                        placeholder="Check Out Date"
+                        start-placeholder="开始 / Start"
+                        end-placeholder="结束 / End"
+                        value-format="yyyy-MM-dd"
+                        format="yyyy-MM-dd"
+                        :default-value="new Date(2024,5,14)"
+                        :picker-options="{
+                          disabledDate(time) {
+                          let checkInDate = new Date(people.checkInDate);
+                          let checkOutDate = new Date(2024, 5, 17);
+                          return time.getTime() <= checkInDate.getTime() || time.getTime() >= checkOutDate.getTime(); }}"
+                      ></el-date-picker>
+                    </el-form-item>
+                  </el-col>
+                </template>
 
                 <el-col :span="24">
                   <div class="submit-button" id="target">
@@ -126,17 +220,31 @@ export default {
         institution: "",
         title: "",
         topic: "",
+        bookHotel: "",
+        roomType: "",
+        checkInDate: "",
+        checkOutDate: "",
         attach: {files: ""}
       },
       fileList: [],
       formRules: {
         name: [{required: true, message: 'Please input name', trigger: 'blur'}],
         email: [{required: true, message: 'Please input email', trigger: 'blur'}],
-        telephone: [{required: true, message: 'Please input telephone', trigger: 'blur'}]
+        telephone: [{required: true, message: 'Please input telephone', trigger: 'blur'}],
+        bookHotel: [{required: true, message: 'Please choose yes or no', trigger: 'blur'}],
+        roomType: [{required: true, message: 'Please input room type', trigger: 'blur'}],
+        checkInDate: [{required: true, message: 'Please input check in date', trigger: 'blur'}],
+        checkOutDate: [{required: true, message: 'Please input check out date', trigger: 'blur'}]
       },
     };
   },
   methods: {
+    // 检查并确保退房日期晚于入住日期
+    checkDate () {
+      const { checkInDate, checkOutDate } = this.people;
+      if (checkInDate && checkOutDate && new Date(checkInDate).getTime() >= new Date(checkOutDate).getTime()) {
+        this.people.checkOutDate = '';
+      }},
     scrollToElement(id) {
       const element = document.getElementById(id);
       if (element) {

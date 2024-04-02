@@ -19,9 +19,10 @@ public class PeopleController {
     public Result add(@RequestBody People people) {
         try {
             log.info("新增信息：{}", people);
-            peopleService.add(people);
+            peopleService.addOrUpdate(people);
             return Result.success();
         } catch (Exception ex) {
+            System.out.println(ex);
             return Result.error("System failed, please try again later.");
         }
 

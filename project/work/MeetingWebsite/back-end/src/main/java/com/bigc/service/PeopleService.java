@@ -5,7 +5,7 @@ import com.bigc.pojo.People;
 public interface PeopleService {
 
     /**
-     * 新增注册/投稿人信息
+     * 新增/更新注册人信息
      */
-    void add(People people);
+    void addOrUpdate(People people);
 }

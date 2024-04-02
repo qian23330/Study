@@ -44,30 +44,36 @@
     </section>
     <div class="container">
       <div class="title sec-title">
-        <h6>蔓兰酒店/Man Lan Hotel</h6>
+        <h3>蔓兰酒店/Man Lan Hotel</h3>
+        <br>
+        <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html" class="btn-link">酒店详情 / Hotel Details</a>
+        <br><br>
+        <p>订房电话：18191061030（张丽）/ Booking phone number: 18191061030 (Zhang Li)</p>
+        <p>预定时备注“ISGTM-2”或“第二届基因组学与转化医学国际研讨会”可享受优惠价！</p>
+        <p>Please note "ISGTM-2" or "2nd International Symposium on Genomics and Translational Medicine" when booking to enjoy discounted prices!</p>
       </div>
     </div>
     <section class="introduction">
       <div class="card">
         <div class="photo"><img src="/static/photos/hotel/标注_精品大床房.png" alt=""></div>
         <h1></h1>
-        <h2>精品大床房</h2>
+        <h2>精品大床房 / Deluxe King Room</h2>
         <p>￥478</p>
-        <a href="http://manlan.api.first-edu.com.cn/html/xwzx/2.html">酒店详情</a>
+        <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html">酒店详情 / Hotel Details</a>
       </div>
       <div class="card">
         <div class="photo"><img src="/static/photos/hotel/标注_观景大床房.png" alt=""></div>
         <h1></h1>
-        <h2>观景大床房</h2>
+        <h2>观景大床房 / Scenic View King Room</h2>
         <p>￥768</p>
-        <a href="http://manlan.api.first-edu.com.cn/html/xwzx/2.html">酒店详情</a>
+        <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html">酒店详情 / Hotel Details</a>
       </div>
       <div class="card">
         <div class="photo"><img src="/static/photos/hotel/标注_蔓兰套房.png" alt=""></div>
         <h1></h1>
-        <h2>蔓兰套房</h2>
+        <h2>蔓兰套房 / Manlan Suite</h2>
         <p>￥1288</p>
-        <a href="http://manlan.api.first-edu.com.cn/html/xwzx/2.html">酒店详情</a>
+        <a href="http://www.hotelmomc.com.cn/html/rmmdd/sc/16.html">酒店详情 / Hotel Details</a>
       </div>
     </section>
     <FooterComponent></FooterComponent>
