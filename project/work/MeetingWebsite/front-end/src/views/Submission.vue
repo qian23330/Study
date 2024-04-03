@@ -182,10 +182,10 @@
                     <i class="el-icon-upload"></i>
                     <div class="el-upload__text">将文件拖到此处或<em>点击上传</em>。</div>
                     <div class="el-upload__text">Drag the file here, or <em>click to upload</em>.</div>
-                    <div class="el-upload__tip" slot="tip">请将投稿摘要文件重命名为“题目-姓名”<br>
+                    <div class="el-upload__tip" slot="tip">
                       仅支持上传pdf或doc格式的文件，请不要超过10MB<br>
                       一次仅支持上传一个文件</div>
-                    <div class="el-upload__tip" slot="tip">Please change the file name to 'Title-Name'.<br>
+                    <div class="el-upload__tip" slot="tip">
                       Only .pdf/.doc files are supported and do not exceed 10MB.<br>
                       Only one file can be uploaded at a time. Please check it.</div>
                   </el-upload>
