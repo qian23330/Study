@@ -17,9 +17,9 @@ public class People {
     private String telephone;
     private String institution;
     private String title;
-    private short topic;
+    private Short topic;
     private String bookHotel;
-    private short roomType;
+    private Short roomType;
     private LocalDate checkInDate;
     private LocalDate checkOutDate;
     private LocalDateTime createTime;

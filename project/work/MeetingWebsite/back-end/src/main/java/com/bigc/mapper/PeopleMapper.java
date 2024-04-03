@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Update;
 public interface PeopleMapper {
 
     @Select("SELECT * FROM register_info WHERE email = #{email}")
-    People findByEmail(String id);
+    People findByEmail(String email);
 
     @Insert("INSERT INTO register_info (id, name, email, telephone, institution, title, topic, " +
             "book_hotel, room_type, checkin_date, checkout_date, create_time, update_time) " +
