@@ -2,7 +2,7 @@ package com.leetcode.others.normal.链表.leetcode0092;
 
 /*
 力扣-92-反转链表 II
-normal-链表
+normal-链表区间反转
  */
 
 import com.leetcode.utils.LinkedlistSolution;
@@ -12,32 +12,41 @@ import java.util.Scanner;
 
 class Solution {
     public ListNode reverseBetween(ListNode head, int left, int right) {
-        ListNode dummy = new ListNode(-1, head), p = dummy;
+        ListNode dummy = new ListNode(-1, head), pre = dummy;
         for (int i = 0; i < left - 1; i++) {
-            p = p.next;
+            pre = pre.next;
         }
-        ListNode cur = p.next;
-        ListNode pre = null;
+        ListNode rightNode = pre;
         for (int i = 0; i < right - left + 1; i++) {
-            ListNode nex = cur.next;
+            rightNode = rightNode.next;
+        }
+        ListNode leftNode = pre.next;
+        ListNode cur = rightNode.next;
+        pre.next = null;
+        rightNode.next = null;
+        reverseList(leftNode);
+        pre.next = rightNode;
+        leftNode.next = cur;
+        return dummy.next;
+    }
+
+    private void reverseList(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode tmp = cur.next;
             cur.next = pre;
             pre = cur;
-            cur = nex;
+            cur = tmp;
         }
-        p.next.next = cur;
-        p.next = pre;
-        return dummy.next;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入一系列整数，以空格分隔，每行一组：");
-        String[] values = scanner.nextLine().split(" ");
-        ListNode head = LinkedlistSolution.createLinkedList(values);
-        System.out.println("请输入left：");
+        String[] input = scanner.nextLine().split(" ");
+        ListNode head = LinkedlistSolution.createLinkedList(input);
         int left = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("请输入right：");
         int right = scanner.nextInt();
         LinkedlistSolution.printLinkedList(new Solution().reverseBetween(head, left, right));
     }
