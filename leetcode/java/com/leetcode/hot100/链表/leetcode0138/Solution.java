@@ -6,12 +6,8 @@ hot100-链表-哈希
  */
 
 
-import com.leetcode.utils.LinkedlistSolution;
-import com.leetcode.utils.ListNode;
-
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 // Definition for a Node.
 class Node {

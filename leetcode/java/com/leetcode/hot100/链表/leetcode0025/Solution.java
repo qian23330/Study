@@ -12,43 +12,36 @@ import java.util.Scanner;
 
 class Solution {
     public ListNode reverseKGroup(ListNode head, int k) {
-        ListNode hair = new ListNode(0);
-        hair.next = head;
-        ListNode pre = hair;
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
 
-        while (head != null) {
-            ListNode tail = pre;
-            // 查看剩余部分长度是否大于等于 k
-            for (int i = 0; i < k; i++) {
-                tail = tail.next;
-                if (tail == null) {
-                    return hair.next;
-                }
-            }
-            ListNode nex = tail.next;
-            ListNode[] reverse = reverse(head, tail);
-            head = reverse[0];
-            tail = reverse[1];
-            // 把子链表重新接回原链表
-            pre.next = head;
-            tail.next = nex;
-            pre = tail;
-            head = tail.next;
+        ListNode pre = dummy;
+        ListNode end = dummy;
+
+        while (end.next != null) {
+            for (int i = 0; i < k && end != null; i++) end = end.next;
+            if (end == null) break;
+            ListNode start = pre.next;
+            ListNode next = end.next;
+            end.next = null;
+            pre.next = reverse(start);
+            start.next = next;
+            pre = start;
+            end = pre;
         }
-
-        return hair.next;
+        return dummy.next;
     }
 
-    private ListNode[] reverse(ListNode head, ListNode tail) {
-        ListNode pre = tail.next;
-        ListNode cur = head;
-        while (pre != tail) {
-            ListNode next = cur.next;
-            cur.next = pre;
-            pre = cur;
-            cur = next;
+    private ListNode reverse(ListNode head) {
+        ListNode pre = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
         }
-        return new ListNode[]{tail, head};
+        return pre;
     }
 
     public static void main(String[] args) {
