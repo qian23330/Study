@@ -21,7 +21,6 @@ import java.util.UUID;
 @Component
 public class AliOSSUtils {
 
-
     @Autowired
     private AliOSSProperties aliOSSProperties;
 
@@ -49,11 +48,11 @@ public class AliOSSUtils {
         // 避免文件覆盖
         String originalFilename = file.getOriginalFilename();
         assert originalFilename != null;
-//        String fileName = UUID.randomUUID().toString() + originalFilename.substring(originalFilename.lastIndexOf("."));
+        String fileName = UUID.randomUUID() + originalFilename.substring(originalFilename.lastIndexOf("."));
 
         //上传文件到 OSS
         OSS ossClient = new OSSClientBuilder().build(endpoint, credentialsProvider);
-        ossClient.putObject(bucketName, originalFilename, inputStream);
+        ossClient.putObject(bucketName, fileName, inputStream);
 
         //文件访问路径
         String url = endpoint.split("//")[0] + "//" + bucketName + "." + endpoint.split("//")[1] + "/" + originalFilename;
