@@ -19,7 +19,7 @@ class Solution {
             g[pre].add(cur);
             indegree[cur]++;
         }
-        Deque<Integer> q = new LinkedList<>();
+        Queue<Integer> q = new LinkedList<>();
         for (int i = 0; i < numCourses; i++) {
             if (indegree[i] == 0) {
                 q.offer(i);
