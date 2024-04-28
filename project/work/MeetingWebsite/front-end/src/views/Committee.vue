@@ -14,12 +14,29 @@
         <div class="title sec-title">
           <h2 class="mytext">Committee</h2>
           <p>学术委员会名单 / Committee members list</p>
-          <p>(待定 / Underdetermined)</p>
+          <br>
+          <h3>大会委员会</h3>
+          <br>
+          <h4>学术委员会</h4>
+          <h5>主席：邓红文</h5>
+          <h5>副主席: 李明定，Yun-Long Liu</h5>
+          <br>
+          <h5>学委会委员（按姓氏笔画排序）</h5>
+          <h5>Yu-Ping Wang，Hao Zhu，刘鹏渊，李明，李轩，李淼新，沈洁，</h5>
+          <h5>肖红梅，肖苏妹，杨铁林，张峰，张垒，张丽姝，官方霖，郭燕，</h5>
+          <h5>徐书华，蒋慧，蒋德科，雷署丰，Wei Lei</h5>
+          <br><br>
+          <h4>组织委员会</h4>
+          <h5>主席：杨铁林</h5>
+          <br>
+          <h5>组委会委员（按姓氏笔画排序）</h5>
+          <h5>王然，朱东丽，刘鹏渊，李淼新，肖苏妹，陈晓峰，张峰，张垒，</h5>
+          <h5>张丽姝，林旭，郭燕，董珊珊，蒋德科，蒋慧，雷署丰</h5>
         </div>
       </div>
     </section>
     <section class="introduction">
-      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br>
     </section>
     <FooterComponent></FooterComponent>
   </div>
