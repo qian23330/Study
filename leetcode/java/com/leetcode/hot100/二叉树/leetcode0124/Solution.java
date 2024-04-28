@@ -14,19 +14,17 @@ class Solution {
     int maxSum = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
-        maxGain(root);  // 计算节点的最大贡献值
+        dfs(root);  // 计算节点的最大贡献值
         return maxSum;
     }
 
-    private int maxGain(TreeNode node) {
+    private int dfs(TreeNode node) {
         if (node == null) return 0;
-
-        int leftGain = Math.max(maxGain(node.left), 0);
-        int rightGain = Math.max(maxGain(node.right), 0);
-
-        int res = node.val + leftGain + rightGain;
-        maxSum = Math.max(res, maxSum);
-        return node.val + Math.max(leftGain, rightGain);
+        int left = dfs(node.left);
+        int right = dfs(node.right);
+        int cur = node.val + left + right;
+        maxSum = Math.max(maxSum, cur);
+        return Math.max(Math.max(left, right) + node.val, 0);
     }
 
     public static void main(String[] args) {

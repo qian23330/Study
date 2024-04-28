@@ -1,8 +1,8 @@
-package com.leetcode.hot100.矩阵.leetcode0200;
+package com.leetcode.hot100.图.leetcode0200;
 
 /*
 力扣-200-岛屿数量
-hot100-bfs/dfs-矩阵
+hot100-bfs/dfs
  */
 
 import java.util.*;
