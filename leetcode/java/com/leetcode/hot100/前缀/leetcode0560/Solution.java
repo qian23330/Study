@@ -1,4 +1,4 @@
-package com.leetcode.hot100.前缀和.leetcode0560;
+package com.leetcode.hot100.前缀.leetcode0560;
 
 /*
 力扣-560-和为 K 的子数组
