@@ -27,7 +27,7 @@
               <div class="modern-inner">
                 <h4>重要日期 / Important Date</h4>
                 <p>论文投稿 / Submission：</p>
-                <p>2024.01.01 - 05.01</p>
+                <p>2024.01.01 - 06.01</p>
                 <p>参会注册 / Register：</p>
                 <p>2024.01.01 - 06.12</p>
                 <p>会议时间 / Meeting：</p>

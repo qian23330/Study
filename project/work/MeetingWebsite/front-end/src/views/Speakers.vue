@@ -19,10 +19,10 @@
       <div class="box">
         <div class="top-bar"></div>
         <div class="details">
-          <img alt="image" src="@/assets/images/speakers/wps_doc_2.jpg" />
-          <h3>Hong-Wen Deng (邓红文)</h3>
+          <img alt="image" src="@/assets/images/speakers/dr_deng.jpeg" />
+          <h4>Hong-Wen Deng (邓红文)</h4>
           <h4>Professor</h4>
-          <h5>Tulane University</h5>
+          <h4>Tulane University</h4>
           <div class="modern-btn">
             <a href="https://medicine.tulane.edu/departments/biomedical-informatics-and-genomics-division-biomed-gen-tulane-center-aging-tips-mentor">Home Page<i class="fa fa-long-arrow-right"></i></a>
           </div>
@@ -38,10 +38,10 @@
       <div class="box">
         <div class="top-bar"></div>
         <div class="details">
-          <img alt="image" src="@/assets/images/speakers/李明定.jpeg" />
-          <h3>李明定</h3>
-          <h4>欧洲自然科学院外籍院士，教授</h4>
-          <h5>浙江大学</h5>
+          <img alt="image" src="@/assets/images/speakers/mingding.png" />
+          <h4>李明定</h4>
+          <h4>教授</h4>
+          <h4>浙江大学</h4>
           <div class="modern-btn">
             <a href="https://person.zju.edu.cn/ml2km#0">Home Page<i class="fa fa-long-arrow-right"></i></a>
           </div>
@@ -57,10 +57,31 @@
       <div class="box">
         <div class="top-bar"></div>
         <div class="details">
+          <img alt="image" src="@/assets/images/speakers/yunlong.jpg" />
+          <h4>Yun-Long Liu (刘云龙)</h4>
+          <h4>Professor</h4>
+          <h4>Indiana University</h4>
+          <div class="modern-btn">
+            <a href="https://yunlongliulab.github.io/ ">Home Page<i class="fa fa-long-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="description">
+          <h5 style="text-align: center">Topic: Roles of regulatory variants in complex disease</h5>
+          <br>
+          <p>Dr. Liu’s team is dedicated to employing systems biology approaches to decipher the molecular mechanisms of gene regulation that
+            play critical roles in complex diseases such as cancer, addiction, and neurodegenerative disorders. Specific research areas include developing
+            and implementing cutting-edge experimental assays and innovative computational algorithms in understanding the functions of genetic variants in
+            complex diseases, designing methodologies on analyzing multimodal high-dimensional data, and understanding regulatory mechanisms and translational
+            impact of alternative splicing in cancer and other diseases. </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="top-bar"></div>
+        <div class="details">
           <img alt="image" src="@/assets/images/speakers/李明.jpeg" />
-          <h3>李明</h3>
+          <h4>李明</h4>
           <h4>研究员</h4>
-          <h5>中国科学院昆明动物研究所</h5>
+          <h4>中国科学院昆明动物研究所</h4>
           <div class="modern-btn">
             <a href="http://sourcedb.kiz.cas.cn/zw/zjrc/yq/201606/t20160601_4614219.html">Home Page<i class="fa fa-long-arrow-right"></i></a>
           </div>
@@ -75,28 +96,10 @@
       <div class="box">
         <div class="top-bar"></div>
         <div class="details">
-          <img alt="image" src="@/assets/images/speakers/wps_doc_19.jpg" />
-          <h3>Yun-Long Liu (刘云龙)</h3>
-          <h4>Associate Professor</h4>
-          <h5>Indiana Univ. School of Medicine</h5>
-          <div class="modern-btn">
-            <a href="http://compbio.iupui.edu/people/details/10">Home Page<i class="fa fa-long-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="description">
-          <h5 style="text-align: center">Topic: Roles of regulatory variants in complex disease</h5>
-          <br>
-          <p>Dr. Liu’s laboratory develops computational methodologies to study transcriptional,
-            post-transcriptional and epigenetic regulation. High-throughput experimental data from multiple domains are integrated.</p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="top-bar"></div>
-        <div class="details">
-          <img alt="image" src="@/assets/images/speakers/wps_doc_6.jpg" />
-          <h3>杨铁林</h3>
+          <img alt="image" src="@/assets/images/speakers/ytl.jpg" />
+          <h4>杨铁林</h4>
           <h4>教授</h4>
-          <h5>西安交通大学</h5>
+          <h4>西安交通大学</h4>
           <div class="modern-btn">
             <a href="http://gr.xjtu.edu.cn/web/yangtielin;jsessionid=422B9990E73EBAEC416C39133E06FAFB">Home Page<i class="fa fa-long-arrow-right"></i></a>
           </div>

@@ -79,10 +79,10 @@
                 <el-col :span="12">
                   <el-form-item label="投稿主题 :" prop="选择框">
                     <el-select v-model="people.topic" placeholder="Topic" style="width: 100%;">
-                      <el-option label="生物信息学与统计方法/Bioinformatics and Statistical Methods" value="0"></el-option>
-                      <el-option label="人工智能、大数据与精准医疗/Artificial Intelligence, Big Data, and Precision Medicine" value="1"></el-option>
-                      <el-option label="多组学、生物标志物、疾病诊断和风险预测/Multi-omics, Biomarkers, Disease Diagnosis, and Risk Prediction" value="2"></el-option>
-                      <el-option label="药物、靶点、疾病机制和治疗/Drugs, Targets, Disease Mechanisms, and Treatment" value="3"></el-option>
+                      <el-option label="生物信息学与统计方法 / Bioinformatics and Statistical Methods" value="0"></el-option>
+                      <el-option label="人工智能、大数据与精准医疗 / Artificial Intelligence, Big Data, and Precision Medicine" value="1"></el-option>
+                      <el-option label="多组学、生物标志物、疾病诊断和风险预测 / Multi-omics, Biomarkers, Disease Diagnosis, and Risk Prediction" value="2"></el-option>
+                      <el-option label="药物、靶点、疾病机制和治疗 / Drugs, Targets, Disease Mechanisms, and Treatment" value="3"></el-option>
                     </el-select>
                   </el-form-item>
                 </el-col>
