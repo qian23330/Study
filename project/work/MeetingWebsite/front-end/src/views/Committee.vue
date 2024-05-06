@@ -21,21 +21,21 @@
           <p class="p">副主席: 李明定，Yun-Long Liu</p>
           <br>
           <p class="p">委员（按姓氏笔画排序）</p>
-          <p class="p">Yu-Ping Wang，Hao Zhu，刘鹏渊，李明，李轩，李淼新，沈洁，</p>
-          <p class="p">肖红梅，肖苏妹，杨铁林，张峰，张垒，张丽姝，官方霖，郭燕，</p>
+          <p class="p">Yu-Ping Wang，邓飞艳，Hao Zhu，刘鹏渊，李明，李轩，李淼新，</p>
+          <p class="p">沈洁，肖红梅，肖苏妹，杨铁林，张峰，张垒，张丽姝，官方霖，郭燕，</p>
           <p class="p">徐书华，蒋慧，蒋德科，雷署丰，Wei Lei</p>
           <br><br>
           <h3>组织委员会</h3>
           <p class="p">主席：杨铁林</p>
           <br>
           <p class="p">委员（按姓氏笔画排序）</p>
-          <p class="p">王然，朱东丽，刘鹏渊，李淼新，肖苏妹，陈晓峰，张峰，张垒，</p>
-          <p class="p">张丽姝，林旭，郭燕，董珊珊，蒋德科，蒋慧，雷署丰</p>
+          <p class="p">王然，邓飞艳，朱东丽，刘鹏渊，李淼新，肖苏妹，陈晓峰，张峰，</p>
+          <p class="p">张垒，张丽姝，林旭，郭燕，董珊珊，蒋德科，蒋慧，雷署丰</p>
         </div>
       </div>
     </section>
     <section class="introduction">
-      <br><br><br><br>
+      <br><br>
     </section>
     <FooterComponent></FooterComponent>
   </div>
