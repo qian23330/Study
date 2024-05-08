@@ -32,8 +32,8 @@ class Solution {
         }
     }
 
-    private boolean isValid(String s, int startIndex, int end) {
-        for (int i = startIndex, j = end; i < j; i++, j--) {
+    private boolean isValid(String s, int start, int end) {
+        for (int i = start, j = end; i < j; i++, j--) {
             if (s.charAt(i) != s.charAt(j)) {
                 return false;
             }
