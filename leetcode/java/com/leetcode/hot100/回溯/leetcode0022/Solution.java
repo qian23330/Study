@@ -14,23 +14,23 @@ class Solution {
     StringBuilder path = new StringBuilder();
 
     public List<String> generateParenthesis(int n) {
-        backtracking(res, path, 0, 0, n);
+        backtracking(0, 0, n);
         return res;
     }
 
-    private void backtracking(List<String> res, StringBuilder path, int left, int right, int max) {
+    private void backtracking(int left, int right, int max) {
         if (path.length() == 2 * max) {
             res.add(path.toString());
             return;
         }
         if (left < max) {
             path.append('(');
-            backtracking(res, path, left + 1, right, max);
+            backtracking(left + 1, right, max);
             path.deleteCharAt(path.length() - 1);
         }
         if (right < left) {
             path.append(')');
-            backtracking(res, path, left, right + 1, max);
+            backtracking(left, right + 1, max);
             path.deleteCharAt(path.length() - 1);
         }
     }
