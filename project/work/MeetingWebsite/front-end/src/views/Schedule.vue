@@ -38,5 +38,4 @@
 <script setup>
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
-import Table from "@/components/TimetableComponent.vue";
 </script>

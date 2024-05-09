@@ -26,12 +26,14 @@
             <div class="col-md-4 modern-class">
               <div class="modern-inner">
                 <h4>重要日期 / Important Date</h4>
+                <br>
                 <p>论文投稿 / Submission：</p>
                 <p>2024.01.01 - 06.01</p>
                 <p>参会注册 / Register：</p>
                 <p>2024.01.01 - 06.12</p>
                 <p>会议时间 / Meeting：</p>
                 <p>2024.06.13 - 06.16</p>
+                <br>
                 <div class="modern-btn">
                   <a href="#/schedule">learn more<i class="fa fa-long-arrow-right"></i></a>
                 </div>
@@ -43,12 +45,14 @@
             <div class="col-md-4 modern-class modern-apply text-center">
               <div class="modern-apply-inner">
                 <!-- <p>Apply To</p> -->
-                <br><br>
                 <h3>Click To Register</h3>
                 <a href="#/submission" class="btn btn-primary btn">Register</a>
                 <br><br><br>
                 <h3>Click To Submit</h3>
                 <div @click="tiaozhuan" class="btn btn-primary btn">Submit</div>
+                <br><br><br>
+                <h3>Invitation / Notice</h3>
+                <a href="/static/file/templates.zip" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
               </div>
             </div>
           </div>
@@ -196,7 +200,7 @@ export default {
           const downloadUrl = window.URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = downloadUrl;
-          link.download = 'notice.pdf'; // 设置下载的文件名
+          link.download = 'Invitation-Notice.zip'; // 设置下载的文件名
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);

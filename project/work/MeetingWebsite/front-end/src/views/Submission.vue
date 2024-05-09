@@ -15,6 +15,7 @@
           <h2 class="mytext">Registration</h2>
           <h3>注册费 / Registration Fee</h3>
           <br>
+          <p>注册费包含会议期间的茶歇费和资料费等，食宿和交通费自理</p>
           <p>会议注册费缴纳方式为银行转账汇款或现场缴费</p>
 <!--          <p>The payment method for conference registration is bank transfer remittance or on-site payment</p>-->
           <p>（注：注册时选择预定住宿者，住宿费需入住当日现场缴费；<em><strong>请在转账备注信息中备注"姓名+ISGTM"。</strong></em>）</p>
@@ -203,9 +204,7 @@
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
-import { add, update } from "@/api/send.js";
-import Table from "@/components/TimetableComponent.vue";
-import FeeTable from "@/components/Fee.vue";
+import { add } from "@/api/send.js";
 
 export default {
   mounted() {
@@ -213,7 +212,7 @@ export default {
       this.scrollToElement(this.$route.hash.slice(1));
     }
   },
-  components: {FeeTable, Table, HeaderComponent, FooterComponent },
+  components: {HeaderComponent, FooterComponent },
   data() {
     return {
       people: {
