@@ -72,7 +72,6 @@
   <!--Footer Bottom-->
 </template>
 <script>
-import axios from 'axios';
 export default {
   name: "FooterComponent",
   data() {
@@ -80,31 +79,7 @@ export default {
       registeredCount: 0,
       submittedCount: 0
     };
-  },
-  // mounted() {
-  //   this.fetchRegisteredCount();
-  //   this.fetchSubmittedCount();
-  // },
-  // methods: {
-  //   async fetchRegisteredCount() {
-  //     try {
-  //       // 使用 Axios 或 Fetch 发送请求获取已注册人数
-  //       const response = await axios.get('/api/getRegisteredCount');
-  //       this.registeredCount = response.data.count; // 假设后端返回数据格式为 { count: 100 }
-  //     } catch (error) {
-  //       console.error('Error fetching registered count:', error);
-  //     }
-  //   },
-  //   async fetchSubmittedCount() {
-  //     try {
-  //       // 使用 Axios 或 Fetch 发送请求获取已投稿人数
-  //       const response = await axios.get('/api/getSubmittedCount');
-  //       this.submittedCount = response.data.count; // 假设后端返回数据格式为 { count: 50 }
-  //     } catch (error) {
-  //       console.error('Error fetching submitted count:', error);
-  //     }
-  //   }
-  // }
+  }
 }
 </script>
 <style scoped>

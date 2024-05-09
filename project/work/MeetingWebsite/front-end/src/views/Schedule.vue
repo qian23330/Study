@@ -19,18 +19,12 @@
           <img src="/static/file/table.png" alt="table.png">
         </div>
       </div>
-
     </section>
     <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <style scoped>
-.parent-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .mytext {
   text-transform: capitalize;
 }
