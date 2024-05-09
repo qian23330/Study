@@ -52,7 +52,7 @@
                 <div @click="tiaozhuan" class="btn btn-primary btn">Submit</div>
                 <br><br><br>
                 <h3>Invitation / Notice</h3>
-                <a href="/static/file/templates.zip" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
+                <a href="/static/file/Invitation-Notice.zip" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
               </div>
             </div>
           </div>
