@@ -15,6 +15,7 @@
                 <p>陕西省西安市西咸新区沣西新城河堤路与梧桐东路交叉路口南</p>
                 <p>Xi'an Jiaotong University(Western China Science And Technology Innovation Harbor)</p>
                 <p>South of the Intersection of Hedi Road and Wutong East Road, Fengxi New City, Xixian New Area, Xi'an City, Shaanxi Province.</p>
+                <br>
                 <div class="modern-btn">
                   <a href="#/traffic">learn more<i class="fa fa-long-arrow-right"></i></a>
                 </div>
@@ -33,7 +34,7 @@
                 <p>2024.01.01 - 06.12</p>
                 <p>会议时间 / Meeting：</p>
                 <p>2024.06.13 - 06.16</p>
-                <br>
+                <br><br>
                 <div class="modern-btn">
                   <a href="#/schedule">learn more<i class="fa fa-long-arrow-right"></i></a>
                 </div>
@@ -51,8 +52,9 @@
                 <h3>Click To Submit</h3>
                 <div @click="tiaozhuan" class="btn btn-primary btn">Submit</div>
                 <br><br><br>
-                <h3>Invitation / Notice</h3>
-                <a href="/static/file/Invitation-Notice.zip" @click.prevent="downloadFile" class="btn btn-primary btn">Download</a>
+                <h4>资料下载 / Material Download</h4>
+                <a href="/static/file/Invitation-Notice/Invitation%20letter%20temple-The%202nd%20International%20Symposium%20on%20Genomics%20and%20Translational%20Medicine.docx" @click.prevent="downloadFile01" class="btn btn-primary btn">邀请函 / Invitation Letter</a>
+                <a href="/static/file/Invitation-Notice/会议通知.pdf" @click.prevent="downloadFile02" class="btn btn-primary btn">会议通知 / Meeting Notification</a>
               </div>
             </div>
           </div>
@@ -191,7 +193,7 @@ export default {
   name: 'HomeView',
   components: {Slider, FooterComponent, HeaderComponent},
   methods: {
-    downloadFile(event) {
+    downloadFile01(event) {
       const url = event.target.href;  // 获取链接的url
       fetch(url)
         .then(response => response.blob())
@@ -200,7 +202,25 @@ export default {
           const downloadUrl = window.URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = downloadUrl;
-          link.download = 'Invitation-Notice.zip'; // 设置下载的文件名
+          link.download = 'Invitation letter temple-The 2nd International Symposium on Genomics and Translational Medicine.docx'; // 设置下载的文件名
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        })
+        .catch(() => {
+          this.$message.error('Download error');
+        });
+    },
+    downloadFile02(event) {
+      const url = event.target.href;  // 获取链接的url
+      fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+          // 创建Blob URL并用于异步下载
+          const downloadUrl = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = downloadUrl;
+          link.download = '会议通知.pdf'; // 设置下载的文件名
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
