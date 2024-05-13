@@ -74,7 +74,7 @@
                 </el-col>
                 <el-col :span="12">
                   <el-form-item label="文章题目 :">
-                    <el-input v-model="people.title" placeholder="Title"></el-input>
+                    <el-input v-model="people.title" placeholder="Title of your submission"></el-input>
                   </el-form-item>
                 </el-col>
                 <el-col :span="12">
@@ -282,7 +282,13 @@ export default {
     },
     handleAvatarSuccess(res) {
       this.people.attach.files = res.data.data;
-      this.$message.success('file uploaded successfully！');
+      this.$message.success({
+        dangerouslyUseHTMLString: true,
+        message: '<strong style="font-size: 20px;">摘要已成功提交！/ Abstract accepted. Thank you!</strong>',
+        type: 'success',
+        duration: 6000
+      });
+      // this.$message.success('摘要已成功提交！/ Abstract accepted. Thank you!');
     },
     beforeAvatarUpload(file) {
       const fileType = file.type.toLowerCase();
@@ -293,11 +299,23 @@ export default {
       const isLt2M = file.size / 1024 / 1024 < 10;
 
       if (!isAllowedType) {
-        this.$message.error("please check your file type which should be .pdf or .docx");
+        this.$message.error({
+          dangerouslyUseHTMLString: true,
+          message: '<strong style="font-size: 20px;">Please check your file type which should be .pdf or .docx !</strong>',
+          type: 'error',
+          duration: 6000
+        });
+        // this.$message.error("please check your file type which should be .pdf or .docx");
         return false;
       }
       if (!isLt2M) {
-        this.$message.error("The file size cannot exceed 10MB!");
+        this.$message.error({
+          dangerouslyUseHTMLString: true,
+          message: '<strong style="font-size: 20px;">The file size cannot exceed 10MB!</strong>',
+          type: 'error',
+          duration: 6000
+        });
+        // this.$message.error("The file size cannot exceed 10MB!");
         return false;
       }
 
@@ -307,7 +325,13 @@ export default {
     submitForm() {
       // Check if input fields are filled
       if (!this.people.name || !this.people.email || !this.people.telephone) {
-        this.$message.error('Please fill in all the required fields');
+        this.$message.error({
+          dangerouslyUseHTMLString: true,
+          message: '<strong style="font-size: 20px;">请填写基本信息！/ Please fill in all the required fields !</strong>',
+          type: 'error',
+          duration: 6000
+        });
+        // this.$message.error('Please fill in all the required fields');
         return;
       }
 
@@ -330,15 +354,21 @@ export default {
       this.$refs.form.validate((valid) => {
         if (valid) {
           // Rest of your existing logic for confirmation and submission
-          this.$confirm("confirm to submit?", "Warning", {
+          this.$confirm("<strong style='font-size: 16px'>确认提交？ / Confirm to submit?</strong>", "Warning", {
             confirmButtonText: "Yes",
             cancelButtonText: "No",
             type: "warning",
+            dangerouslyUseHTMLString: true,
           }).then(() => {
             add(this.people)
               .then((resp) => {
                 if (resp.data.code === 1) {
-                  this.$message.success({ message: 'successfully submitted', type: 'success' });
+                  this.$message.success({
+                    dangerouslyUseHTMLString: true,
+                    message: '<strong style="font-size: 20px;">已成功注册！/ Successfully registered. Thank you!</strong>',
+                    type: 'success',
+                    duration: 6000
+                  });
                   // Additional actions upon successful submission
                 } else {
                   this.$message.error(resp.data.msg);
