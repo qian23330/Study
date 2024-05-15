@@ -9,24 +9,24 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 class MinStack {
-    private Deque<Integer> stack;
-    private Deque<Integer> min_stack;
+    private final Deque<Integer> stack;
+    private final Deque<Integer> minStack;
 
     public MinStack() {
         stack = new LinkedList<>();
-        min_stack = new LinkedList<>();
+        minStack = new LinkedList<>();
     }
 
     public void push(int val) {
         stack.push(val);
-        if (min_stack.isEmpty() || val <= min_stack.peek()) {
-            min_stack.push(val);
+        if (minStack.isEmpty() || val <= minStack.peek()) {
+            minStack.push(val);
         }
     }
 
     public void pop() {
-        if (stack.pop().equals(min_stack.peek())) {
-            min_stack.pop();
+        if (stack.pop().equals(minStack.peek())) {
+            minStack.pop();
         }
     }
 
@@ -36,7 +36,18 @@ class MinStack {
     }
 
     public int getMin() {
-        if (!min_stack.isEmpty()) return min_stack.peek();
+        if (!minStack.isEmpty()) return minStack.peek();
         return -1;
+    }
+
+    public static void main(String[] args) {
+        MinStack minStack = new MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.top());
+        System.out.println(minStack.getMin());
     }
 }
