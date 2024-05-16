@@ -11,26 +11,24 @@ import java.util.Scanner;
 
 class Solution {
     public String decodeString(String s) {
-        int multi = 0;  // 数字
+        int num = 0;  // 数字
         StringBuilder res = new StringBuilder();
-        Deque<Integer> stack_multi = new LinkedList<>();
+        Deque<Integer> stack_num = new LinkedList<>();
         Deque<String> stack_res = new LinkedList<>();
 
         for (char c : s.toCharArray()) {
             if (c == '[') {
-                stack_multi.push(multi);
+                stack_num.push(num);
                 stack_res.push(res.toString());
-                multi = 0;
+                num = 0;
                 res = new StringBuilder();
             } else if (c == ']') {
                 StringBuilder tmp = new StringBuilder();
-                int cur_multi = stack_multi.pop();
-                for (int i = 0; i < cur_multi; i++) {
-                    tmp.append(res);
-                }
+                int cur_num = stack_num.pop();
+                tmp.append(String.valueOf(res).repeat(Math.max(0, cur_num)));
                 res = new StringBuilder(stack_res.pop() + tmp);
             } else if (c >= '0' && c <= '9') {
-                multi = multi * 10 + Integer.parseInt(c + "");  // 连续数字
+                num = num * 10 + Integer.parseInt(c + "");  // 连续数字
             } else {
                 res.append(c);
             }
