@@ -24,4 +24,14 @@ class Solution {
         }
         return top;
     }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] input = scanner.nextLine().split(" ");
+        int[] nums = Arrays.stream(input)
+                .mapToInt(Integer::parseInt)
+                .toArray();
+        int k = scanner.nextInt();
+        System.out.println(Arrays.toString(new Solution().topKFrequent(nums, k)));
+    }
 }
