@@ -15,9 +15,14 @@
           <h2 class="mytext">Schedule</h2>
           <p>会议具体时间安排如下：</p>
           <p>The specific schedule of the meeting is as follows:</p>
-          <br><br>
-          <img src="/static/file/table.png" alt="table.png">
+          <br>
+          <img src="/static/file/agenda/00.jpg" alt="table.png">
+          <img src="/static/file/agenda/01.jpg" alt="table.png">
+          <img src="/static/file/agenda/02.jpg" alt="table.png">
+          <img src="/static/file/agenda/03.jpg" alt="table.png">
+          <img src="/static/file/agenda/04.jpg" alt="table.png">
         </div>
+
       </div>
     </section>
     <FooterComponent></FooterComponent>
