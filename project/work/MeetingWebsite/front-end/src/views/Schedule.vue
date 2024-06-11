@@ -16,11 +16,11 @@
           <p>会议具体时间安排如下：</p>
           <p>The specific schedule of the meeting is as follows:</p>
           <br>
-          <img src="/static/file/agenda/00.jpg" alt="table.png">
           <img src="/static/file/agenda/01.jpg" alt="table.png">
           <img src="/static/file/agenda/02.jpg" alt="table.png">
           <img src="/static/file/agenda/03.jpg" alt="table.png">
           <img src="/static/file/agenda/04.jpg" alt="table.png">
+          <img src="/static/file/agenda/05.jpg" alt="table.png">
         </div>
 
       </div>
