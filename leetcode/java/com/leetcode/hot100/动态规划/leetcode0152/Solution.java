@@ -10,15 +10,19 @@ import java.util.Scanner;
 
 class Solution {
     public int maxProduct(int[] nums) {
-        int len = nums.length;
-        int res = nums[0], maxF = res, minF = res;
-        for (int i = 1; i < len; i++) {
-            int mx = maxF, mn = minF;
-            maxF = Math.max(mx * nums[i], Math.max(nums[i], mn * nums[i]));
-            minF = Math.min(mn * nums[i], Math.min(nums[i], mx * nums[i]));
-            res = Math.max(maxF, res);
+        int max = Integer.MIN_VALUE, imax = 1, imin = 1;
+        for (int num : nums) {
+            if (num < 0) {
+                int tmp = imax;
+                imax = imin;
+                imin = tmp;
+            }
+            imax = Math.max(imax * num, num);
+            imin = Math.min(imin * num, num);
+
+            max = Math.max(max, imax);
         }
-        return res;
+        return max;
     }
 
     public static void main(String[] args) {
