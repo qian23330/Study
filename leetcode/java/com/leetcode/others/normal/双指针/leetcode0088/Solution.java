@@ -25,9 +25,7 @@ class Solution {
             }
             sorted[p1 + p2 - 1] = cur;
         }
-        for (int i = 0; i < nums1.length; i++) {
-            nums1[i] = sorted[i];
-        }
+        System.arraycopy(sorted, 0, nums1, 0, nums1.length);
     }
 
     public static void main(String[] args) {
