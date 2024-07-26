@@ -26,10 +26,10 @@ class Solution {
                 break;
             }
             ListNode start = pre.next;
-            ListNode next = end.next;
+            ListNode tmp = end.next;
             end.next = null;
             pre.next = reverse(start);
-            start.next = next;
+            start.next = tmp;
             pre = start;
             end = pre;
         }
@@ -38,12 +38,12 @@ class Solution {
 
     private ListNode reverse(ListNode head) {
         ListNode pre = null;
-        ListNode curr = head;
-        while (curr != null) {
-            ListNode next = curr.next;
-            curr.next = pre;
-            pre = curr;
-            curr = next;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
         }
         return pre;
     }
