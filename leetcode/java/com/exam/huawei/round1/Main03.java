@@ -35,6 +35,7 @@ package com.exam.huawei.round1;
  * 3
  */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main03 {
@@ -60,26 +61,25 @@ public class Main03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         n = scanner.nextInt();
-
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 a[i][j] = scanner.nextInt();
             }
         }
-
-        int x;
+        scanner.nextLine();
         int res = -1;
         int ans = 0;
-        while (scanner.hasNextInt()) {
-            x = scanner.nextInt();
+        String[] input = scanner.nextLine().split(" ");
+        int[] nums = Arrays.stream(input).mapToInt(Integer::parseInt).toArray();
+        for (int num : nums) {
             for (int i = 0; i < n; i++) {
-                if (x == i) continue;
-                st[x] = true;
-                int t = dfs(x, 10);
-                st[x] = false;
+                if (num == i) continue;
+                st[num] = true;
+                int t = dfs(num, 10);
+                st[num] = false;
                 if (t > ans) {
                     ans = t;
-                    res = x;
+                    res = num;
                 }
             }
         }
