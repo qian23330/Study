@@ -70,16 +70,18 @@ public class Main03 {
         int res = -1;
         int ans = 0;
         String[] input = scanner.nextLine().split(" ");
-        int[] nums = Arrays.stream(input).mapToInt(Integer::parseInt).toArray();
-        for (int num : nums) {
+        int[] exposed = Arrays.stream(input)
+                .mapToInt(Integer::parseInt)
+                .toArray();
+        for (int x : exposed) {
             for (int i = 0; i < n; i++) {
-                if (num == i) continue;
-                st[num] = true;
-                int t = dfs(num, 10);
-                st[num] = false;
+                if (x == i) continue;
+                st[x] = true;
+                int t = dfs(x, 10);
+                st[x] = false;
                 if (t > ans) {
                     ans = t;
-                    res = num;
+                    res = x;
                 }
             }
         }
