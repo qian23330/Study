@@ -75,7 +75,7 @@ public class Main01 {
         }
 
         List<Map.Entry<String, Integer>> res = new ArrayList<>(h3.entrySet());
-        res.sort((o1, o2) -> o1.getKey().compareTo(o2.getKey()));
+        res.sort(Map.Entry.comparingByKey());
 
         for (Map.Entry<String, Integer> entry : res) {
             System.out.println(entry.getKey() + "," + entry.getValue());
