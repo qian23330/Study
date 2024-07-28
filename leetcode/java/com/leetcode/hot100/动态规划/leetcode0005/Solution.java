@@ -2,50 +2,35 @@ package com.leetcode.hot100.动态规划.leetcode0005;
 
 /*
 力扣-5-最长回文子串
-hot100-动态规划
+hot100-动态规划 / 中心扩散
  */
 
 import java.util.Scanner;
 
 class Solution {
     public String longestPalindrome(String s) {
-        int len = s.length();
-        if (len < 2) {
-            return s;
+        if (s == null || s.isEmpty()) {
+            return "";
         }
-
-        int maxLen = 1;
-        int begin = 0;
-        boolean[][] dp = new boolean[len][len];
-        for (int i = 0; i < len; i++) {
-            dp[i][i] = true;
-        }
-
-        char[] charArray = s.toCharArray();  // 提高效率
-        for (int L = 2; L <= len; L++) {
-            for (int i = 0; i < len; i++) {
-                int j = L + i - 1;  // j - i + 1 = L
-                if (j >= len) {
-                    break;
-                }
-
-                if (charArray[i] != charArray[j]) {
-                    dp[i][j] = false;
-                } else {
-                    if (j - i < 3) {  // j - i + 1 < 4
-                        dp[i][j] = true;
-                    } else {
-                        dp[i][j] = dp[i + 1][j - 1];
-                    }
-                }
-
-                if (dp[i][j] && j - i + 1 > maxLen) {
-                    maxLen = j - i + 1;
-                    begin = i;
-                }
+        int start = 0, end = start;
+        for (int i = 0; i < s.length(); i++) {
+            int len1 = findLength(s, i, i);
+            int len2 = findLength(s, i, i + 1);
+            int len = Math.max(len1, len2);
+            if (len > end - start) {
+                start = i - (len - 1) / 2;
+                end = i + len / 2;
             }
         }
-        return s.substring(begin, begin + maxLen);
+        return s.substring(start, end + 1);
+    }
+
+    private int findLength(String s, int left, int right) {
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
+        }
+        return right - left - 1;
     }
 
     public static void main(String[] args) {
