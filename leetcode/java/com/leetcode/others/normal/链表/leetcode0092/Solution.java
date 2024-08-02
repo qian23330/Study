@@ -21,12 +21,12 @@ class Solution {
             rightNode = rightNode.next;
         }
         ListNode leftNode = pre.next;
-        ListNode cur = rightNode.next;
+        ListNode succ = rightNode.next;
         pre.next = null;
         rightNode.next = null;
         reverseList(leftNode);
         pre.next = rightNode;
-        leftNode.next = cur;
+        leftNode.next = succ;
         return dummy.next;
     }
 
