@@ -33,10 +33,10 @@ class Solution {
         ListNode cur = head;
         ListNode pre = null;
         while (cur != null) {
-            ListNode nex = cur.next;
+            ListNode tmp = cur.next;
             cur.next = pre;
             pre = cur;
-            cur = nex;
+            cur = tmp;
         }
         return pre;
     }
