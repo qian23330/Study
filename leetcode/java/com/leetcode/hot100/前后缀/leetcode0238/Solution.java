@@ -1,4 +1,4 @@
-package com.leetcode.hot100.前缀.leetcode0238;
+package com.leetcode.hot100.前后缀.leetcode0238;
 
 /*
 力扣-238-除自身以外数组的乘积

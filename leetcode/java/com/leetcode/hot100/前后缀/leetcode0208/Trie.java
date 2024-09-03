@@ -1,4 +1,4 @@
-package com.leetcode.hot100.前缀.leetcode0208;
+package com.leetcode.hot100.前后缀.leetcode0208;
 
 /*
 力扣-208-实现 Trie (前缀树)
@@ -19,7 +19,7 @@ class Trie {
         }
     }
 
-    private final Node root;
+    Node root;
 
     public Trie() {
         root = new Node();
@@ -28,7 +28,10 @@ class Trie {
     public void insert(String word) {
         Node cur = root;
         for (char w : word.toCharArray()) {
-            cur = cur.children.computeIfAbsent(w, c -> new Node());
+            if (!cur.children.containsKey(w)) {
+                cur.children.put(w, new Node());
+            }
+            cur = cur.children.get(w);
         }
         cur.isWord = true;
     }
