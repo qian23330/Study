@@ -15,12 +15,14 @@ class Solution {
             map.merge(num, 1, Integer::sum);
         }
         for (Integer i : map.keySet()) {
-            heap.add(i);
-            if (heap.size() > k) heap.poll();
+            heap.offer(i);
+            if (heap.size() > k) {
+                heap.poll();
+            }
         }
         int[] top = new int[k];
         for (int i = k - 1; i >= 0; i--) {
-            top[i] = Optional.ofNullable(heap.poll()).orElse(0);
+            top[i] = heap.poll();
         }
         return top;
     }
