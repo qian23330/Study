@@ -3,6 +3,9 @@ package com.leetcode.others.practice;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+不同数组合成的最大数
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

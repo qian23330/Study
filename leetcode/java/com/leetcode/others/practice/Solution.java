@@ -9,45 +9,36 @@ practice-练习
 import java.util.*;
 
 class Solution {
-
-    private static class People {
-        String name;
-        int age;
-
-        People(){};
-
-        People(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-    }
-
+    /*
+    lc 159 至少包含两个不同字符的最长子串
+    滑动窗口/哈希
+     */
     public static void main(String[] args) {
-        Map<Integer, Integer> map = new HashMap<>();
-        map.put(0, 1);
-        map.put(1, 2);
-        map.put(2, 3);
-        map.forEach((k, v) -> System.out.println("key是-" + k + " value是-" + v));
-        map.entrySet().removeIf(v -> v.getValue() == 1 || v.getValue() == 2);
-        System.out.println("-----");
-        map.forEach((k, v) -> System.out.println("key是-" + k + " value是-" + v));
-        System.out.println("-----");
-
-        People people1 = new People("Tom", 35);
-        People people2 = new People("Ruby", 32);
-        PriorityQueue<People> pq = new PriorityQueue<>(Comparator.comparingInt(People::getAge));
-        pq.offer(people1);
-        pq.offer(people2);
-        pq.forEach((p) -> System.out.println(p.getName()));
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        Map<Character, Integer> map = new HashMap<>();
+        int n = s.length(), uniqCnt = 0, start = 0;
+        int len = 0, startIndex = 0;
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            map.put(c, map.getOrDefault(c, 0) + 1);
+            if (map.get(c) == 1) {
+                uniqCnt++;
+            }
+            while (uniqCnt > 2) {
+                char t = s.charAt(start);
+                map.put(t, map.get(t) - 1);
+                if (map.get(t) == 0) {
+                    uniqCnt--;
+                }
+                start++;
+            }
+            if (i - start + 1 > len) {
+                len = i - start + 1;
+                startIndex = start;
+            }
+        }
+        System.out.println(s.substring(startIndex, len + startIndex));
     }
 }
 
