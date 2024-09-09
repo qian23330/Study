@@ -25,7 +25,7 @@ class Solution {
             } else if (c == ']') {
                 StringBuilder tmp = new StringBuilder();
                 int cur_num = stack_num.pop();
-                tmp.append(res.toString().repeat(Math.max(0, cur_num)));
+                tmp.append(res.toString().repeat(cur_num));
                 res = new StringBuilder(stack_res.pop() + tmp);
             } else if (c >= '0' && c <= '9') {
                 num = num * 10 + Integer.parseInt(c + "");  // 连续数字
