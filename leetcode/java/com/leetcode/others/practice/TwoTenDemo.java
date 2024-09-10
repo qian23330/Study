@@ -10,7 +10,7 @@ public class TwoTenDemo {
         int decimal = 0, power = 0;
         for (int i = s.length() - 1; i >= 0 ; i--) {
             int digit = s.charAt(i) - '0';
-            decimal += digit * Math.pow(2, power);
+            decimal += (int) (digit * Math.pow(2, power));
             power++;
         }
         return decimal;
