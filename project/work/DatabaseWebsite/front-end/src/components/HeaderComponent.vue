@@ -35,29 +35,17 @@ export default {
         link: "/",
         id: 0
       }, {
-        name: "Committee",
-        link: "/committee",
+        name: "Browse",
+        link: "/browse",
         id: 1
       }, {
-        name: "Speakers",
-        link: "/speakers",
+        name: "Help",
+        link: "/help",
         id: 2
       }, {
-        name: "Schedule",
-        link: "/schedule",
+        name: "About",
+        link: "/about",
         id: 3
-      },{
-        name: "Registration / Submission",
-        link: "/submission",
-        id: 4
-      },{
-        name: "Traffic / Hotel",
-        link: "/traffic",
-        id: 5
-      },{
-        name: "History",
-        link: "/history",
-        id: 6
       }],
       drawer: true
     }

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bac2e996-871c-400d-b0b8-78f0f0efaa5f" name="Changes" comment="24-05-08">
+      <change beforePath="$PROJECT_DIR$/../../project/work/DatabaseWebsite/front-end/src/components/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/work/DatabaseWebsite/front-end/src/components/HeaderComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/work/DatabaseWebsite/front-end/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/work/DatabaseWebsite/front-end/src/views/Home.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2diDB2DygwkGLtcYcXe7LpJ0S4C" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/qianlong/Git/Study/leetcode/python&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/work" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bac2e996-871c-400d-b0b8-78f0f0efaa5f" name="Changes" comment="" />
+      <created>1710481866698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710481866698</updated>
+      <workItem from="1710481867734" duration="30000" />
+      <workItem from="1710484291977" duration="1604000" />
+      <workItem from="1710502042992" duration="3386000" />
+      <workItem from="1710558092386" duration="626000" />
+      <workItem from="1710727988711" duration="5716000" />
+      <workItem from="1710847248534" duration="3349000" />
+      <workItem from="1710996113834" duration="4399000" />
+      <workItem from="1711074970651" duration="5622000" />
+      <workItem from="1711157410033" duration="14421000" />
+      <workItem from="1712455630788" duration="1273000" />
+      <workItem from="1712554629218" duration="3477000" />
+      <workItem from="1715158683639" duration="9469000" />
+      <workItem from="1715251366481" duration="723000" />
+      <workItem from="1715760115024" duration="18000" />
+      <workItem from="1715849299759" duration="3127000" />
+      <workItem from="1716187935213" duration="218000" />
+      <workItem from="1720948623237" duration="151000" />
+      <workItem from="1720949169171" duration="2409000" />
+      <workItem from="1722081362140" duration="1566000" />
+      <workItem from="1741837807099" duration="3000" />
+    </task>
+    <task id="LOCAL-00001" summary="removed">
+      <option name="closed" value="true" />
+      <created>1710502086946</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710502086946</updated>
+    </task>
+    <task id="LOCAL-00002" summary="美团-exam01">
+      <option name="closed" value="true" />
+      <created>1710511209138</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710511209138</updated>
+    </task>
+    <task id="LOCAL-00003" summary="美团-exam01">
+      <option name="closed" value="true" />
+      <created>1711113558622</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711113558622</updated>
+    </task>
+    <task id="LOCAL-00004" summary="24-03-24">
+      <option name="closed" value="true" />
+      <created>1711297517401</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711297517401</updated>
+    </task>
+    <task id="LOCAL-00005" summary="24-04-08">
+      <option name="closed" value="true" />
+      <created>1712559747315</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712559747315</updated>
+    </task>
+    <task id="LOCAL-00006" summary="24-05-08">
+      <option name="closed" value="true" />
+      <created>1715173010168</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715173010168</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="removed" />
+    <MESSAGE value="美团-exam01" />
+    <MESSAGE value="24-03-24" />
+    <MESSAGE value="24-04-08" />
+    <MESSAGE value="24-05-08" />
+    <option name="LAST_COMMIT_MESSAGE" value="24-05-08" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/python$1.coverage" NAME="1 Coverage Results" MODIFIED="1715163616835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam/华为/round1" />
+    <SUITE FILE_PATH="coverage/python$leetcode0001.coverage" NAME="leetcode0001 Coverage Results" MODIFIED="1710481889159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python$4.coverage" NAME="4 Coverage Results" MODIFIED="1711112572031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam/美团/round1" />
+    <SUITE FILE_PATH="coverage/python$2.coverage" NAME="2 Coverage Results" MODIFIED="1715170674961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam/华为/round1" />
+    <SUITE FILE_PATH="coverage/python$3.coverage" NAME="3 Coverage Results" MODIFIED="1715172388697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam/华为/round1" />
+  </component>
+</project>
