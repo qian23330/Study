@@ -1,3 +1,0 @@
-/Users/qianlong/Git/Study/Cpp/cmake-build-debug/CMakeFiles/Cpp.dir
-/Users/qianlong/Git/Study/Cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/qianlong/Git/Study/Cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
