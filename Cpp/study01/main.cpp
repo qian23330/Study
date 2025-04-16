@@ -1,27 +1,50 @@
 #include <iostream>
+using namespace std;
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 int main()
 {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    // 整型
+    short num1 = 10;
+    cout << sizeof(num1) << endl;
 
-    for (int i = 1; i <= 5; i++)
-    {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
-    }
+    int num2 = 10;
+    cout << sizeof(num2) << endl;
+
+    long num3 = 10;
+    cout << sizeof(num3) << endl;
+
+    long long num4 = 10;
+    cout << sizeof(num4) << endl;
+
+    // 浮点型
+    float f1 = 3.1415926f;
+    cout << "f1 = " << f1 << endl;
+    cout << sizeof(f1) << endl;
+    double d1 = 3.1415926;
+    cout << "d1 = " << d1 << endl;
+    cout << sizeof(d1) << endl;
+
+    float f2 = 3e-2;
+    cout << "f2 = " << f2 << endl;
+
+    // 字符型
+    char ch = 'a';
+    cout << ch << endl;
+    cout << (int)ch << endl;
+    cout << sizeof(ch) << endl;
+
+    // 转义字符
+    cout << "Hello World!\n";
+    cout << "\\" << endl;
+    cout << "aaa\tbbb" << endl;
+    cout << "aaaa\tbbb" << endl;
+    cout << "aa\tbbb" << endl;
+    cout << "aaaaa\tbbb" << endl;
+    cout << "a\tbbb" << endl;
+
+    // 字符串
+
 
     return 0;
 }
-
-// TIP See CLion help at <a
-// href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
-//  Also, you can try interactive lessons for CLion by selecting
-//  'Help | Learn IDE Features' from the main menu.
