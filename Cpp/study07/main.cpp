@@ -19,5 +19,18 @@ int main() {
         }
         cout << endl;
     }
+
+
+    // 数组
+    int nums[] = {90, 80, 70, 60, 50, 40, 30, 20, 10};
+    for (int i = 0; i < 9; ++i) {
+        cout << nums[i] << endl;
+    }
+    cout << sizeof(nums) << endl;
+    cout << sizeof(nums) / sizeof(nums[0]) << endl;
+    cout << (int)(size_t)nums << endl;
+    cout << (int)(size_t)&nums[0] << endl;
+    cout << (int)(size_t)&nums[1] << endl;
+
     return 0;
 }
